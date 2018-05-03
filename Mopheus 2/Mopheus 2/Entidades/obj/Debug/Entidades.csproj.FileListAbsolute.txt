@@ -1,0 +1,23 @@
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\bin\Debug\Entidades.dll
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\bin\Debug\Entidades.pdb
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\obj\Debug\Entidades.dll
+C:\sistemas\AutomacaoBalanca\Dev\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\bin\Debug\Entidades.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\bin\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\bin\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\obj\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Entidades\obj\Debug\Entidades.pdb

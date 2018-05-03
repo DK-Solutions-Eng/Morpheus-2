@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[ControlMix]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [NAME] VARCHAR(50) NULL, 
+    [ADDR] INT NULL, 
+    [MODEL] NVARCHAR(50) NULL, 
+    [ID_DEVICE] INT NULL, 
+    [SPEED] INT NULL
+)

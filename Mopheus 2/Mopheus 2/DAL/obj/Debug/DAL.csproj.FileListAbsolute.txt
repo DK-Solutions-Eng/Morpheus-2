@@ -1,0 +1,17 @@
+C:\sistemas\AutomacaoBalanca\Dev\DAL\bin\Debug\DAL.dll
+C:\sistemas\AutomacaoBalanca\Dev\DAL\bin\Debug\DAL.pdb
+C:\sistemas\AutomacaoBalanca\Dev\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\sistemas\AutomacaoBalanca\Dev\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\sistemas\AutomacaoBalanca\Dev\DAL\obj\Debug\DAL.dll
+C:\sistemas\AutomacaoBalanca\Dev\DAL\obj\Debug\DAL.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\DAL\bin\Debug\DAL.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\DAL\bin\Debug\DAL.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\DAL\obj\Debug\DAL.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\DAL\obj\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\bin\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\bin\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.pdb

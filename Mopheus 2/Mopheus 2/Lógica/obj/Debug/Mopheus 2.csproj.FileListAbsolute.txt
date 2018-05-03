@@ -1,0 +1,70 @@
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.exe.config
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.exe
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.pdb
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_PRINCIPAL.resources
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Properties.Resources.resources
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csproj.GenerateResource.Cache
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.exe
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.pdb
+c:\users\lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_Entradas_Saidas.resources
+C:\Users\Lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_REDE.resources
+C:\Users\Lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Morpheus2_DataBase.mdf
+C:\Users\Lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Morpheus2_DataBase_log.ldf
+C:\Users\Lucas\documents\visual studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_receita.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_Entradas_Saidas.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_PRINCIPAL.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_receita.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Form_REDE.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Properties.Resources.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csproj.GenerateResource.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.exe
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Morpheus2_DataBase.mdf
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Morpheus2_DataBase_log.ldf
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.exe.config
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.exe
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Mopheus 2.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus_2.Component1.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\BLL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Common.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\BLL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Common.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\bin\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\obj\Debug\Mopheus 2.csproj.CopyComplete
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Morpheus2_DataBase.mdf
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Morpheus2_DataBase_log.ldf
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.exe.config
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.exe
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_IO.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MAIN.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_receita.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_REDE.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Splash.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Sobre.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Properties.Resources.resources
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.GenerateResource.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CopyComplete
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe.licenses
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Device_Status.resources

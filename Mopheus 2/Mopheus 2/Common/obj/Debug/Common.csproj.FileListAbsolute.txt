@@ -1,0 +1,17 @@
+C:\sistemas\AutomacaoBalanca\Dev\Common\bin\Debug\Common.dll
+C:\sistemas\AutomacaoBalanca\Dev\Common\bin\Debug\Common.pdb
+C:\sistemas\AutomacaoBalanca\Dev\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\sistemas\AutomacaoBalanca\Dev\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\sistemas\AutomacaoBalanca\Dev\Common\obj\Debug\Common.dll
+C:\sistemas\AutomacaoBalanca\Dev\Common\obj\Debug\Common.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Common\bin\Debug\Common.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Common\bin\Debug\Common.pdb
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Common\obj\Debug\Common.dll
+C:\Users\Lucas\Google Drive\DK Solutions\AEPH\Software\Morpheus2\Common\obj\Debug\Common.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\bin\Debug\Common.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\bin\Debug\Common.pdb
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\obj\Debug\Common.dll
+C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Common\obj\Debug\Common.pdb
