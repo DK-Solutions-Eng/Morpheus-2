@@ -29,7 +29,7 @@ namespace Mopheus_2
 
             frmSplash.Dispose();
 
-            //Inicia a aplicação com o FrmPrincipal
+            //Inicia a aplicação com o Form_MAIN
             Application.Run(new Form_MAIN());            
         }
 

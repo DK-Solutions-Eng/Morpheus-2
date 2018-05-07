@@ -135,7 +135,7 @@
             this.textBox_vezes = new System.Windows.Forms.TextBox();
             this.label_vezez = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox_linhas = new System.Windows.Forms.TextBox();
             this.textBox_endereco = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -199,7 +199,7 @@
             // 
             this.novaReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.NewFile_16x;
             this.novaReceitaToolStripMenuItem.Name = "novaReceitaToolStripMenuItem";
-            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.novaReceitaToolStripMenuItem.Text = "Nova Receita";
             this.novaReceitaToolStripMenuItem.Click += new System.EventHandler(this.novaReceitaToolStripMenuItem_Click);
             // 
@@ -207,14 +207,14 @@
             // 
             this.carregarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.OpenFolder_16x;
             this.carregarToolStripMenuItem.Name = "carregarToolStripMenuItem";
-            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.carregarToolStripMenuItem.Text = "Carregar";
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Save_16x_32;
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
@@ -233,28 +233,28 @@
             // 
             this.enviarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Upload_16x;
             this.enviarReceitaToolStripMenuItem.Name = "enviarReceitaToolStripMenuItem";
-            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.enviarReceitaToolStripMenuItem.Text = "Enviar Receita";
             // 
             // executarReceitaToolStripMenuItem
             // 
             this.executarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
             this.executarReceitaToolStripMenuItem.Name = "executarReceitaToolStripMenuItem";
-            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.executarReceitaToolStripMenuItem.Text = "Executar Receita";
             // 
             // pausarReceitaToolStripMenuItem
             // 
             this.pausarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
             this.pausarReceitaToolStripMenuItem.Name = "pausarReceitaToolStripMenuItem";
-            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.pausarReceitaToolStripMenuItem.Text = "Pausar Receita";
             // 
             // pararReceitaToolStripMenuItem
             // 
             this.pararReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
             this.pararReceitaToolStripMenuItem.Name = "pararReceitaToolStripMenuItem";
-            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.pararReceitaToolStripMenuItem.Text = "Parar Receita";
             // 
             // visualizarToolStripMenuItem
@@ -387,6 +387,7 @@
             this.descenderToolStripMenuItem.Name = "descenderToolStripMenuItem";
             this.descenderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.descenderToolStripMenuItem.Text = "Nível Abaixo";
+            this.descenderToolStripMenuItem.Click += new System.EventHandler(this.descenderToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
@@ -1098,13 +1099,13 @@
             // 
             this.textBox_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
             this.textBox_tempo_limite_total.Name = "textBox_tempo_limite_total";
-            this.textBox_tempo_limite_total.Size = new System.Drawing.Size(100, 20);
+            this.textBox_tempo_limite_total.Size = new System.Drawing.Size(121, 20);
             this.textBox_tempo_limite_total.TabIndex = 1;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 3);
+            this.label19.Location = new System.Drawing.Point(3, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 13);
             this.label19.TabIndex = 0;
@@ -1119,7 +1120,7 @@
             this.groupBox1.Controls.Add(this.textBox_vezes);
             this.groupBox1.Controls.Add(this.label_vezez);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.textBox_linhas);
             this.groupBox1.Controls.Add(this.textBox_endereco);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label7);
@@ -1193,13 +1194,13 @@
             this.label17.TabIndex = 16;
             this.label17.Text = "Linhas";
             // 
-            // textBox10
+            // textBox_linhas
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(639, 32);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(50, 20);
-            this.textBox10.TabIndex = 15;
+            this.textBox_linhas.Enabled = false;
+            this.textBox_linhas.Location = new System.Drawing.Point(639, 32);
+            this.textBox_linhas.Name = "textBox_linhas";
+            this.textBox_linhas.Size = new System.Drawing.Size(50, 20);
+            this.textBox_linhas.TabIndex = 15;
             // 
             // textBox_endereco
             // 
@@ -1406,7 +1407,7 @@
         private System.Windows.Forms.TextBox textBox_vezes;
         private System.Windows.Forms.Label label_vezez;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox_linhas;
         private System.Windows.Forms.TextBox textBox_endereco;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label7;

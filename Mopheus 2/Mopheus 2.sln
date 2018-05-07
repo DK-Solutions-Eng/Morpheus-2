@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Mopheus 2\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mopheus 2", "Mopheus 2\Lógica\Mopheus 2.csproj", "{44FB3990-FB8B-42AF-88C1-74D93579D4E3}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Banco", "Mopheus 2\Banco\Banco.sqlproj", "{5C50218A-5B73-44DC-939D-2F77B7ED8822}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{44FB3990-FB8B-42AF-88C1-74D93579D4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44FB3990-FB8B-42AF-88C1-74D93579D4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44FB3990-FB8B-42AF-88C1-74D93579D4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C50218A-5B73-44DC-939D-2F77B7ED8822}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

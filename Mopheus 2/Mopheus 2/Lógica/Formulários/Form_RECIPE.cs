@@ -226,6 +226,7 @@ namespace Mopheus_2
         }
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             if (string.IsNullOrEmpty(textBox_nome_receita.Text))
             {
                 MessageBox.Show("Informe o nome da receita!");
@@ -291,7 +292,7 @@ namespace Mopheus_2
                 MessageBox.Show("Defina a sáida!");
                 return;
             }
-
+            */
 
 
 
@@ -318,7 +319,7 @@ namespace Mopheus_2
                 objitensreceita.produto = comboBox_produto.Text;
                 objitensreceita.rele = Convert.ToInt32(textBox_rele.Text);
                 objitensreceita.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
-                objitensreceita.tempo_espera_evento_anterior = Convert.ToInt32(textBox_tempo_espera_evento_anterior.Text);
+                objitensreceita.tempo_espera_evento_anterior = Convert.ToDateTime(textBox_tempo_espera_evento_anterior.Text);
                 objitensreceita.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
                 if(radioButton_ON_evento_anterior.Checked)
                 {
@@ -332,7 +333,7 @@ namespace Mopheus_2
                 objitensreceita.tipo_evento_posterior = comboBox_evento_posterior_tipo.Text;
                 objitensreceita.pre_corte = Convert.ToInt32(textBox_precorte.Text);
                 objitensreceita.corte = Convert.ToInt32(textBox_corte.Text);
-                objitensreceita.limite_seguranca_evento_posterior = Convert.ToInt32(textBox_peso_limite.Text);
+                objitensreceita.limite_peso_seguranca_evento_posterior = Convert.ToInt32(textBox_peso_limite.Text);
                 objitensreceita.tempo_on = Convert.ToInt32(textBox_tempo_on.Text);
                 objitensreceita.tempo_off = Convert.ToInt32(textBox_tempo_off.Text);
                 objitensreceita.entrada_evento_posterior = comboBox_tipo_entrada_evento_posterior.Text;
@@ -345,10 +346,10 @@ namespace Mopheus_2
                     objitensreceita.status_entrada_digital_evento_posterior = false;
                 }
                 objitensreceita.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
-                objitensreceita.seguranca_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
-                objitensreceita.tempo_evento_posterior = Convert.ToInt32(textBox_tempo_evento_posterior.Text);
-                objitensreceita.tempo_limite_evento_posterior = Convert.ToInt32(textBox_tempo_limite_evento_posterior.Text);
-                objitensreceita.tempo_limite_total = Convert.ToInt32(textBox_tempo_limite_total.Text);
+                objitensreceita.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
+                objitensreceita.tempo_evento_posterior = Convert.ToDateTime(textBox_tempo_evento_posterior.Text);
+                objitensreceita.tempo_seguranca_evento_posterior = Convert.ToDateTime(textBox_tempo_limite_evento_posterior.Text);
+                objitensreceita.tempo_limite_total = Convert.ToDateTime(textBox_tempo_limite_total.Text);
                 if(checkBox_alerta.Checked)
                 {
                     objitensreceita.alerta_emergencia = true;
@@ -375,68 +376,101 @@ namespace Mopheus_2
                     objitensreceita.acionar_saida = true;
                     objitensreceita.saida_seguranca = "";
                 }
-
-
-
-
-                objitensreceita.objetivo = cboObjetivo.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                //item.comando_valor = Convert.ToInt32(cboValor.SelectedItem.ToString().Split('-').GetValue(0));
-                objitensreceita.valor = txtValor.Text;
-                objitensreceita.corte = txtValorCorte.Text;
-                objitensreceita.acao = cboAcao.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                objitensreceita.parametro1 = cboParametro1.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                objitensreceita.parametro2 = cboParametro2.SelectedItem == null ? "" : cboParametro2.SelectedValue.ToString();
-                objitensreceita.tipo_limite = cboTipoLimite.SelectedItem == null ? "" : cboTipoLimite.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                objitensreceita.valor_limite = txtValorLimite.Text;
                 objitensreceita.dateinsert = objitensreceita.dateinsert;
                 objitensreceita.dateupdate = objitensreceita.dateupdate;
+
                 //considero as linhas do grid porque por padrao ele conta o cabeçalho... resumindo seria a nova linha
                 objitensreceita.sequencia = 0;
                 bllitensreceita.update(objitensreceita);
                 carregaItensReceita(obj.id);
-                //limpaCamposItensReceita();
+                clean_itens_receita();
                 objitensreceita = null;
-                //cboObjetivo.Focus();
+                tabControl2.SelectedIndex = 0;
+                textBox_etapa.Focus();
             }
             else
             {
                 ItensReceita item = new ItensReceita();
                 item.id_receita = obj.id;
-                item.objetivo = cboObjetivo.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                //item.comando_valor = Convert.ToInt32(cboValor.SelectedItem.ToString().Split('-').GetValue(0));
-                item.valor = txtValor.Text;
-                item.corte = txtValorCorte.Text;
-                item.acao = cboAcao.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                item.parametro1 = cboParametro1.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                item.parametro2 = cboParametro2.SelectedValue == null ? "" : cboParametro2.SelectedValue.ToString();
-                item.tipo_limite = cboTipoLimite.SelectedItem == null ? "" : cboTipoLimite.SelectedItem.ToString().Split('-').GetValue(0).ToString();
-                item.valor_limite = txtValorLimite.Text;
+                item.etapa = textBox_etapa.Text;
+                item.processo = comboBox_processo.Text;
+                item.produto = comboBox_produto.Text;
+                item.rele = Convert.ToInt32(textBox_rele.Text);
+                item.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
+                item.tempo_espera_evento_anterior = Convert.ToDateTime(textBox_tempo_espera_evento_anterior.Text);
+                item.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
+                if (radioButton_ON_evento_anterior.Checked)
+                {
+                    item.status_entrada_digital_evento_anterior = true;
+                }
+                if (radioButton_OFF_evento_anterior.Checked)
+                {
+                    item.status_entrada_digital_evento_anterior = false;
+                }
+                item.temperatura_evento_anterior = Convert.ToInt32(textBox_limite_temperatura_evento_anterior.Text);
+                item.tipo_evento_posterior = comboBox_evento_posterior_tipo.Text;
+                item.pre_corte = Convert.ToInt32(textBox_precorte.Text);
+                item.corte = Convert.ToInt32(textBox_corte.Text);
+                item.tempo_on = Convert.ToInt32(textBox_tempo_on.Text);
+                item.tempo_off = Convert.ToInt32(textBox_tempo_off.Text);
+                item.limite_peso_seguranca_evento_posterior = Convert.ToInt32(textBox_peso_limite.Text);
+                item.entrada_evento_posterior = comboBox_tipo_entrada_evento_posterior.Text;
+                if (radioButton_ON_evento_posterior.Checked)
+                {
+                    item.status_entrada_digital_evento_posterior = true;
+                }
+                if (radioButton_OFF_evento_posterior.Checked)
+                {
+                    item.status_entrada_digital_evento_posterior = false;
+                }
+                item.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
+                item.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
+                item.tempo_evento_posterior = Convert.ToDateTime(textBox_tempo_evento_posterior.Text);
+                item.tempo_seguranca_evento_posterior = Convert.ToDateTime(textBox_tempo_limite_evento_posterior.Text);
+                item.tempo_limite_total = Convert.ToDateTime(textBox_tempo_limite_total.Text);
+                if (checkBox_alerta.Checked)
+                {
+                    item.alerta_emergencia = true;
+                }
+                else
+                {
+                    item.alerta_emergencia = false;
+                }
+                if (checkBox_pausar.Checked)
+                {
+                    item.pausar_receita = true;
+                }
+                else
+                {
+                    item.pausar_receita = false;
+                }
+                if (checkBox_saida.Checked)
+                {
+                    item.acionar_saida = true;
+                    item.saida_seguranca = comboBox_saida_emergencia.Text;
+                }
+                else
+                {
+                    item.acionar_saida = true;
+                    item.saida_seguranca = "";
+                }
                 item.dateinsert = DateTime.Now;
+              
                 //considero as linhas do grid porque por padrao ele conta o cabeçalho... resumindo seria a nova linha
-                item.sequencia = 0;//bllitensreceita.getCustomReceita(obj.id) == null ? 1 : bllitensreceita.getCustomReceita(obj.id).Rows.Count + 1;
+                item.sequencia = 0;
+                //bllitensreceita.getCustomReceita(obj.id) == null ? 1 : bllitensreceita.getCustomReceita(obj.id).Rows.Count + 1;
                 bllitensreceita.insert(item);
                 carregaItensReceita(obj.id);
-                limpaCamposItensReceita();
-                cboObjetivo.Focus();
+                clean_itens_receita();
+                tabControl2.SelectedIndex = 0;
+                textBox_etapa.Focus();
             }
-            gridItensReceita.Left = 6;
-            gridItensReceita.Top = 64;
-            gridItensReceita.Height = 204;
-            enableButtonItensReceita(true, false, false, false);
+
             bllitensreceita.ordenaSequencia(obj.id);
             carregaItensReceita(obj.id);
-            btnNovoItem.Focus();
-
-
-
-
-
-
-
-
 
             //verifica se tem item para a receita
-            DataTable dt = bllitensreceita.getCustomReceita(Convert.ToInt32(txtCodigo.Text));
+            DataTable dt = bllitensreceita.getCustomReceita(Convert.ToInt32(textBox_id.Text));
             if (dt == null)
             {
                 MessageBox.Show("Adicione pelo menos um item na receita!");
@@ -446,17 +480,17 @@ namespace Mopheus_2
             {
                 obj = new Receita();
             }
-            if (string.IsNullOrEmpty(txtCodigo.Text))
+            if (string.IsNullOrEmpty(textBox_id.Text))
             {
-                obj.nome = txtNome.Text;
+                obj.nome = textBox_nome_receita.Text;
                 obj.dateinsert = DateTime.Now;
                 bll.insert(obj);
-                MessageBox.Show("Receita cadastrada com sucesso!");
+                MessageBox.Show("Receita salva com sucesso!");
             }
             else
             {
-                obj.id = Convert.ToInt32(txtCodigo.Text);
-                obj.nome = txtNome.Text;
+                obj.id = Convert.ToInt32(textBox_id.Text);
+                obj.nome = textBox_nome_receita.Text;
                 obj.dateupdate = DateTime.Now;
                 obj.dateinsert = this.obj.dateinsert;
                 bll.update(obj);
@@ -465,8 +499,86 @@ namespace Mopheus_2
             tabControl1.SelectedIndex = 0;
             atualiza("");
             carregaItensReceita(0);
-            limpa();
-            limpaCamposItensReceita();
+            clean_itens_receita();
+        }
+
+        private void clean_itens_receita()
+        {
+            #region limpeza dos dados da receita
+            textBox_id.Text="";
+            textBox_nome_receita.Text="";
+            comboBox_device.Text = "";
+            textBox_endereco.Text = "";
+            textBox_linhas.Text = "";
+            comboBox_repeticao.Text = "";
+            textBox_vezes.Text = "";
+            textBox_intervalo.Text = "";
+            #endregion
+
+            #region limpeza dos itens da receita
+            textBox_etapa.Text="";
+            comboBox_processo.Text = "";
+            comboBox_produto.Text = "";
+            comboBox_produto.Text = "";
+            comboBox_evento_anterior_tipo.Text = "";
+            textBox_tempo_espera_evento_anterior.Text = "";
+            comboBox_tipo_entrada_evento_anterior.Text = "";
+            textBox_limite_temperatura_evento_anterior.Text = "";
+            comboBox_evento_posterior_tipo.Text = "";
+            textBox_precorte.Text = "";
+            textBox_corte.Text = "";
+            textBox_peso_limite.Text = "";
+            textBox_tempo_on.Text = "";
+            textBox_tempo_off.Text = "";
+            comboBox_tipo_entrada_evento_posterior.Text = "";
+            textBox_limite_temperatura_evento_posterior.Text = "";
+            textBox_limite_temperatura_segurança.Text = "";
+            textBox_tempo_evento_posterior.Text = "";
+            textBox_tempo_limite_evento_posterior.Text = "";
+            textBox_tempo_limite_total.Text = "";
+            checkBox_alerta.Checked = false;
+            checkBox_pausar.Checked = false;
+            checkBox_saida.Checked = false;
+            comboBox_saida_emergencia.Text = "";
+            comboBox_saida_emergencia.Enabled = false;
+            #endregion
+        }
+
+        public void atualiza(string filtro)
+        {
+            int linhaSelecionada = 0, primeiraLinha = 0;
+            if (dataGridView_receitas.CurrentRow != null)
+            {
+                primeiraLinha = dataGridView_receitas.FirstDisplayedScrollingRowIndex;
+                linhaSelecionada = dataGridView_receitas.CurrentRow.Index;
+            }
+            dataGridView_receitas.DataSource = bll.getAll(filtro, "NOME");
+            dataGridView_receitas.Refresh();
+            dataGridView_receitas.ClearSelection();
+        }
+
+        private void descenderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[9].Value != null)
+                {
+                    int sequencia = Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+                    if (sequencia != 1)
+                    {
+                        bllitensreceita.updateCustomMoveAbaixoSequencia(sequencia, Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[29].Value.ToString()));
+                        carregaItensReceita(obj.id);
+                        dataGridView_itens_receita.ClearSelection();
+                        dataGridView_itens_receita.CurrentCell = dataGridView_itens_receita.Rows[(sequencia - 2)].Cells[0];
+                        dataGridView_itens_receita.Rows[(sequencia - 2)].Selected = true;
+                        clean_itens_receita();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
