@@ -47,6 +47,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_receitas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.timeEdit_intervalo = new DevExpress.XtraEditors.TimeEdit();
             this.dataGridView_itens_receita = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip_etapas_receita = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.novaEtapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl_evento_anterior = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.textBox_tempo_espera_evento_anterior = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -113,9 +113,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.comboBox_tipo_entrada_evento_posterior = new System.Windows.Forms.ComboBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.textBox_tempo_limite_evento_posterior = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox_tempo_evento_posterior = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox_evento_posterior_tipo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -125,13 +123,11 @@
             this.checkBox_pausar = new System.Windows.Forms.CheckBox();
             this.checkBox_alerta = new System.Windows.Forms.CheckBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox_tempo_limite_total = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label32 = new System.Windows.Forms.Label();
             this.comboBox_repeticao = new System.Windows.Forms.ComboBox();
             this.label_intervalo = new System.Windows.Forms.Label();
-            this.textBox_intervalo = new System.Windows.Forms.TextBox();
             this.textBox_vezes = new System.Windows.Forms.TextBox();
             this.label_vezez = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -144,11 +140,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_id = new System.Windows.Forms.TextBox();
+            this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
+            this.timeEdit_tempo_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
+            this.timeEdit_tempo_limite_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
+            this.timeEdit_tempo_limite_total = new DevExpress.XtraEditors.TimeEdit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).BeginInit();
             this.contextMenuStrip_etapas_receita.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -171,6 +172,10 @@
             this.tabPage8.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -326,6 +331,17 @@
             this.tabPage2.Size = new System.Drawing.Size(978, 596);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Receita";
+            // 
+            // timeEdit_intervalo
+            // 
+            this.timeEdit_intervalo.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_intervalo.Location = new System.Drawing.Point(842, 33);
+            this.timeEdit_intervalo.Name = "timeEdit_intervalo";
+            this.timeEdit_intervalo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_intervalo.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_intervalo.Size = new System.Drawing.Size(112, 20);
+            this.timeEdit_intervalo.TabIndex = 18;
             // 
             // dataGridView_itens_receita
             // 
@@ -523,7 +539,7 @@
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage13.Controls.Add(this.textBox_tempo_espera_evento_anterior);
+            this.tabPage13.Controls.Add(this.timeEdit_tempo_espera_evento_anterior);
             this.tabPage13.Controls.Add(this.label8);
             this.tabPage13.Location = new System.Drawing.Point(4, 25);
             this.tabPage13.Name = "tabPage13";
@@ -531,13 +547,6 @@
             this.tabPage13.Size = new System.Drawing.Size(563, 144);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Tempo";
-            // 
-            // textBox_tempo_espera_evento_anterior
-            // 
-            this.textBox_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 19);
-            this.textBox_tempo_espera_evento_anterior.Name = "textBox_tempo_espera_evento_anterior";
-            this.textBox_tempo_espera_evento_anterior.Size = new System.Drawing.Size(100, 20);
-            this.textBox_tempo_espera_evento_anterior.TabIndex = 61;
             // 
             // label8
             // 
@@ -968,22 +977,15 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage8.Controls.Add(this.textBox_tempo_limite_evento_posterior);
+            this.tabPage8.Controls.Add(this.timeEdit_tempo_limite_evento_posterior);
+            this.tabPage8.Controls.Add(this.timeEdit_tempo_evento_posterior);
             this.tabPage8.Controls.Add(this.label26);
-            this.tabPage8.Controls.Add(this.textBox_tempo_evento_posterior);
             this.tabPage8.Controls.Add(this.label24);
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Size = new System.Drawing.Size(564, 143);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Tempo";
-            // 
-            // textBox_tempo_limite_evento_posterior
-            // 
-            this.textBox_tempo_limite_evento_posterior.Location = new System.Drawing.Point(8, 60);
-            this.textBox_tempo_limite_evento_posterior.Name = "textBox_tempo_limite_evento_posterior";
-            this.textBox_tempo_limite_evento_posterior.Size = new System.Drawing.Size(102, 20);
-            this.textBox_tempo_limite_evento_posterior.TabIndex = 69;
             // 
             // label26
             // 
@@ -993,13 +995,6 @@
             this.label26.Size = new System.Drawing.Size(104, 13);
             this.label26.TabIndex = 68;
             this.label26.Text = "Limite de Segurança";
-            // 
-            // textBox_tempo_evento_posterior
-            // 
-            this.textBox_tempo_evento_posterior.Location = new System.Drawing.Point(9, 21);
-            this.textBox_tempo_evento_posterior.Name = "textBox_tempo_evento_posterior";
-            this.textBox_tempo_evento_posterior.Size = new System.Drawing.Size(100, 20);
-            this.textBox_tempo_evento_posterior.TabIndex = 1;
             // 
             // label24
             // 
@@ -1031,12 +1026,12 @@
             // tabPage11
             // 
             this.tabPage11.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage11.Controls.Add(this.timeEdit_tempo_limite_total);
             this.tabPage11.Controls.Add(this.comboBox_saida_emergencia);
             this.tabPage11.Controls.Add(this.checkBox_saida);
             this.tabPage11.Controls.Add(this.checkBox_pausar);
             this.tabPage11.Controls.Add(this.checkBox_alerta);
             this.tabPage11.Controls.Add(this.label29);
-            this.tabPage11.Controls.Add(this.textBox_tempo_limite_total);
             this.tabPage11.Controls.Add(this.label19);
             this.tabPage11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
@@ -1095,13 +1090,6 @@
             this.label29.TabIndex = 2;
             this.label29.Text = "Ação";
             // 
-            // textBox_tempo_limite_total
-            // 
-            this.textBox_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
-            this.textBox_tempo_limite_total.Name = "textBox_tempo_limite_total";
-            this.textBox_tempo_limite_total.Size = new System.Drawing.Size(121, 20);
-            this.textBox_tempo_limite_total.TabIndex = 1;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -1113,10 +1101,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.timeEdit_intervalo);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.comboBox_repeticao);
             this.groupBox1.Controls.Add(this.label_intervalo);
-            this.groupBox1.Controls.Add(this.textBox_intervalo);
             this.groupBox1.Controls.Add(this.textBox_vezes);
             this.groupBox1.Controls.Add(this.label_vezez);
             this.groupBox1.Controls.Add(this.label17);
@@ -1152,6 +1140,7 @@
             this.comboBox_repeticao.Name = "comboBox_repeticao";
             this.comboBox_repeticao.Size = new System.Drawing.Size(80, 21);
             this.comboBox_repeticao.TabIndex = 21;
+            this.comboBox_repeticao.SelectedIndexChanged += new System.EventHandler(this.comboBox_repeticao_SelectedIndexChanged);
             // 
             // label_intervalo
             // 
@@ -1161,13 +1150,6 @@
             this.label_intervalo.Size = new System.Drawing.Size(115, 13);
             this.label_intervalo.TabIndex = 20;
             this.label_intervalo.Text = "Intervalo de Repetição";
-            // 
-            // textBox_intervalo
-            // 
-            this.textBox_intervalo.Location = new System.Drawing.Point(842, 32);
-            this.textBox_intervalo.Name = "textBox_intervalo";
-            this.textBox_intervalo.Size = new System.Drawing.Size(112, 20);
-            this.textBox_intervalo.TabIndex = 19;
             // 
             // textBox_vezes
             // 
@@ -1269,6 +1251,50 @@
             this.textBox_id.Size = new System.Drawing.Size(55, 20);
             this.textBox_id.TabIndex = 8;
             // 
+            // timeEdit_tempo_espera_evento_anterior
+            // 
+            this.timeEdit_tempo_espera_evento_anterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 19);
+            this.timeEdit_tempo_espera_evento_anterior.Name = "timeEdit_tempo_espera_evento_anterior";
+            this.timeEdit_tempo_espera_evento_anterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(88, 20);
+            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
+            // 
+            // timeEdit_tempo_evento_posterior
+            // 
+            this.timeEdit_tempo_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_evento_posterior.Location = new System.Drawing.Point(9, 21);
+            this.timeEdit_tempo_evento_posterior.Name = "timeEdit_tempo_evento_posterior";
+            this.timeEdit_tempo_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
+            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
+            // 
+            // timeEdit_tempo_limite_evento_posterior
+            // 
+            this.timeEdit_tempo_limite_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_limite_evento_posterior.Location = new System.Drawing.Point(9, 60);
+            this.timeEdit_tempo_limite_evento_posterior.Name = "timeEdit_tempo_limite_evento_posterior";
+            this.timeEdit_tempo_limite_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_limite_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_limite_evento_posterior.Size = new System.Drawing.Size(101, 20);
+            this.timeEdit_tempo_limite_evento_posterior.TabIndex = 71;
+            // 
+            // timeEdit_tempo_limite_total
+            // 
+            this.timeEdit_tempo_limite_total.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
+            this.timeEdit_tempo_limite_total.Name = "timeEdit_tempo_limite_total";
+            this.timeEdit_tempo_limite_total.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_limite_total.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_limite_total.Size = new System.Drawing.Size(67, 20);
+            this.timeEdit_tempo_limite_total.TabIndex = 7;
+            // 
             // Form_receita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1289,6 +1315,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).EndInit();
             this.contextMenuStrip_etapas_receita.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1325,6 +1352,10 @@
             this.tabPage11.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1361,7 +1392,6 @@
         private System.Windows.Forms.ComboBox comboBox_evento_anterior_tipo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox_tempo_espera_evento_anterior;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl_evento_posterior;
         private System.Windows.Forms.TabPage tabPage6;
@@ -1392,9 +1422,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBox_tipo_entrada_evento_posterior;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.TextBox textBox_tempo_limite_evento_posterior;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox_tempo_evento_posterior;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox_evento_posterior_tipo;
         private System.Windows.Forms.Label label10;
@@ -1403,7 +1431,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ComboBox comboBox_repeticao;
         private System.Windows.Forms.Label label_intervalo;
-        private System.Windows.Forms.TextBox textBox_intervalo;
         private System.Windows.Forms.TextBox textBox_vezes;
         private System.Windows.Forms.Label label_vezez;
         private System.Windows.Forms.Label label17;
@@ -1434,7 +1461,6 @@
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusDosDispositivosToolStripMenuItem;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox_tempo_limite_total;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBox_saida_emergencia;
         private System.Windows.Forms.CheckBox checkBox_saida;
@@ -1446,5 +1472,10 @@
         private System.Windows.Forms.ToolStripMenuItem descenderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarEtapaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private DevExpress.XtraEditors.TimeEdit timeEdit_intervalo;
+        private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_espera_evento_anterior;
+        private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_evento_posterior;
+        private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_evento_posterior;
+        private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_total;
     }
 }

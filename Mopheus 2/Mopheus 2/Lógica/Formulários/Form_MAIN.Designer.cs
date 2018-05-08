@@ -45,8 +45,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,7 +78,7 @@
             // 
             this.receitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.EditPage_16x_32;
             this.receitaToolStripMenuItem.Name = "receitaToolStripMenuItem";
-            this.receitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.receitaToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.receitaToolStripMenuItem.Text = "Receita";
             this.receitaToolStripMenuItem.Click += new System.EventHandler(this.receitaToolStripMenuItem_Click);
             // 
@@ -83,14 +86,14 @@
             // 
             this.lerLogsToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.DownloadFile_16x;
             this.lerLogsToolStripMenuItem.Name = "lerLogsToolStripMenuItem";
-            this.lerLogsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lerLogsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.lerLogsToolStripMenuItem.Text = "Ler Logs";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Close_16x;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -174,6 +177,27 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timeEdit1
+            // 
+            this.timeEdit1.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit1.Location = new System.Drawing.Point(357, 62);
+            this.timeEdit1.Name = "timeEdit1";
+            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit1.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit1.Size = new System.Drawing.Size(148, 20);
+            this.timeEdit1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(534, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form_MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +205,8 @@
             this.BackgroundImage = global::Mopheus_2.Properties.Resources.logo_aeph_do_brasil_back;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.timeEdit1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -197,6 +223,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +246,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem lerLogsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private DevExpress.XtraEditors.TimeEdit timeEdit1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

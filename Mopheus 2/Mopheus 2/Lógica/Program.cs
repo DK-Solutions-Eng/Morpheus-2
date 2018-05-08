@@ -17,6 +17,20 @@ namespace Mopheus_2
         [STAThread]
         static void Main()
         {
+            // Create a new object, representing the Brazilian culture.  
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
+
+            // The following line provides localization for the application's user interface.  
+            Thread.CurrentThread.CurrentUICulture = culture;
+
+            // The following line provides localization for data formats.  
+            Thread.CurrentThread.CurrentCulture = culture;
+
+            // Set this culture as the default culture for all threads in this application.  
+            // Note: The following properties are supported in the .NET Framework 4.5+ 
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Form_Splash frmSplash = new Form_Splash();

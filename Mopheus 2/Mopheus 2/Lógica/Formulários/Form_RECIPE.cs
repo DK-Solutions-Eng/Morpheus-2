@@ -45,7 +45,7 @@ namespace Mopheus_2
             label_vezez.Visible = false;
             textBox_vezes.Visible = false;
             label_intervalo.Visible = false;
-            textBox_intervalo.Visible = false;
+            timeEdit_intervalo.Visible = false;
 
             comboBox_processo.Items.Add("Enchimento");
             comboBox_processo.Items.Add("Escoamento");
@@ -93,14 +93,14 @@ namespace Mopheus_2
                 label_vezez.Visible = false;
                 textBox_vezes.Visible = false;
                 label_intervalo.Visible = false;
-                textBox_intervalo.Visible = false;
+                timeEdit_intervalo.Visible = false;
             }
             else
             {
                 label_vezez.Visible = true;
                 textBox_vezes.Visible = true;
                 label_intervalo.Visible = true;
-                textBox_intervalo.Visible = true;
+                timeEdit_intervalo.Visible = true;
             }
         }
 
@@ -173,7 +173,7 @@ namespace Mopheus_2
             textBox_endereco.Text = obj.endereco.ToString();
             comboBox_repeticao.Text = obj.repeticao;
             textBox_vezes.Text = obj.vezes.ToString();
-            textBox_intervalo.Text = obj.intervalo;
+            timeEdit_intervalo.Text = obj.intervalo;
             carregaItensReceita(obj.id);
             tabControl1.SelectedIndex = 1;
         }
@@ -319,7 +319,7 @@ namespace Mopheus_2
                 objitensreceita.produto = comboBox_produto.Text;
                 objitensreceita.rele = Convert.ToInt32(textBox_rele.Text);
                 objitensreceita.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
-                objitensreceita.tempo_espera_evento_anterior = Convert.ToDateTime(textBox_tempo_espera_evento_anterior.Text);
+                objitensreceita.tempo_espera_evento_anterior = timeEdit_tempo_espera_evento_anterior.Text;
                 objitensreceita.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
                 if(radioButton_ON_evento_anterior.Checked)
                 {
@@ -347,9 +347,9 @@ namespace Mopheus_2
                 }
                 objitensreceita.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
                 objitensreceita.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
-                objitensreceita.tempo_evento_posterior = Convert.ToDateTime(textBox_tempo_evento_posterior.Text);
-                objitensreceita.tempo_seguranca_evento_posterior = Convert.ToDateTime(textBox_tempo_limite_evento_posterior.Text);
-                objitensreceita.tempo_limite_total = Convert.ToDateTime(textBox_tempo_limite_total.Text);
+                objitensreceita.tempo_evento_posterior = timeEdit_tempo_evento_posterior.Text;
+                objitensreceita.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
+                objitensreceita.tempo_limite_total = timeEdit_tempo_limite_total.Text;
                 if(checkBox_alerta.Checked)
                 {
                     objitensreceita.alerta_emergencia = true;
@@ -397,7 +397,7 @@ namespace Mopheus_2
                 item.produto = comboBox_produto.Text;
                 item.rele = Convert.ToInt32(textBox_rele.Text);
                 item.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
-                item.tempo_espera_evento_anterior = Convert.ToDateTime(textBox_tempo_espera_evento_anterior.Text);
+                item.tempo_espera_evento_anterior = timeEdit_tempo_espera_evento_anterior.Text;
                 item.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
                 if (radioButton_ON_evento_anterior.Checked)
                 {
@@ -425,9 +425,9 @@ namespace Mopheus_2
                 }
                 item.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
                 item.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
-                item.tempo_evento_posterior = Convert.ToDateTime(textBox_tempo_evento_posterior.Text);
-                item.tempo_seguranca_evento_posterior = Convert.ToDateTime(textBox_tempo_limite_evento_posterior.Text);
-                item.tempo_limite_total = Convert.ToDateTime(textBox_tempo_limite_total.Text);
+                item.tempo_evento_posterior = timeEdit_tempo_evento_posterior.Text;
+                item.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
+                item.tempo_limite_total = timeEdit_tempo_limite_total.Text;
                 if (checkBox_alerta.Checked)
                 {
                     item.alerta_emergencia = true;
@@ -512,7 +512,7 @@ namespace Mopheus_2
             textBox_linhas.Text = "";
             comboBox_repeticao.Text = "";
             textBox_vezes.Text = "";
-            textBox_intervalo.Text = "";
+            timeEdit_intervalo.Text = "00:00:00";
             #endregion
 
             #region limpeza dos itens da receita
@@ -521,7 +521,7 @@ namespace Mopheus_2
             comboBox_produto.Text = "";
             comboBox_produto.Text = "";
             comboBox_evento_anterior_tipo.Text = "";
-            textBox_tempo_espera_evento_anterior.Text = "";
+            timeEdit_tempo_espera_evento_anterior.Text = "00:00:00";
             comboBox_tipo_entrada_evento_anterior.Text = "";
             textBox_limite_temperatura_evento_anterior.Text = "";
             comboBox_evento_posterior_tipo.Text = "";
@@ -533,9 +533,9 @@ namespace Mopheus_2
             comboBox_tipo_entrada_evento_posterior.Text = "";
             textBox_limite_temperatura_evento_posterior.Text = "";
             textBox_limite_temperatura_segurança.Text = "";
-            textBox_tempo_evento_posterior.Text = "";
-            textBox_tempo_limite_evento_posterior.Text = "";
-            textBox_tempo_limite_total.Text = "";
+            timeEdit_tempo_evento_posterior.Text = "00:00:00";
+            timeEdit_tempo_limite_evento_posterior.Text = "00:00:00";
+            timeEdit_tempo_limite_total.Text = "00:00:00";
             checkBox_alerta.Checked = false;
             checkBox_pausar.Checked = false;
             checkBox_saida.Checked = false;

@@ -194,7 +194,7 @@ namespace BLL
             obj.produto = row["produto"].ToString();
             obj.rele = Convert.ToInt32(row["rele"].ToString());
             obj.tipo_evento_anterior = row["tipo_evento_anterior"].ToString();
-            obj.tempo_espera_evento_anterior = Convert.ToDateTime(row["tempo_espera_evento_anterior"].ToString());
+            obj.tempo_espera_evento_anterior = row["tempo_espera_evento_anterior"].ToString();
             obj.entrada_evento_anterior = row["entrada_evento_anterior"].ToString();
             obj.status_entrada_digital_evento_anterior = Convert.ToBoolean(row["status_entrada_digital_evento_anterior"].ToString());
             obj.temperatura_evento_anterior = Convert.ToInt32(row["temperatura_evento_anterior"].ToString());
@@ -208,9 +208,9 @@ namespace BLL
             obj.status_entrada_digital_evento_posterior = Convert.ToBoolean(row["status_entrada_digital_evento_posterior"].ToString());
             obj.temperatura_evento_posterior = Convert.ToInt32(row["temperatura_evento_posterior"].ToString());
             obj.limite_temperatura_evento_posterior = Convert.ToInt32(row["limite_temperatura_evento_posterior"].ToString());
-            obj.tempo_evento_posterior = Convert.ToDateTime(row["tempo_evento_posterior"].ToString());
-            obj.tempo_seguranca_evento_posterior = Convert.ToDateTime(row["tempo_seguranca_evento_posterior"].ToString());
-            obj.tempo_limite_total = Convert.ToDateTime(row["tempo_limite_total"].ToString());
+            obj.tempo_evento_posterior = (row["tempo_evento_posterior"].ToString());
+            obj.tempo_seguranca_evento_posterior = (row["tempo_seguranca_evento_posterior"].ToString());
+            obj.tempo_limite_total = (row["tempo_limite_total"].ToString());
             obj.alerta_emergencia = Convert.ToBoolean(row["alerta_emergencia"].ToString());
             obj.pausar_receita = Convert.ToBoolean(row["pausar_receita"].ToString());
             obj.acionar_saida = Convert.ToBoolean(row["acionar_saida"].ToString());

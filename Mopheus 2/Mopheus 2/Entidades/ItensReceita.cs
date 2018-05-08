@@ -13,7 +13,7 @@ namespace Entidades
         public string produto { get; set; }
         public int rele { get; set; }
         public string tipo_evento_anterior { get; set; }
-        public DateTime tempo_espera_evento_anterior { get; set; }
+        public string tempo_espera_evento_anterior { get; set; }
         public string entrada_evento_anterior { get; set; }
         public bool status_entrada_digital_evento_anterior { get; set; }
         public int temperatura_evento_anterior { get; set; }
@@ -27,9 +27,9 @@ namespace Entidades
         public bool status_entrada_digital_evento_posterior { get; set; }
         public int temperatura_evento_posterior { get; set; }
         public int limite_temperatura_evento_posterior { get; set; }
-        public DateTime tempo_evento_posterior { get; set; }
-        public DateTime tempo_seguranca_evento_posterior { get; set; }
-        public DateTime tempo_limite_total { get; set; }
+        public string tempo_evento_posterior { get; set; }
+        public string tempo_seguranca_evento_posterior { get; set; }
+        public string tempo_limite_total { get; set; }
         public bool alerta_emergencia { get; set; }
         public bool pausar_receita { get; set; }
         public bool acionar_saida { get; set; }

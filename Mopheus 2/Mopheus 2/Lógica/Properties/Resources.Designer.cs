@@ -22,7 +22,7 @@ namespace Mopheus_2.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Mopheus_2.Properties {
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mopheus_2.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Mopheus_2.Properties {
         ///   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_16x {
+        public static System.Drawing.Bitmap Add_16x {
             get {
                 object obj = ResourceManager.GetObject("Add_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ASX_Edit_grey_16x {
+        public static System.Drawing.Bitmap ASX_Edit_grey_16x {
             get {
                 object obj = ResourceManager.GetObject("ASX_Edit_grey_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cancel_16x {
+        public static System.Drawing.Bitmap Cancel_16x {
             get {
                 object obj = ResourceManager.GetObject("Cancel_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Close_16x {
+        public static System.Drawing.Bitmap Close_16x {
             get {
                 object obj = ResourceManager.GetObject("Close_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Download_16x {
+        public static System.Drawing.Bitmap Download_16x {
             get {
                 object obj = ResourceManager.GetObject("Download_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DownloadFile_16x {
+        public static System.Drawing.Bitmap DownloadFile_16x {
             get {
                 object obj = ResourceManager.GetObject("DownloadFile_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EditPage_16x_32 {
+        public static System.Drawing.Bitmap EditPage_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("EditPage_16x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HelpApplication_16x_32 {
+        public static System.Drawing.Bitmap HelpApplication_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("HelpApplication_16x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap InputOutput_16x {
+        public static System.Drawing.Bitmap InputOutput_16x {
             get {
                 object obj = ResourceManager.GetObject("InputOutput_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_aeph_do_brasil {
+        public static System.Drawing.Bitmap logo_aeph_do_brasil {
             get {
                 object obj = ResourceManager.GetObject("logo-aeph-do-brasil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_aeph_do_brasil_back {
+        public static System.Drawing.Bitmap logo_aeph_do_brasil_back {
             get {
                 object obj = ResourceManager.GetObject("logo-aeph-do-brasil_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +173,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Network_16x {
+        public static System.Drawing.Bitmap Network_16x {
             get {
                 object obj = ResourceManager.GetObject("Network_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +183,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NewFile_16x {
+        public static System.Drawing.Bitmap NewFile_16x {
             get {
                 object obj = ResourceManager.GetObject("NewFile_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +193,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OpenFolder_16x {
+        public static System.Drawing.Bitmap OpenFolder_16x {
             get {
                 object obj = ResourceManager.GetObject("OpenFolder_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +203,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pause_16x {
+        public static System.Drawing.Bitmap Pause_16x {
             get {
                 object obj = ResourceManager.GetObject("Pause_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +213,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PlayVideo_16x {
+        public static System.Drawing.Bitmap PlayVideo_16x {
             get {
                 object obj = ResourceManager.GetObject("PlayVideo_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +223,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Save_16x_32 {
+        public static System.Drawing.Bitmap Save_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("Save_16x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +233,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap serial {
+        public static System.Drawing.Bitmap serial {
             get {
                 object obj = ResourceManager.GetObject("serial", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +243,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SerialPort_16x {
+        public static System.Drawing.Bitmap SerialPort_16x {
             get {
                 object obj = ResourceManager.GetObject("SerialPort_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +253,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap StatusAlert_16x {
+        public static System.Drawing.Bitmap StatusAlert_16x {
             get {
                 object obj = ResourceManager.GetObject("StatusAlert_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +263,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Stop_grey_16x {
+        public static System.Drawing.Bitmap Stop_grey_16x {
             get {
                 object obj = ResourceManager.GetObject("Stop_grey_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +273,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UIAboutBox_16x_32 {
+        public static System.Drawing.Bitmap UIAboutBox_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("UIAboutBox_16x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +283,7 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Upload_16x {
+        public static System.Drawing.Bitmap Upload_16x {
             get {
                 object obj = ResourceManager.GetObject("Upload_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

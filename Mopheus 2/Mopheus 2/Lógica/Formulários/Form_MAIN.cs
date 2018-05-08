@@ -17,6 +17,8 @@ namespace Mopheus_2
     {
         Form_CONFIG_SERIAL_PORT form_config_serial;
 
+        
+
         public Form_MAIN()
         {
             InitializeComponent();
@@ -115,6 +117,17 @@ namespace Mopheus_2
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(timeEdit1.Time.ToShortTimeString().ToString());
+            int x,hora,minuto,segundo;
+            x = Int32.Parse(timeEdit1.Text.Replace(":",""));
+            hora = Int32.Parse(timeEdit1.Text.Substring(0,2));
+
+
+
         }
     }
 }
