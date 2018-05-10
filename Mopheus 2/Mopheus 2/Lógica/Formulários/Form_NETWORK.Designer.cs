@@ -38,23 +38,23 @@
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propriedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList_rede = new System.Windows.Forms.ImageList(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox_Speed = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button_save_config = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_addr_device = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox_addr_device = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_name_device = new System.Windows.Forms.TextBox();
+            this.button_save_config = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_Speed = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView_rede
@@ -66,10 +66,9 @@
             this.treeView_rede.Name = "treeView_rede";
             this.treeView_rede.SelectedImageIndex = 0;
             this.treeView_rede.ShowNodeToolTips = true;
-            this.treeView_rede.Size = new System.Drawing.Size(250, 300);
+            this.treeView_rede.Size = new System.Drawing.Size(250, 364);
             this.treeView_rede.TabIndex = 4;
-            this.treeView_rede.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeView_rede_MouseClick);
-            this.treeView_rede.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_rede_MouseDown);
+            this.treeView_rede.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_rede_NodeMouseDoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -84,6 +83,7 @@
             // 
             // novoControlMIXToolStripMenuItem
             // 
+            this.novoControlMIXToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.clp;
             this.novoControlMIXToolStripMenuItem.Name = "novoControlMIXToolStripMenuItem";
             this.novoControlMIXToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.novoControlMIXToolStripMenuItem.Text = "Novo ControlMix";
@@ -91,6 +91,7 @@
             // 
             // novoIndicadorToolStripMenuItem
             // 
+            this.novoIndicadorToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.balanca;
             this.novoIndicadorToolStripMenuItem.Name = "novoIndicadorToolStripMenuItem";
             this.novoIndicadorToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.novoIndicadorToolStripMenuItem.Text = "Novo Indicador";
@@ -98,6 +99,7 @@
             // 
             // novaExpansãoToolStripMenuItem
             // 
+            this.novaExpansãoToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.clp;
             this.novaExpansãoToolStripMenuItem.Name = "novaExpansãoToolStripMenuItem";
             this.novaExpansãoToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.novaExpansãoToolStripMenuItem.Text = "Nova Expansão";
@@ -105,6 +107,7 @@
             // 
             // excluirToolStripMenuItem
             // 
+            this.excluirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
             this.excluirToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
@@ -112,9 +115,11 @@
             // 
             // propriedadesToolStripMenuItem
             // 
+            this.propriedadesToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Property_16x;
             this.propriedadesToolStripMenuItem.Name = "propriedadesToolStripMenuItem";
             this.propriedadesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.propriedadesToolStripMenuItem.Text = "Propriedades";
+            this.propriedadesToolStripMenuItem.Click += new System.EventHandler(this.propriedadesToolStripMenuItem_Click);
             // 
             // imageList_rede
             // 
@@ -122,15 +127,13 @@
             this.imageList_rede.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList_rede.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // menuStrip1
+            // dataGridView1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(516, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(539, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(406, 302);
+            this.dataGridView1.TabIndex = 8;
             // 
             // arquivoToolStripMenuItem
             // 
@@ -157,42 +160,51 @@
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // groupBox1
+            // menuStrip1
             // 
-            this.groupBox1.Controls.Add(this.comboBox_Speed);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button_save_config);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox_addr_device);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(268, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(242, 162);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Propriedades";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arquivoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(274, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // comboBox_Speed
+            // label1
             // 
-            this.comboBox_Speed.FormattingEnabled = true;
-            this.comboBox_Speed.Location = new System.Drawing.Point(113, 36);
-            this.comboBox_Speed.Name = "comboBox_Speed";
-            this.comboBox_Speed.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_Speed.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Endereço na Rede";
             // 
-            // label3
+            // textBox_addr_device
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Velocidade";
+            this.textBox_addr_device.Location = new System.Drawing.Point(6, 73);
+            this.textBox_addr_device.Name = "textBox_addr_device";
+            this.textBox_addr_device.Size = new System.Drawing.Size(100, 20);
+            this.textBox_addr_device.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nome do Dispositivo";
+            // 
+            // textBox_name_device
+            // 
+            this.textBox_name_device.Location = new System.Drawing.Point(6, 33);
+            this.textBox_name_device.Name = "textBox_name_device";
+            this.textBox_name_device.Size = new System.Drawing.Size(228, 20);
+            this.textBox_name_device.TabIndex = 3;
             // 
             // button_save_config
             // 
-            this.button_save_config.Location = new System.Drawing.Point(82, 119);
+            this.button_save_config.Location = new System.Drawing.Point(83, 103);
             this.button_save_config.Name = "button_save_config";
             this.button_save_config.Size = new System.Drawing.Size(75, 23);
             this.button_save_config.TabIndex = 4;
@@ -200,51 +212,44 @@
             this.button_save_config.UseVisualStyleBackColor = true;
             this.button_save_config.Click += new System.EventHandler(this.button_save_config_Click);
             // 
-            // textBox2
+            // label3
             // 
-            this.textBox2.Location = new System.Drawing.Point(7, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 20);
-            this.textBox2.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(110, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Velocidade";
             // 
-            // label2
+            // comboBox_Speed
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nome do Dispositivo";
+            this.comboBox_Speed.FormattingEnabled = true;
+            this.comboBox_Speed.Location = new System.Drawing.Point(112, 72);
+            this.comboBox_Speed.Name = "comboBox_Speed";
+            this.comboBox_Speed.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Speed.TabIndex = 6;
             // 
-            // textBox_addr_device
+            // groupBox1
             // 
-            this.textBox_addr_device.Location = new System.Drawing.Point(7, 37);
-            this.textBox_addr_device.Name = "textBox_addr_device";
-            this.textBox_addr_device.Size = new System.Drawing.Size(100, 20);
-            this.textBox_addr_device.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Endereço na Rede";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(516, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(406, 302);
-            this.dataGridView1.TabIndex = 8;
+            this.groupBox1.Controls.Add(this.comboBox_Speed);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.button_save_config);
+            this.groupBox1.Controls.Add(this.textBox_name_device);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox_addr_device);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(291, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(242, 138);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Propriedades";
             // 
             // Form_REDE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 341);
+            this.ClientSize = new System.Drawing.Size(274, 403);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -256,15 +261,15 @@
             this.MinimizeBox = false;
             this.Name = "Form_REDE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rede";
+            this.Text = "Configuração de Rede";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_REDE_FormClosing);
             this.Load += new System.EventHandler(this.Form_REDE_Load);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,18 +284,18 @@
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propriedadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novaExpansãoToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_addr_device;
+        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox_Speed;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox_addr_device;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_name_device;
         private System.Windows.Forms.Button button_save_config;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox_Speed;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

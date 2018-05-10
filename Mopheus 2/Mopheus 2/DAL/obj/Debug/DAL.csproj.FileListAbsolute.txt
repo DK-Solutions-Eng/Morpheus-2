@@ -15,3 +15,9 @@ C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\D
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.dll
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\bin\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\bin\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\DAL\obj\Debug\DAL.pdb

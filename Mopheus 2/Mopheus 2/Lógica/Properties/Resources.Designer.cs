@@ -83,6 +83,16 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap balanca {
+            get {
+                object obj = ResourceManager.GetObject("balanca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Cancel_16x {
             get {
                 object obj = ResourceManager.GetObject("Cancel_16x", resourceCulture);
@@ -96,6 +106,16 @@ namespace Mopheus_2.Properties {
         public static System.Drawing.Bitmap Close_16x {
             get {
                 object obj = ResourceManager.GetObject("Close_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap clp {
+            get {
+                object obj = ResourceManager.GetObject("clp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,16 @@ namespace Mopheus_2.Properties {
         public static System.Drawing.Bitmap PlayVideo_16x {
             get {
                 object obj = ResourceManager.GetObject("PlayVideo_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Property_16x {
+            get {
+                object obj = ResourceManager.GetObject("Property_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -50,12 +50,11 @@ namespace Entidades
 
         //public int id { get; set; }
         public string model { get; set; }
-
         public string name { get; set; }
-
         public int addr { get; set; }
-        
         public int baud_rate { get; set; }
+        public string parent { get; set; }
+        public string full_name { get; set; }
 
 
     }

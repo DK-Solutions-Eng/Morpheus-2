@@ -11,7 +11,6 @@ namespace BLL
         string table { get; set; }
         DataTable getAll(string filtro, string campopesquisa);
         T get(int? id);
-
         void update(T obj);
         void insert(T obj);
         void delete(int? id);
