@@ -123,6 +123,26 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ComponentInstallStatus_16x {
+            get {
+                object obj = ResourceManager.GetObject("ComponentInstallStatus_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap CSTest_16x {
+            get {
+                object obj = ResourceManager.GetObject("CSTest_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Download_16x {
             get {
                 object obj = ResourceManager.GetObject("Download_16x", resourceCulture);

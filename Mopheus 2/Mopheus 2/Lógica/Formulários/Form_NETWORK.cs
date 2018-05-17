@@ -57,6 +57,56 @@ namespace Mopheus_2
             root.ImageIndex = root.SelectedImageIndex = 0;
             treeView_rede.Refresh();
         }
+        private void treeView_rede_MouseDown(object sender, MouseEventArgs e)
+        {
+            TreeNode id = treeView_rede.GetNodeAt(e.X, e.Y);
+
+            switch (e.Button)
+            {
+                case System.Windows.Forms.MouseButtons.Left:
+
+                    break;
+
+                case System.Windows.Forms.MouseButtons.Right:
+                    treeView_rede.SelectedNode = id;
+
+                    if (id != null)
+                    {
+                        if (id.Text == System.Windows.Forms.SystemInformation.ComputerName)
+                        {
+                            ToolStripMenuItem addControlMIXLabel = new ToolStripMenuItem();
+                            novoControlMIXToolStripMenuItem.Visible = true;
+                            novoIndicadorToolStripMenuItem.Visible = false;
+                            novaExpansãoToolStripMenuItem.Visible = false;
+                            excluirToolStripMenuItem.Visible = false;
+                            propriedadesToolStripMenuItem.Visible = true;
+                        }
+
+                        if (id.Text.IndexOf("ControlMix") != -1)
+                        {
+                            ToolStripMenuItem addControlMIXLabel = new ToolStripMenuItem();
+                            novoControlMIXToolStripMenuItem.Visible = false;
+                            novoIndicadorToolStripMenuItem.Visible = true;
+                            novaExpansãoToolStripMenuItem.Visible = true;
+                            excluirToolStripMenuItem.Visible = true;
+                            propriedadesToolStripMenuItem.Visible = true;
+                        }
+
+                        if (id.Text.IndexOf("Indicador") != -1)
+                        {
+                            ToolStripMenuItem addControlMIXLabel = new ToolStripMenuItem();
+                            novoControlMIXToolStripMenuItem.Visible = false;
+                            novoIndicadorToolStripMenuItem.Visible = false;
+                            novaExpansãoToolStripMenuItem.Visible = false;
+                            excluirToolStripMenuItem.Visible = true;
+                            propriedadesToolStripMenuItem.Visible = true;
+                        }
+
+                    }
+                    break;
+            }
+
+        }
 
         public void novoControlMIXToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,11 +119,12 @@ namespace Mopheus_2
             treeView_rede.ExpandAll();
             treeView_rede.Refresh();
 
-            device.model = "ControlMIX";
+            device.model = "ControlMix";
+            device.type_model = "5-DI/12-RO";
             device.name = Interaction.InputBox("Insira o nome do Dispositivo!", "Nome do Dispositivo");
             newNode.Text = newNode.Text + "-" + device.name;
-            device.addr = Convert.ToInt32(Interaction.InputBox("Insira o endereço do nó!", "Endereço do Dispositivo", "0"));
             device.full_name = newNode.Text;
+            device.addr = Convert.ToInt32(Interaction.InputBox("Insira o endereço do nó!", "Endereço do Dispositivo", "0"));
             device.parent = newNode.Parent.ToString();
             device.baud_rate = 19200;
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
@@ -97,8 +148,10 @@ namespace Mopheus_2
             treeView_rede.Refresh();
 
             device.model = "Indicador";
+            device.type_model = "Matrix";
             device.name = Interaction.InputBox("Insira o nome do Dispositivo!", "Nome do Dispositivo");
             newNode.Text = newNode.Text + "-" + device.name;
+            device.full_name = newNode.Text;
             device.addr = Convert.ToInt32(Interaction.InputBox("Insira o endereço do nó!", "Endereço do Dispositivo", "0"));
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
             device.dateinsert = DateTime.Now;
@@ -114,7 +167,28 @@ namespace Mopheus_2
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            treeView_rede.SelectedNode.Remove();
+            if (treeView_rede.SelectedNode.Name != System.Windows.Forms.SystemInformation.ComputerName)
+            {
+                
+
+                DataTable dt = bll.getAll(treeView_rede.SelectedNode.Text, "full_name");
+                if (dt == null)
+                {
+                    //bll.insert(device);
+                    //dt = bll.getAll(treeView_rede.SelectedNode.Text, "name");
+                    return;
+                }
+                device = bll.get(Convert.ToInt32(dt.Rows[0]["id"].ToString()));
+
+                //textBox_addr_device.Text = device.addr.ToString();
+                //comboBox_Speed.Text = device.baud_rate.ToString();
+                //textBox_name_device.Text = device.name;
+                //comboBox_Speed.Text = device.baud_rate.ToString();
+                //treeView_rede.Refresh();
+                bll.delete(device.id);
+                treeView_rede.SelectedNode.Remove();
+            }
+            
         }
 
         private void novaExpansãoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,8 +201,10 @@ namespace Mopheus_2
             treeView_rede.Refresh();
 
             device.model = "Expansão";
+            device.type_model = "0-DI/12-RO";
             device.name = Interaction.InputBox("Insira o nome do Dispositivo!", "Nome do Dispositivo");
             newNode.Text = newNode.Text + "-" + device.name;
+            device.full_name = newNode.Text;
             device.addr = Convert.ToInt32(Interaction.InputBox("Insira o endereço do nó!", "Endereço do Dispositivo", "0"));
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
             device.dateinsert = DateTime.Now;
@@ -175,24 +251,32 @@ namespace Mopheus_2
 
         public void load_xmlfile_network()
         {
-            try
+            List<Network> list = bll.getAllCustom();
+            if (list.Count==0)
             {
-
-
-                if (System.IO.File.Exists(@"network.xml"))
-                {
-                    this.treeView_rede.Nodes.Clear();
-                    TreeViewSerializer serializer = new TreeViewSerializer();
-                    serializer.DeserializeTreeView(this.treeView_rede, @"network.xml");
-                    treeView_rede.ExpandAll();
-                }
+                return;
             }
-
-            catch (Exception erro)
+            else
             {
-                MessageBox.Show(erro.Message.ToString(), "Atenção!");
-                TreeNode root = treeView_rede.Nodes.Add(System.Windows.Forms.SystemInformation.ComputerName);
-                root.ImageIndex = root.SelectedImageIndex = 0;
+                try
+                {
+
+
+                    if (System.IO.File.Exists(@"network.xml"))
+                    {
+                        this.treeView_rede.Nodes.Clear();
+                        TreeViewSerializer serializer = new TreeViewSerializer();
+                        serializer.DeserializeTreeView(this.treeView_rede, @"network.xml");
+                        treeView_rede.ExpandAll();
+                    }
+                }
+
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message.ToString(), "Atenção!");
+                    TreeNode root = treeView_rede.Nodes.Add(System.Windows.Forms.SystemInformation.ComputerName);
+                    root.ImageIndex = root.SelectedImageIndex = 0;
+                }
             }
         }
 
@@ -221,26 +305,26 @@ namespace Mopheus_2
 
         private void treeView_rede_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (treeView_rede.SelectedNode.Text != System.Windows.Forms.SystemInformation.ComputerName)
-            {
-                DataTable dt = bll.getAll(treeView_rede.SelectedNode.Text, "full_name");
-                if (dt == null)
-                {
-                    //bll.insert(device);
-                    //dt = bll.getAll(treeView_rede.SelectedNode.Text, "name");
-                    return;
-                }
-                device = bll.get(Convert.ToInt32(dt.Rows[0]["id"].ToString()));
+            //if (treeView_rede.SelectedNode.Text != System.Windows.Forms.SystemInformation.ComputerName)
+            //{
+            //    DataTable dt = bll.getAll(treeView_rede.SelectedNode.Text, "full_name");
+            //    if (dt == null)
+            //    {
+            //        //bll.insert(device);
+            //        //dt = bll.getAll(treeView_rede.SelectedNode.Text, "name");
+            //        return;
+            //    }
+            //    device = bll.get(Convert.ToInt32(dt.Rows[0]["id"].ToString()));
 
-                textBox_addr_device.Text = device.addr.ToString();
-                comboBox_Speed.Text = device.baud_rate.ToString();
-                textBox_name_device.Text = device.name;
-                comboBox_Speed.Text = device.baud_rate.ToString();
-                treeView_rede.Refresh();
-            }
+            //    textBox_addr_device.Text = device.addr.ToString();
+            //    comboBox_Speed.Text = device.baud_rate.ToString();
+            //    textBox_name_device.Text = device.name;
+            //    comboBox_Speed.Text = device.baud_rate.ToString();
+            //    treeView_rede.Refresh();
+            //}
 
-            DEVICE_PROPERTIES _PROPERTIES = new DEVICE_PROPERTIES(device.name, device.model, device.baud_rate.ToString(), device.addr);
-            _PROPERTIES.ShowDialog();
+            //DEVICE_PROPERTIES _PROPERTIES = new DEVICE_PROPERTIES(device.name, device.model, device.baud_rate.ToString(), device.addr);
+            //_PROPERTIES.ShowDialog();
 
         }
 
@@ -264,8 +348,13 @@ namespace Mopheus_2
                 treeView_rede.Refresh();
             }
 
-            DEVICE_PROPERTIES _PROPERTIES = new DEVICE_PROPERTIES(device.name, device.model, device.baud_rate.ToString(), device.addr);
+            DEVICE_PROPERTIES _PROPERTIES = new DEVICE_PROPERTIES(device.id,device.name,device.model,device.type_model,device.full_name,device.addr,device.baud_rate,device.parent,device.dateinsert,device.dateupdate);
             _PROPERTIES.ShowDialog();
+        }
+
+        private void treeView_rede_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

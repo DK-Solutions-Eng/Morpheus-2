@@ -36,6 +36,10 @@ namespace BLL
             obj.name = row["name"].ToString();
             obj.baud_rate = Convert.ToInt32(row["baud_rate"].ToString());
             obj.addr = Convert.ToInt32(row["addr"].ToString());
+            obj.full_name= row["full_name"].ToString();
+            obj.parent = row["parent"].ToString();
+            obj.model= row["model"].ToString();
+            obj.type_model = row["type_model"].ToString();
             if (row["dateinsert"].ToString() == "")
             {
                 obj.dateinsert = null;

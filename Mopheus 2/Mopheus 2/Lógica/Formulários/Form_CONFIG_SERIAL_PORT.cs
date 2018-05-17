@@ -22,6 +22,7 @@ namespace Mopheus_2
         public Form_CONFIG_SERIAL_PORT()
         {
             InitializeComponent();
+            timerCOM.Enabled = true;
         }
 
         private void button_conectar_Click(object sender, EventArgs e)
@@ -35,17 +36,15 @@ namespace Mopheus_2
                 }
                 else
                 {
-                    button_conectar.Text = "DESCONECTAR";
-
                     if (string.IsNullOrEmpty(comboBox_porta_arduino.Text))
                     {
-                        MessageBox.Show("Selecione a Porta Serial");
+                        MessageBox.Show("Selecione a Porta Serial","Atenção!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         return;
                     }
 
                     if (string.IsNullOrEmpty(comboBox_Speed.Text))
                     {
-                        MessageBox.Show("Selecione a Velocidade");
+                        MessageBox.Show("Selecione a Velocidade", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
@@ -61,10 +60,13 @@ namespace Mopheus_2
                     Serial_Comumnication.serial_port.DataBits = 8;
                     Serial_Comumnication.serial_port.StopBits = System.IO.Ports.StopBits.Two;
                     Serial_Comumnication.serial_port.Parity = System.IO.Ports.Parity.None;
-
+              
                     Serial_Comumnication.serial_port.Open();
-
-                    MessageBox.Show("Porta serial aberta com sucesso!");
+                    if (Serial_Comumnication.serial_port.IsOpen)
+                    {
+                        button_conectar.Text = "DESCONECTAR";
+                        MessageBox.Show("Porta serial aberta com sucesso!");
+                    }
                 }
             }
             catch (Exception ex)
@@ -87,6 +89,8 @@ namespace Mopheus_2
                 }
                 else
                 {
+                    comboBox_porta_arduino.SelectedIndex = 0;
+
                     comboBox_Speed.Items.Add(1200);
                     comboBox_Speed.Items.Add(2400);
                     comboBox_Speed.Items.Add(4800);
@@ -186,6 +190,53 @@ namespace Mopheus_2
             {
                 MessageBox.Show(erro.Message.ToString(), "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            atualizaListaCOMs();
+        }
+
+        private void atualizaListaCOMs()
+        {
+            int i;
+            bool quantDiferente; //flag para sinalizar que a quantidade de portas mudou
+
+            i = 0;
+            quantDiferente = false;
+
+            //se a quantidade de portas mudou
+            if (comboBox_porta_arduino.Items.Count == SerialPort.GetPortNames().Length)
+            {
+                foreach (string s in SerialPort.GetPortNames())
+                {
+                    if (comboBox_porta_arduino.Items[i++].Equals(s) == false)
+                    {
+                        quantDiferente = true;
+                    }
+                }
+            }
+            else
+            {
+                quantDiferente = true;
+            }
+
+            //Se não foi detectado diferença
+            if (quantDiferente == false)
+            {
+                return;                     //retorna
+            }
+
+            //limpa comboBox
+            comboBox_porta_arduino.Items.Clear();
+
+            //adiciona todas as COM diponíveis na lista
+            foreach (string s in SerialPort.GetPortNames())
+            {
+                comboBox_porta_arduino.Items.Add(s);
+            }
+            //seleciona a primeira posição da lista
+            comboBox_porta_arduino.SelectedIndex = 0;
         }
     }
 }

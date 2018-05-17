@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CONFIG_SERIAL_PORT));
             this.button_conectar = new System.Windows.Forms.Button();
             this.comboBox_porta_arduino = new System.Windows.Forms.ComboBox();
@@ -44,15 +45,14 @@
             this.checkBox_CR_LF = new System.Windows.Forms.CheckBox();
             this.button_enviar = new System.Windows.Forms.Button();
             this.checkBox_limpar = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.timerCOM = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_conectar
             // 
-            this.button_conectar.Location = new System.Drawing.Point(9, 99);
+            this.button_conectar.Location = new System.Drawing.Point(268, 99);
             this.button_conectar.Name = "button_conectar";
             this.button_conectar.Size = new System.Drawing.Size(100, 37);
             this.button_conectar.TabIndex = 5;
@@ -63,7 +63,7 @@
             // comboBox_porta_arduino
             // 
             this.comboBox_porta_arduino.FormattingEnabled = true;
-            this.comboBox_porta_arduino.Location = new System.Drawing.Point(9, 32);
+            this.comboBox_porta_arduino.Location = new System.Drawing.Point(268, 32);
             this.comboBox_porta_arduino.Name = "comboBox_porta_arduino";
             this.comboBox_porta_arduino.Size = new System.Drawing.Size(100, 21);
             this.comboBox_porta_arduino.TabIndex = 3;
@@ -71,7 +71,7 @@
             // comboBox_Speed
             // 
             this.comboBox_Speed.FormattingEnabled = true;
-            this.comboBox_Speed.Location = new System.Drawing.Point(9, 72);
+            this.comboBox_Speed.Location = new System.Drawing.Point(268, 72);
             this.comboBox_Speed.Name = "comboBox_Speed";
             this.comboBox_Speed.Size = new System.Drawing.Size(100, 21);
             this.comboBox_Speed.TabIndex = 4;
@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(265, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 56);
+            this.label2.Location = new System.Drawing.Point(265, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 4;
@@ -193,25 +193,16 @@
             this.checkBox_limpar.Text = "Limpar ao enviar";
             this.checkBox_limpar.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button_conectar);
-            this.groupBox1.Controls.Add(this.comboBox_porta_arduino);
-            this.groupBox1.Controls.Add(this.comboBox_Speed);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 146);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Configuração";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.button_conectar);
             this.groupBox2.Controls.Add(this.button_clear_rx);
+            this.groupBox2.Controls.Add(this.comboBox_porta_arduino);
             this.groupBox2.Controls.Add(this.textBox_rx);
+            this.groupBox2.Controls.Add(this.comboBox_Speed);
             this.groupBox2.Controls.Add(this.checkBox_limpar);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox_tx);
             this.groupBox2.Controls.Add(this.button_enviar);
             this.groupBox2.Controls.Add(this.label3);
@@ -219,20 +210,24 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.checkBox_continuous);
             this.groupBox2.Controls.Add(this.button_clear_tx);
-            this.groupBox2.Location = new System.Drawing.Point(275, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(377, 388);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Testes";
             // 
+            // timerCOM
+            // 
+            this.timerCOM.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form_CONFIG_SERIAL_PORT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 409);
+            this.ClientSize = new System.Drawing.Size(403, 409);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -240,8 +235,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comunicação";
             this.Load += new System.EventHandler(this.Form_CONFIG_SERIAL_PORT_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -265,7 +258,7 @@
         private System.Windows.Forms.CheckBox checkBox_CR_LF;
         private System.Windows.Forms.Button button_enviar;
         private System.Windows.Forms.CheckBox checkBox_limpar;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Timer timerCOM;
     }
 }

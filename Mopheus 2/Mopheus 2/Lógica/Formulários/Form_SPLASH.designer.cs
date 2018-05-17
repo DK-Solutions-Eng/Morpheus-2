@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 118);
+            this.ClientSize = new System.Drawing.Size(523, 120);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Splash";
@@ -55,6 +55,7 @@
             this.Text = "Splash";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Black;
+            this.Load += new System.EventHandler(this.Form_Splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,7 +18,8 @@ namespace BLL
         public List<Rele> getCustomListRele()
         {
             DAOGeral daogeral = new DAOGeral();
-            DataTable dt = daogeral.executaComRetorno("SELECT ID,CODIGO,(CODIGO + '-' + NOME) AS NOME,TIPO,DATEINSERT,DATEUPDATE FROM " + table + " ORDER BY ID");
+            //DataTable dt = daogeral.executaComRetorno("SELECT ID,CODIGO,(CODIGO + '-' + NOME) AS NOME,TIPO,DATEINSERT,DATEUPDATE FROM " + table + " ORDER BY ID");
+            DataTable dt = daogeral.executaComRetorno("SELECT * FROM " + table);
             List<Rele> list = new List<Rele>();
             if (dt.Rows.Count > 0)
             {
@@ -51,7 +52,7 @@ namespace BLL
         public override DataTable getAll(string filtro, string campopesquisa)
         {
             DAOGeral daogeral = new DAOGeral();
-            DataTable dt = daogeral.executaComRetorno("SELECT TABLEX.ID,TABLEX.CODIGO,TABLEX.NOME,TIPO.NOME AS TIPO FROM " + table + " TABLEX LEFT JOIN TIPORELE TIPO ON TABLEX.TIPO = TIPO.ID " + (filtro != "" ? " WHERE " + campopesquisa + " LIKE '" + filtro + "%'" : "") + " ORDER BY ID");
+            DataTable dt = daogeral.executaComRetorno("SELECT * FROM " + table + (filtro != "" ? " WHERE " + campopesquisa + " LIKE '" + filtro + "%'" : "") + " ORDER BY ID");
             if (dt.Rows.Count > 0)
             {
                 return dt;
@@ -62,10 +63,13 @@ namespace BLL
         {
             Rele obj = new Rele();
             obj.id = Convert.ToInt32(row["id"].ToString());
-            obj.codigo = row["codigo"].ToString();
-            obj.nome = row["nome"].ToString();
-            obj.tipo = Convert.ToInt32(row["tipo"].ToString());
-            if(row["dateinsert"].ToString() == "")
+            obj.IO = (row["IO"].ToString());
+            obj.descricao = row["descricao"].ToString();
+            obj.tipo = row["tipo"].ToString();
+            obj.device = row["device"].ToString();
+            obj.funcao = row["funcao"].ToString();
+            obj.parent = row["parent"].ToString();
+            if (row["dateinsert"].ToString() == "")
             {
                 obj.dateinsert = null;
             }

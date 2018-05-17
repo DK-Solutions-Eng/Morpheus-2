@@ -39,17 +39,18 @@
             this.comunicaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaESaídasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matériaPrimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
-            this.button1 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.statusDosDispositivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -69,16 +70,19 @@
             this.configuraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.receitaToolStripMenuItem,
             this.lerLogsToolStripMenuItem,
+            this.statusDosDispositivosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
-            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.configuraçãoToolStripMenuItem.Text = "Editar";
+            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.configuraçãoToolStripMenuItem.Text = "Exibir";
             // 
             // receitaToolStripMenuItem
             // 
             this.receitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.EditPage_16x_32;
             this.receitaToolStripMenuItem.Name = "receitaToolStripMenuItem";
-            this.receitaToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.receitaToolStripMenuItem.ShortcutKeyDisplayString = "F2";
+            this.receitaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.receitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.receitaToolStripMenuItem.Text = "Receita";
             this.receitaToolStripMenuItem.Click += new System.EventHandler(this.receitaToolStripMenuItem_Click);
             // 
@@ -86,14 +90,19 @@
             // 
             this.lerLogsToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.DownloadFile_16x;
             this.lerLogsToolStripMenuItem.Name = "lerLogsToolStripMenuItem";
-            this.lerLogsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.lerLogsToolStripMenuItem.Text = "Ler Logs";
+            this.lerLogsToolStripMenuItem.ShortcutKeyDisplayString = "F3";
+            this.lerLogsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.lerLogsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lerLogsToolStripMenuItem.Text = "Logs";
+            this.lerLogsToolStripMenuItem.Click += new System.EventHandler(this.lerLogsToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Close_16x;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.sairToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
+            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -102,7 +111,9 @@
             this.configuraçãoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.comunicaçãoToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.entradaESaídasToolStripMenuItem});
+            this.entradaESaídasToolStripMenuItem,
+            this.matériaPrimaToolStripMenuItem,
+            this.fornecedoresToolStripMenuItem});
             this.configuraçãoToolStripMenuItem1.Name = "configuraçãoToolStripMenuItem1";
             this.configuraçãoToolStripMenuItem1.Size = new System.Drawing.Size(91, 20);
             this.configuraçãoToolStripMenuItem1.Text = "Configuração";
@@ -111,7 +122,9 @@
             // 
             this.comunicaçãoToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.SerialPort_16x;
             this.comunicaçãoToolStripMenuItem.Name = "comunicaçãoToolStripMenuItem";
-            this.comunicaçãoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.comunicaçãoToolStripMenuItem.ShortcutKeyDisplayString = "F5";
+            this.comunicaçãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.comunicaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.comunicaçãoToolStripMenuItem.Text = "Comunicação";
             this.comunicaçãoToolStripMenuItem.Click += new System.EventHandler(this.comunicaçãoToolStripMenuItem_Click);
             // 
@@ -119,7 +132,9 @@
             // 
             this.toolStripMenuItem1.Image = global::Mopheus_2.Properties.Resources.Network_16x;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem1.ShortcutKeyDisplayString = "F6";
+            this.toolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F6;
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Rede";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -127,9 +142,31 @@
             // 
             this.entradaESaídasToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.InputOutput_16x;
             this.entradaESaídasToolStripMenuItem.Name = "entradaESaídasToolStripMenuItem";
-            this.entradaESaídasToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.entradaESaídasToolStripMenuItem.ShortcutKeyDisplayString = "F7";
+            this.entradaESaídasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
+            this.entradaESaídasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entradaESaídasToolStripMenuItem.Text = "Entrada e Saídas";
             this.entradaESaídasToolStripMenuItem.Click += new System.EventHandler(this.entradaESaídasToolStripMenuItem_Click);
+            // 
+            // matériaPrimaToolStripMenuItem
+            // 
+            this.matériaPrimaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.CSTest_16x;
+            this.matériaPrimaToolStripMenuItem.Name = "matériaPrimaToolStripMenuItem";
+            this.matériaPrimaToolStripMenuItem.ShortcutKeyDisplayString = "F8";
+            this.matériaPrimaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
+            this.matériaPrimaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matériaPrimaToolStripMenuItem.Text = "Matéria Prima";
+            this.matériaPrimaToolStripMenuItem.Click += new System.EventHandler(this.matériaPrimaToolStripMenuItem_Click);
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.ComponentInstallStatus_16x;
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.ShortcutKeyDisplayString = "F9";
+            this.fornecedoresToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -144,7 +181,9 @@
             // 
             this.helpToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.HelpApplication_16x_32;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.helpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
+            this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -152,7 +191,7 @@
             // 
             this.sobreToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.UIAboutBox_16x_32;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -177,26 +216,19 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timeEdit1
+            // notifyIcon1
             // 
-            this.timeEdit1.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(357, 62);
-            this.timeEdit1.Name = "timeEdit1";
-            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit1.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit1.Size = new System.Drawing.Size(148, 20);
-            this.timeEdit1.TabIndex = 2;
+            this.notifyIcon1.BalloonTipTitle = "Morpheus 2";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Morpheus 2";
+            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
-            // button1
+            // statusDosDispositivosToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(534, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 36);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.statusDosDispositivosToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.StatusAlert_16x;
+            this.statusDosDispositivosToolStripMenuItem.Name = "statusDosDispositivosToolStripMenuItem";
+            this.statusDosDispositivosToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.statusDosDispositivosToolStripMenuItem.Text = "Status dos Dispositivos";
             // 
             // Form_MAIN
             // 
@@ -205,13 +237,12 @@
             this.BackgroundImage = global::Mopheus_2.Properties.Resources.logo_aeph_do_brasil_back;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.timeEdit1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_MAIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -219,11 +250,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_PRINCIPAL_FormClosing);
             this.Load += new System.EventHandler(this.Form_PRINCIPAL_Load);
+            this.Resize += new System.EventHandler(this.Form_MAIN_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +277,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem lerLogsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private DevExpress.XtraEditors.TimeEdit timeEdit1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem matériaPrimaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripMenuItem statusDosDispositivosToolStripMenuItem;
     }
 }
 

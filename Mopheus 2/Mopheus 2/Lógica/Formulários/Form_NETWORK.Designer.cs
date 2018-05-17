@@ -69,6 +69,8 @@
             this.treeView_rede.Size = new System.Drawing.Size(250, 364);
             this.treeView_rede.TabIndex = 4;
             this.treeView_rede.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_rede_NodeMouseDoubleClick);
+            this.treeView_rede.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeView_rede_MouseClick);
+            this.treeView_rede.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_rede_MouseDown);
             // 
             // contextMenuStrip1
             // 

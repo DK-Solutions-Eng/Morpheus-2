@@ -170,3 +170,5 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraNavBar.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\ru\DevExpress.XtraNavBar.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.DEVICE_PROPERTIES.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MATERIA_PRIMA.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_FORNECEDOR.resources

@@ -18,43 +18,14 @@ namespace Entidades
         {
 
         }
-        //public int addr
-        //{
-        //    get { return ADDR; }
-        //    set { ADDR = value; }
-        //}
 
-        //public int baud_rate
-        //{
-        //    get { return BAUD_RATE; }
-        //    set { BAUD_RATE = value; }
-        //}
-
-        //public string model
-        //{
-        //    get { return MODEL; }
-        //    set { MODEL = value; }
-        //}
-
-        //public string name
-        //{
-        //    get { return NAME; }
-        //    set { NAME = value; }
-        //}
-
-        //public int id
-        //{
-        //    get { return ID; }
-        //    set { ID = value; }
-        //}
-
-        //public int id { get; set; }
         public string model { get; set; }
         public string name { get; set; }
         public int addr { get; set; }
         public int baud_rate { get; set; }
         public string parent { get; set; }
         public string full_name { get; set; }
+        public string type_model { get; set; }
 
 
     }

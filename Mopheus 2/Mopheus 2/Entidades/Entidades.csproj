@@ -48,9 +48,11 @@
     <Compile Include="Base.cs" />
     <Compile Include="Comando.cs" />
     <Compile Include="Configuracao.cs" />
+    <Compile Include="Fornecedor.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="ItensReceita.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Materia_Prima.cs" />
     <Compile Include="Network.cs" />
     <Compile Include="Receita.cs" />
     <Compile Include="TipoComando.cs" />

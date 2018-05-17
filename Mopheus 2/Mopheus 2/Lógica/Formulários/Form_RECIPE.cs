@@ -23,8 +23,12 @@ namespace Mopheus_2
         Receita obj;
         ItensReceita objitensreceita;
         ItensReceitaBLL bllitensreceita = new ItensReceitaBLL("ItensReceita");
-        ComandoBLL bllcomando = new ComandoBLL("Comando");
-        ReleBLL bllrele = new ReleBLL("Rele");
+
+        ReleBLL relebll = new ReleBLL("Rele");
+        Rele rele = new Rele();
+
+        Network network = new Network();
+        NetworkBLL netbll = new NetworkBLL("Network");
 
         public Form_receita()
         {
@@ -49,6 +53,7 @@ namespace Mopheus_2
 
             comboBox_processo.Items.Add("Enchimento");
             comboBox_processo.Items.Add("Escoamento");
+            comboBox_processo.Items.Add("N/A");
 
             comboBox_evento_anterior_tipo.Items.Add("Tempo");
             comboBox_evento_anterior_tipo.Items.Add("Entrada");
@@ -59,6 +64,17 @@ namespace Mopheus_2
             comboBox_evento_posterior_tipo.Items.Add("Tempo");
             comboBox_evento_posterior_tipo.SelectedIndex = 0;
 
+            List<Network> list = netbll.getAllCustom();
+            if (list != null)
+            {
+                foreach (Network item in list)
+                {
+                    if (item.model == "ControlMix")
+                    {
+                        comboBox_device.Items.Add(item.full_name);
+                    }
+                }
+            }
         }
 
         private void comboBox_evento_posterior_tipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -579,6 +595,32 @@ namespace Mopheus_2
             {
 
             }
+        }
+
+        private void comboBox_device_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox_produto.Items.Clear();
+
+            List<Rele> list = relebll.getCustomListRele();
+
+            List<Network> listnet = netbll.getAllCustom();
+            if (list != null)
+            {
+                foreach (Rele item in list)
+                {
+                    if (item.device == comboBox_device.Text||item.parent=="TreeNode: "+comboBox_device.Text)
+                    {
+                        comboBox_produto.Items.Add(item.descricao);
+                        
+                    }
+                }
+            }
+
+        }
+
+        private void enviarReceitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

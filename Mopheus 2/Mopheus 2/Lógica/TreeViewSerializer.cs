@@ -18,6 +18,7 @@ namespace Mopheus_2
         private const string XmlNodeTextAtt = "text";
         private const string XmlNodeTagAtt = "tag";
         private const string XmlNodeImageIndexAtt = "imageindex";
+        private const string XmlNodeSelectedImageIndex = "selectedimageindex";
 
         public TreeViewSerializer()
         {
@@ -53,6 +54,7 @@ namespace Mopheus_2
                 textWriter.WriteStartElement(XmlNodeTag);
                 textWriter.WriteAttributeString(XmlNodeTextAtt, node.Text);
                 textWriter.WriteAttributeString(XmlNodeImageIndexAtt, node.ImageIndex.ToString());
+                textWriter.WriteAttributeString(XmlNodeSelectedImageIndex, node.SelectedImageIndex.ToString());
                 if (node.Tag != null)
                     textWriter.WriteAttributeString(XmlNodeTagAtt, node.Tag.ToString());
 
@@ -164,6 +166,10 @@ namespace Mopheus_2
             else if (propertyName == XmlNodeTagAtt)
             {
                 node.Tag = value;
+            }
+            else if (propertyName==XmlNodeSelectedImageIndex)
+            {
+                node.SelectedImageIndex = int.Parse(value);
             }
         }
 

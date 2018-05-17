@@ -35,6 +35,7 @@
             this.novaReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.executarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_receitas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.timeEdit_intervalo = new DevExpress.XtraEditors.TimeEdit();
             this.dataGridView_itens_receita = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip_etapas_receita = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.novaEtapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +69,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl_evento_anterior = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -113,11 +114,14 @@
             this.label23 = new System.Windows.Forms.Label();
             this.comboBox_tipo_entrada_evento_posterior = new System.Windows.Forms.ComboBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.timeEdit_tempo_limite_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
+            this.timeEdit_tempo_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
             this.label26 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox_evento_posterior_tipo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.timeEdit_tempo_limite_total = new DevExpress.XtraEditors.TimeEdit();
             this.comboBox_saida_emergencia = new System.Windows.Forms.ComboBox();
             this.checkBox_saida = new System.Windows.Forms.CheckBox();
             this.checkBox_pausar = new System.Windows.Forms.CheckBox();
@@ -125,6 +129,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timeEdit_intervalo = new DevExpress.XtraEditors.TimeEdit();
             this.label32 = new System.Windows.Forms.Label();
             this.comboBox_repeticao = new System.Windows.Forms.ComboBox();
             this.label_intervalo = new System.Windows.Forms.Label();
@@ -140,16 +145,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_id = new System.Windows.Forms.TextBox();
-            this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit_tempo_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit_tempo_limite_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit_tempo_limite_total = new DevExpress.XtraEditors.TimeEdit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).BeginInit();
             this.contextMenuStrip_etapas_receita.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,6 +158,7 @@
             this.tabPage4.SuspendLayout();
             this.tabControl_evento_anterior.SuspendLayout();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).BeginInit();
             this.tabPage14.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage15.SuspendLayout();
@@ -170,12 +171,12 @@
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).BeginInit();
+            this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -195,16 +196,19 @@
             this.receitasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novaReceitaToolStripMenuItem,
             this.carregarToolStripMenuItem,
-            this.salvarToolStripMenuItem});
+            this.salvarToolStripMenuItem,
+            this.imprimirToolStripMenuItem});
             this.receitasToolStripMenuItem.Name = "receitasToolStripMenuItem";
-            this.receitasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.receitasToolStripMenuItem.Text = "Receitas";
+            this.receitasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.receitasToolStripMenuItem.Text = "Arquivo";
             // 
             // novaReceitaToolStripMenuItem
             // 
             this.novaReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.NewFile_16x;
             this.novaReceitaToolStripMenuItem.Name = "novaReceitaToolStripMenuItem";
-            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.novaReceitaToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N";
+            this.novaReceitaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.novaReceitaToolStripMenuItem.Text = "Nova Receita";
             this.novaReceitaToolStripMenuItem.Click += new System.EventHandler(this.novaReceitaToolStripMenuItem_Click);
             // 
@@ -212,16 +216,25 @@
             // 
             this.carregarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.OpenFolder_16x;
             this.carregarToolStripMenuItem.Name = "carregarToolStripMenuItem";
-            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.carregarToolStripMenuItem.Text = "Carregar";
+            this.carregarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.carregarToolStripMenuItem.Text = "Abrir";
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Save_16x_32;
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.salvarToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.salvarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // comandosToolStripMenuItem
             // 
@@ -238,28 +251,29 @@
             // 
             this.enviarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Upload_16x;
             this.enviarReceitaToolStripMenuItem.Name = "enviarReceitaToolStripMenuItem";
-            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enviarReceitaToolStripMenuItem.Text = "Enviar Receita";
+            this.enviarReceitaToolStripMenuItem.Click += new System.EventHandler(this.enviarReceitaToolStripMenuItem_Click);
             // 
             // executarReceitaToolStripMenuItem
             // 
             this.executarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
             this.executarReceitaToolStripMenuItem.Name = "executarReceitaToolStripMenuItem";
-            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.executarReceitaToolStripMenuItem.Text = "Executar Receita";
             // 
             // pausarReceitaToolStripMenuItem
             // 
             this.pausarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
             this.pausarReceitaToolStripMenuItem.Name = "pausarReceitaToolStripMenuItem";
-            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pausarReceitaToolStripMenuItem.Text = "Pausar Receita";
             // 
             // pararReceitaToolStripMenuItem
             // 
             this.pararReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
             this.pararReceitaToolStripMenuItem.Name = "pararReceitaToolStripMenuItem";
-            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pararReceitaToolStripMenuItem.Text = "Parar Receita";
             // 
             // visualizarToolStripMenuItem
@@ -331,17 +345,6 @@
             this.tabPage2.Size = new System.Drawing.Size(978, 596);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Receita";
-            // 
-            // timeEdit_intervalo
-            // 
-            this.timeEdit_intervalo.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_intervalo.Location = new System.Drawing.Point(842, 33);
-            this.timeEdit_intervalo.Name = "timeEdit_intervalo";
-            this.timeEdit_intervalo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_intervalo.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_intervalo.Size = new System.Drawing.Size(112, 20);
-            this.timeEdit_intervalo.TabIndex = 18;
             // 
             // dataGridView_itens_receita
             // 
@@ -491,9 +494,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(388, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(186, 13);
             this.label2.TabIndex = 34;
-            this.label2.Text = "Produto";
+            this.label2.Text = "Produto/Acionamento/Sensoriamento";
             // 
             // label5
             // 
@@ -547,6 +550,17 @@
             this.tabPage13.Size = new System.Drawing.Size(563, 144);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Tempo";
+            // 
+            // timeEdit_tempo_espera_evento_anterior
+            // 
+            this.timeEdit_tempo_espera_evento_anterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 19);
+            this.timeEdit_tempo_espera_evento_anterior.Name = "timeEdit_tempo_espera_evento_anterior";
+            this.timeEdit_tempo_espera_evento_anterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(88, 20);
+            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
             // 
             // label8
             // 
@@ -987,6 +1001,28 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Tempo";
             // 
+            // timeEdit_tempo_limite_evento_posterior
+            // 
+            this.timeEdit_tempo_limite_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_limite_evento_posterior.Location = new System.Drawing.Point(9, 60);
+            this.timeEdit_tempo_limite_evento_posterior.Name = "timeEdit_tempo_limite_evento_posterior";
+            this.timeEdit_tempo_limite_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_limite_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_limite_evento_posterior.Size = new System.Drawing.Size(101, 20);
+            this.timeEdit_tempo_limite_evento_posterior.TabIndex = 71;
+            // 
+            // timeEdit_tempo_evento_posterior
+            // 
+            this.timeEdit_tempo_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_evento_posterior.Location = new System.Drawing.Point(9, 21);
+            this.timeEdit_tempo_evento_posterior.Name = "timeEdit_tempo_evento_posterior";
+            this.timeEdit_tempo_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
+            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1040,6 +1076,17 @@
             this.tabPage11.Size = new System.Drawing.Size(702, 185);
             this.tabPage11.TabIndex = 3;
             this.tabPage11.Text = "Segurança";
+            // 
+            // timeEdit_tempo_limite_total
+            // 
+            this.timeEdit_tempo_limite_total.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
+            this.timeEdit_tempo_limite_total.Name = "timeEdit_tempo_limite_total";
+            this.timeEdit_tempo_limite_total.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_limite_total.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_limite_total.Size = new System.Drawing.Size(67, 20);
+            this.timeEdit_tempo_limite_total.TabIndex = 7;
             // 
             // comboBox_saida_emergencia
             // 
@@ -1123,6 +1170,17 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações da Receita";
+            // 
+            // timeEdit_intervalo
+            // 
+            this.timeEdit_intervalo.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_intervalo.Location = new System.Drawing.Point(842, 33);
+            this.timeEdit_intervalo.Name = "timeEdit_intervalo";
+            this.timeEdit_intervalo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_intervalo.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_intervalo.Size = new System.Drawing.Size(112, 20);
+            this.timeEdit_intervalo.TabIndex = 18;
             // 
             // label32
             // 
@@ -1217,6 +1275,7 @@
             this.comboBox_device.Name = "comboBox_device";
             this.comboBox_device.Size = new System.Drawing.Size(150, 21);
             this.comboBox_device.TabIndex = 11;
+            this.comboBox_device.SelectedIndexChanged += new System.EventHandler(this.comboBox_device_SelectedIndexChanged);
             // 
             // textBox_nome_receita
             // 
@@ -1251,50 +1310,6 @@
             this.textBox_id.Size = new System.Drawing.Size(55, 20);
             this.textBox_id.TabIndex = 8;
             // 
-            // timeEdit_tempo_espera_evento_anterior
-            // 
-            this.timeEdit_tempo_espera_evento_anterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 19);
-            this.timeEdit_tempo_espera_evento_anterior.Name = "timeEdit_tempo_espera_evento_anterior";
-            this.timeEdit_tempo_espera_evento_anterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(88, 20);
-            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
-            // 
-            // timeEdit_tempo_evento_posterior
-            // 
-            this.timeEdit_tempo_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_evento_posterior.Location = new System.Drawing.Point(9, 21);
-            this.timeEdit_tempo_evento_posterior.Name = "timeEdit_tempo_evento_posterior";
-            this.timeEdit_tempo_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
-            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
-            // 
-            // timeEdit_tempo_limite_evento_posterior
-            // 
-            this.timeEdit_tempo_limite_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_limite_evento_posterior.Location = new System.Drawing.Point(9, 60);
-            this.timeEdit_tempo_limite_evento_posterior.Name = "timeEdit_tempo_limite_evento_posterior";
-            this.timeEdit_tempo_limite_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_limite_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_limite_evento_posterior.Size = new System.Drawing.Size(101, 20);
-            this.timeEdit_tempo_limite_evento_posterior.TabIndex = 71;
-            // 
-            // timeEdit_tempo_limite_total
-            // 
-            this.timeEdit_tempo_limite_total.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
-            this.timeEdit_tempo_limite_total.Name = "timeEdit_tempo_limite_total";
-            this.timeEdit_tempo_limite_total.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_limite_total.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_limite_total.Size = new System.Drawing.Size(67, 20);
-            this.timeEdit_tempo_limite_total.TabIndex = 7;
-            // 
             // Form_receita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1315,7 +1330,6 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).EndInit();
             this.contextMenuStrip_etapas_receita.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -1327,6 +1341,7 @@
             this.tabControl_evento_anterior.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             this.tabControl4.ResumeLayout(false);
@@ -1348,14 +1363,14 @@
             this.tabPage10.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).EndInit();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_intervalo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1477,5 +1492,6 @@
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_evento_posterior;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_evento_posterior;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_total;
+        private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
     }
 }

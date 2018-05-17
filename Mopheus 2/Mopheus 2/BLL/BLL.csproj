@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracaoBLL.cs" />
+    <Compile Include="FornecedorBLL.cs" />
     <Compile Include="ItensReceitaBLL.cs" />
+    <Compile Include="Materia_PrimaBLL.cs" />
     <Compile Include="NetworkBLL.cs" />
     <Compile Include="ReceitaBLL.cs" />
     <Compile Include="TipoReleBLL.cs" />

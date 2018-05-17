@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Entidades
 {
-    class Global
+    public static class Global
     {
         public static bool serial_port_status { get; set; }
+
+        public static bool god_mode { get; set; }
     }
 }

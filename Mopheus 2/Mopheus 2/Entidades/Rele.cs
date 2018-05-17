@@ -8,8 +8,11 @@ namespace Entidades
 {
     public class Rele : Base
     {
-        public string codigo { get; set; }
-        public string nome { get; set; }
-        public int tipo { get; set; }
+        public string IO { get; set; }
+        public string descricao { get; set; }
+        public string tipo { get; set; }
+        public string device { get; set; }
+        public string funcao { get; set; }
+        public string parent { get; set; }
     }
 }
