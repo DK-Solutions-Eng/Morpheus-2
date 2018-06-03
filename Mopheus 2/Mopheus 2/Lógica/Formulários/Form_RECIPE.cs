@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
 using System.IO.Ports;
 using System.Threading;
 using System.Configuration;
+using Microsoft.VisualBasic;
 
 namespace Mopheus_2
 {
@@ -39,6 +40,18 @@ namespace Mopheus_2
             atualiza_receitas("");
 
             disable_all_itens();
+
+            timeEdit_tempo_espera_evento_anterior.Enabled = false;
+            comboBox_IO.Enabled = false;
+            label20.Visible = false;
+            textBox_setpoint.Visible = false;
+            radioButton_OFF_evento_anterior.Visible = false;
+            radioButton_ON_evento_anterior.Visible = false;
+
+            label8.Visible = false;
+            timeEdit_tempo_espera_evento_anterior.Visible = false;
+            label18.Visible = false;
+            comboBox_IO.Visible = false;
         }
 
         private void load_comboboxs()
@@ -62,7 +75,7 @@ namespace Mopheus_2
             comboBox_evento_posterior_tipo.Items.Add("Peso");
             comboBox_evento_posterior_tipo.Items.Add("Entrada");
             comboBox_evento_posterior_tipo.Items.Add("Tempo");
-            comboBox_evento_posterior_tipo.SelectedIndex = 0;
+            //comboBox_evento_posterior_tipo.SelectedIndex = 0;
 
             List<Network> list = netbll.getAllCustom();
             if (list != null)
@@ -72,6 +85,7 @@ namespace Mopheus_2
                     if (item.model == "ControlMix")
                     {
                         comboBox_device.Items.Add(item.full_name);
+                        //textBox_endereco.Text = item.addr.ToString();
                     }
                 }
             }
@@ -81,24 +95,26 @@ namespace Mopheus_2
         {
             if (comboBox_evento_posterior_tipo.Text == "Peso")
             {
-                tabControl_evento_posterior.SelectTab(0);
-                tabControl_evento_posterior.TabPages[0].Enabled = true;
-                tabControl_evento_posterior.TabPages[1].Enabled = false;
-                tabControl_evento_posterior.TabPages[2].Enabled = false;
+                groupBox_entrada.Visible = false;
+                groupBox_peso.Visible = true;
+                groupBox_tempo.Visible = false;
+                    
             }
             if (comboBox_evento_posterior_tipo.Text == "Entrada")
             {
-                tabControl_evento_posterior.SelectTab(1);
-                tabControl_evento_posterior.TabPages[0].Enabled = false;
-                tabControl_evento_posterior.TabPages[1].Enabled = true;
-                tabControl_evento_posterior.TabPages[2].Enabled = false;
+                groupBox_entrada.Visible = true;
+                groupBox_peso.Visible = false;
+                groupBox_tempo.Visible = false;
+
+                groupBox_entrada.Location = new Point(6, 46);
             }
             if (comboBox_evento_posterior_tipo.Text == "Tempo")
             {
-                tabControl_evento_posterior.SelectTab(2);
-                tabControl_evento_posterior.TabPages[0].Enabled = false;
-                tabControl_evento_posterior.TabPages[1].Enabled = false;
-                tabControl_evento_posterior.TabPages[2].Enabled = true;
+                groupBox_entrada.Visible = false;
+                groupBox_peso.Visible = false;
+                groupBox_tempo.Visible = true;
+
+                groupBox_tempo.Location = new Point(6, 46);
             }
         }
 
@@ -124,14 +140,51 @@ namespace Mopheus_2
         {
             if (comboBox_evento_anterior_tipo.Text == "Tempo")
             {
-                tabControl_evento_anterior.SelectTab(0);
+                //tabControl_evento_anterior.SelectTab(0);
+                timeEdit_tempo_espera_evento_anterior.Enabled = true;
+                comboBox_IO.Enabled = false;
 
+                label8.Visible = true;
+                timeEdit_tempo_espera_evento_anterior.Visible = true;
+
+                label18.Visible = false;
+                comboBox_IO.Visible = false;
+
+                radioButton_OFF_evento_anterior.Visible = false;
+                radioButton_ON_evento_anterior.Visible = false;
 
             }
             if (comboBox_evento_anterior_tipo.Text == "Entrada")
             {
-                tabControl_evento_anterior.SelectTab(1);
+                //tabControl_evento_anterior.SelectTab(1);
+                timeEdit_tempo_espera_evento_anterior.Enabled = false;
+                comboBox_IO.Enabled = true;
 
+                label8.Visible = false;
+                label8.Location = new Point(6, 42);
+                timeEdit_tempo_espera_evento_anterior.Visible = false;
+
+                label18.Visible = true;
+                label18.Location = new Point(6, 42);
+                comboBox_IO.Visible = true;
+                comboBox_IO.Location = new Point(9, 58);
+                radioButton_OFF_evento_anterior.Location= new Point(9, 61);
+                radioButton_ON_evento_anterior.Location = new Point(9, 61);
+
+            }
+            if(comboBox_evento_anterior_tipo.Text == "Imediato")
+            {
+                timeEdit_tempo_espera_evento_anterior.Enabled = false;
+                comboBox_IO.Enabled = false;
+
+                label8.Visible = false;
+                timeEdit_tempo_espera_evento_anterior.Visible = false;
+
+                label18.Visible = false;
+                comboBox_IO.Visible = false;
+
+                radioButton_OFF_evento_anterior.Visible = false;
+                radioButton_ON_evento_anterior.Visible = false;
             }
         }
 
@@ -336,23 +389,23 @@ namespace Mopheus_2
                 objitensreceita.rele = Convert.ToInt32(textBox_rele.Text);
                 objitensreceita.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
                 objitensreceita.tempo_espera_evento_anterior = timeEdit_tempo_espera_evento_anterior.Text;
-                objitensreceita.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
-                if(radioButton_ON_evento_anterior.Checked)
-                {
-                    objitensreceita.status_entrada_digital_evento_anterior = true;
-                }
-                if (radioButton_OFF_evento_anterior.Checked)
-                {
-                    objitensreceita.status_entrada_digital_evento_anterior = false;
-                }
-                objitensreceita.temperatura_evento_anterior = Convert.ToInt32(textBox_limite_temperatura_evento_anterior.Text);
+                //objitensreceita.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
+                //if (radioButton_ON_evento_anterior.Checked)
+                //{
+                //    objitensreceita.status_entrada_digital_evento_anterior = true;
+                //}
+                //if (radioButton_OFF_evento_anterior.Checked)
+                //{
+                //    objitensreceita.status_entrada_digital_evento_anterior = false;
+                //}
+                //objitensreceita.temperatura_evento_anterior = Convert.ToInt32(textBox_limite_temperatura_evento_anterior.Text);
                 objitensreceita.tipo_evento_posterior = comboBox_evento_posterior_tipo.Text;
                 objitensreceita.pre_corte = Convert.ToInt32(textBox_precorte.Text);
                 objitensreceita.corte = Convert.ToInt32(textBox_corte.Text);
                 objitensreceita.limite_peso_seguranca_evento_posterior = Convert.ToInt32(textBox_peso_limite.Text);
                 objitensreceita.tempo_on = Convert.ToInt32(textBox_tempo_on.Text);
                 objitensreceita.tempo_off = Convert.ToInt32(textBox_tempo_off.Text);
-                objitensreceita.entrada_evento_posterior = comboBox_tipo_entrada_evento_posterior.Text;
+                objitensreceita.entrada_evento_posterior = comboBox_IO_evento_posterior.Text;
                 if (radioButton_ON_evento_posterior.Checked)
                 {
                     objitensreceita.status_entrada_digital_evento_posterior = true;
@@ -361,12 +414,12 @@ namespace Mopheus_2
                 {
                     objitensreceita.status_entrada_digital_evento_posterior = false;
                 }
-                objitensreceita.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
-                objitensreceita.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
+                objitensreceita.setpoint_evento_posterior = Convert.ToInt32(textBox_setpoint_evento_posterior.Text);
+                objitensreceita.setpoint_limite_evento_posterior = Convert.ToInt32(textBox_setpoint_limite_evento_posterior.Text);
                 objitensreceita.tempo_evento_posterior = timeEdit_tempo_evento_posterior.Text;
-                objitensreceita.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
+                //objitensreceita.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
                 objitensreceita.tempo_limite_total = timeEdit_tempo_limite_total.Text;
-                if(checkBox_alerta.Checked)
+                if (checkBox_alerta.Checked)
                 {
                     objitensreceita.alerta_emergencia = true;
                 }
@@ -374,7 +427,7 @@ namespace Mopheus_2
                 {
                     objitensreceita.alerta_emergencia = false;
                 }
-                if(checkBox_pausar.Checked)
+                if (checkBox_pausar.Checked)
                 {
                     objitensreceita.pausar_receita = true;
                 }
@@ -382,7 +435,7 @@ namespace Mopheus_2
                 {
                     objitensreceita.pausar_receita = false;
                 }
-                if(checkBox_saida.Checked)
+                if (checkBox_saida.Checked)
                 {
                     objitensreceita.acionar_saida = true;
                     objitensreceita.saida_seguranca = comboBox_saida_emergencia.Text;
@@ -414,23 +467,23 @@ namespace Mopheus_2
                 item.rele = Convert.ToInt32(textBox_rele.Text);
                 item.tipo_evento_anterior = comboBox_evento_anterior_tipo.Text;
                 item.tempo_espera_evento_anterior = timeEdit_tempo_espera_evento_anterior.Text;
-                item.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
-                if (radioButton_ON_evento_anterior.Checked)
-                {
-                    item.status_entrada_digital_evento_anterior = true;
-                }
-                if (radioButton_OFF_evento_anterior.Checked)
-                {
-                    item.status_entrada_digital_evento_anterior = false;
-                }
-                item.temperatura_evento_anterior = Convert.ToInt32(textBox_limite_temperatura_evento_anterior.Text);
+                //item.entrada_evento_anterior = comboBox_tipo_entrada_evento_anterior.Text;
+                //if (radioButton_ON_evento_anterior.Checked)
+                //{
+                //    item.status_entrada_digital_evento_anterior = true;
+                //}
+                //if (radioButton_OFF_evento_anterior.Checked)
+                //{
+                //    item.status_entrada_digital_evento_anterior = false;
+                //}
+                //item.temperatura_evento_anterior = Convert.ToInt32(textBox_limite_temperatura_evento_anterior.Text);
                 item.tipo_evento_posterior = comboBox_evento_posterior_tipo.Text;
                 item.pre_corte = Convert.ToInt32(textBox_precorte.Text);
                 item.corte = Convert.ToInt32(textBox_corte.Text);
                 item.tempo_on = Convert.ToInt32(textBox_tempo_on.Text);
                 item.tempo_off = Convert.ToInt32(textBox_tempo_off.Text);
                 item.limite_peso_seguranca_evento_posterior = Convert.ToInt32(textBox_peso_limite.Text);
-                item.entrada_evento_posterior = comboBox_tipo_entrada_evento_posterior.Text;
+                item.entrada_evento_posterior = comboBox_IO_evento_posterior.Text;
                 if (radioButton_ON_evento_posterior.Checked)
                 {
                     item.status_entrada_digital_evento_posterior = true;
@@ -439,10 +492,10 @@ namespace Mopheus_2
                 {
                     item.status_entrada_digital_evento_posterior = false;
                 }
-                item.temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_evento_posterior.Text);
-                item.limite_temperatura_evento_posterior = Convert.ToInt32(textBox_limite_temperatura_segurança.Text);
+                item.setpoint_evento_posterior = Convert.ToInt32(textBox_setpoint_evento_posterior.Text);
+                item.setpoint_limite_evento_posterior = Convert.ToInt32(textBox_setpoint_limite_evento_posterior.Text);
                 item.tempo_evento_posterior = timeEdit_tempo_evento_posterior.Text;
-                item.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
+                //item.tempo_seguranca_evento_posterior = timeEdit_tempo_limite_evento_posterior.Text;
                 item.tempo_limite_total = timeEdit_tempo_limite_total.Text;
                 if (checkBox_alerta.Checked)
                 {
@@ -471,7 +524,7 @@ namespace Mopheus_2
                     item.saida_seguranca = "";
                 }
                 item.dateinsert = DateTime.Now;
-              
+
                 //considero as linhas do grid porque por padrao ele conta o cabeçalho... resumindo seria a nova linha
                 item.sequencia = 0;
                 //bllitensreceita.getCustomReceita(obj.id) == null ? 1 : bllitensreceita.getCustomReceita(obj.id).Rows.Count + 1;
@@ -521,8 +574,8 @@ namespace Mopheus_2
         private void clean_itens_receita()
         {
             #region limpeza dos dados da receita
-            textBox_id.Text="";
-            textBox_nome_receita.Text="";
+            textBox_id.Text = "";
+            textBox_nome_receita.Text = "";
             comboBox_device.Text = "";
             textBox_endereco.Text = "";
             textBox_linhas.Text = "";
@@ -532,25 +585,25 @@ namespace Mopheus_2
             #endregion
 
             #region limpeza dos itens da receita
-            textBox_etapa.Text="";
+            textBox_etapa.Text = "";
             comboBox_processo.Text = "";
             comboBox_produto.Text = "";
             comboBox_produto.Text = "";
             comboBox_evento_anterior_tipo.Text = "";
             timeEdit_tempo_espera_evento_anterior.Text = "00:00:00";
-            comboBox_tipo_entrada_evento_anterior.Text = "";
-            textBox_limite_temperatura_evento_anterior.Text = "";
-            comboBox_evento_posterior_tipo.Text = "";
+            //comboBox_tipo_entrada_evento_anterior.Text = "";
+            //textBox_limite_temperatura_evento_anterior.Text = "";
+            comboBox_evento_posterior_tipo.Text="";
             textBox_precorte.Text = "";
             textBox_corte.Text = "";
             textBox_peso_limite.Text = "";
             textBox_tempo_on.Text = "";
             textBox_tempo_off.Text = "";
-            comboBox_tipo_entrada_evento_posterior.Text = "";
-            textBox_limite_temperatura_evento_posterior.Text = "";
-            textBox_limite_temperatura_segurança.Text = "";
+            comboBox_evento_posterior_tipo.Text = "";
+            textBox_setpoint_evento_posterior.Text = "";
+            textBox_setpoint_limite_evento_posterior.Text = "";
             timeEdit_tempo_evento_posterior.Text = "00:00:00";
-            timeEdit_tempo_limite_evento_posterior.Text = "00:00:00";
+            //timeEdit_tempo_limite_evento_posterior.Text = "00:00:00";
             timeEdit_tempo_limite_total.Text = "00:00:00";
             checkBox_alerta.Checked = false;
             checkBox_pausar.Checked = false;
@@ -600,18 +653,134 @@ namespace Mopheus_2
         private void comboBox_device_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox_produto.Items.Clear();
+            comboBox_IO.Items.Clear();
 
             List<Rele> list = relebll.getCustomListRele();
+            DataTable dt;
+
+            
 
             List<Network> listnet = netbll.getAllCustom();
+            foreach (Network item in listnet)
+            {
+                if(comboBox_device.Text==item.full_name)
+                {
+                    textBox_endereco.Text = item.addr.ToString();
+                }
+            }
+
             if (list != null)
             {
                 foreach (Rele item in list)
                 {
-                    if (item.device == comboBox_device.Text||item.parent=="TreeNode: "+comboBox_device.Text)
+                    if (item.device == comboBox_device.Text || item.parent == "TreeNode: " + comboBox_device.Text)
                     {
                         comboBox_produto.Items.Add(item.descricao);
-                        
+                        switch (item.tipo)
+                        {
+                            case "Entrada Digital":
+                                
+                                comboBox_IO.Items.Add(item.IO + "-"+ item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = true;
+                                radioButton_ON_evento_anterior.Visible = true;
+                                break;
+                            case "Entrada Analógica":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "AI-Tensão":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "AI-Corrente":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-K":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-J":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-T":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-N":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-S":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-E":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-B":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Termopar-R":
+                                //comboBox_IO.Items.Clear();
+                                comboBox_IO.Items.Add(item.IO + "-" + item.descricao);
+                                comboBox_IO_evento_posterior.Items.Add(item.IO + "-" + item.descricao);
+                                radioButton_OFF_evento_anterior.Visible = false;
+                                radioButton_ON_evento_anterior.Visible = false;
+                                textBox_setpoint.Visible = true;
+                                break;
+                            case "Saída a Relé":
+                                comboBox_saida_emergencia.Items.Add(item.IO + "-" + item.descricao);
+                                break;
+                            default:
+                                break;
+                        }
+
+
                     }
                 }
             }
@@ -621,6 +790,24 @@ namespace Mopheus_2
         private void enviarReceitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox_IO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox_produto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Rele> list = relebll.getCustomListRele();
+
+            foreach (Rele item in list)
+            {
+                if (comboBox_produto.Text == item.descricao)
+                {
+                    textBox_rele.Text = item.IO.ToString();
+                }
+            }
         }
     }
 }

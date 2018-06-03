@@ -175,5 +175,19 @@ namespace Mopheus_2
                 notifyIcon1.Visible = true;
             }
         }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_LOGIN form_LOGIN;
+            form_LOGIN = new Form_LOGIN();
+            form_LOGIN.ShowDialog();
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_USERS form_USER;
+            form_USER = new Form_USERS();
+            form_USER.ShowDialog();
+        }
     }
 }

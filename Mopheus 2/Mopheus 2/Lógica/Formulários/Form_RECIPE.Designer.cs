@@ -67,57 +67,42 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox_processo = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabControl_evento_anterior = new System.Windows.Forms.TabControl();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.radioButton_OFF_evento_anterior = new System.Windows.Forms.RadioButton();
             this.radioButton_ON_evento_anterior = new System.Windows.Forms.RadioButton();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.radioButton_OFF_evento_anterior = new System.Windows.Forms.RadioButton();
+            this.textBox_setpoint = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox_limite_temperatura_evento_anterior = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox_tipo_entrada_evento_anterior = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
+            this.comboBox_IO = new System.Windows.Forms.ComboBox();
             this.comboBox_evento_anterior_tipo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabControl_evento_posterior = new System.Windows.Forms.TabControl();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.textBox_peso_limite = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox_precorte = new System.Windows.Forms.TextBox();
-            this.textBox_corte = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_tempo_on = new System.Windows.Forms.TextBox();
-            this.textBox_tempo_off = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.groupBox_tempo = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.timeEdit_tempo_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
+            this.groupBox_entrada = new System.Windows.Forms.GroupBox();
             this.radioButton_OFF_evento_posterior = new System.Windows.Forms.RadioButton();
             this.radioButton_ON_evento_posterior = new System.Windows.Forms.RadioButton();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox_limite_temperatura_segurança = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox_limite_temperatura_evento_posterior = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.comboBox_tipo_entrada_evento_posterior = new System.Windows.Forms.ComboBox();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.timeEdit_tempo_limite_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit_tempo_evento_posterior = new DevExpress.XtraEditors.TimeEdit();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox_setpoint_limite_evento_posterior = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.comboBox_IO_evento_posterior = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox_setpoint_evento_posterior = new System.Windows.Forms.TextBox();
+            this.groupBox_peso = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox_peso_limite = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_tempo_on = new System.Windows.Forms.TextBox();
+            this.textBox_corte = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_tempo_off = new System.Windows.Forms.TextBox();
+            this.textBox_precorte = new System.Windows.Forms.TextBox();
             this.comboBox_evento_posterior_tipo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -156,23 +141,12 @@
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabControl_evento_anterior.SuspendLayout();
-            this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).BeginInit();
-            this.tabPage14.SuspendLayout();
-            this.tabControl4.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.tabPage16.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabControl_evento_posterior.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).BeginInit();
+            this.groupBox_tempo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).BeginInit();
+            this.groupBox_entrada.SuspendLayout();
+            this.groupBox_peso.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -413,7 +387,7 @@
             this.groupBox2.Controls.Add(this.tabControl2);
             this.groupBox2.Location = new System.Drawing.Point(6, 78);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(720, 240);
+            this.groupBox2.Size = new System.Drawing.Size(775, 240);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados da Receita";
@@ -427,7 +401,7 @@
             this.tabControl2.Location = new System.Drawing.Point(6, 19);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(710, 211);
+            this.tabControl2.Size = new System.Drawing.Size(763, 211);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
@@ -444,7 +418,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(702, 185);
+            this.tabPage3.Size = new System.Drawing.Size(755, 185);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Principal";
             // 
@@ -471,6 +445,7 @@
             this.comboBox_produto.Name = "comboBox_produto";
             this.comboBox_produto.Size = new System.Drawing.Size(250, 21);
             this.comboBox_produto.TabIndex = 54;
+            this.comboBox_produto.SelectedIndexChanged += new System.EventHandler(this.comboBox_produto_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -518,171 +493,98 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Controls.Add(this.tabControl_evento_anterior);
+            this.tabPage4.Controls.Add(this.radioButton_ON_evento_anterior);
+            this.tabPage4.Controls.Add(this.radioButton_OFF_evento_anterior);
+            this.tabPage4.Controls.Add(this.textBox_setpoint);
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.label18);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.timeEdit_tempo_espera_evento_anterior);
+            this.tabPage4.Controls.Add(this.comboBox_IO);
             this.tabPage4.Controls.Add(this.comboBox_evento_anterior_tipo);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(702, 185);
+            this.tabPage4.Size = new System.Drawing.Size(755, 185);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Evento Anterior";
-            // 
-            // tabControl_evento_anterior
-            // 
-            this.tabControl_evento_anterior.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl_evento_anterior.Controls.Add(this.tabPage13);
-            this.tabControl_evento_anterior.Controls.Add(this.tabPage14);
-            this.tabControl_evento_anterior.Location = new System.Drawing.Point(125, 6);
-            this.tabControl_evento_anterior.Name = "tabControl_evento_anterior";
-            this.tabControl_evento_anterior.SelectedIndex = 0;
-            this.tabControl_evento_anterior.Size = new System.Drawing.Size(571, 173);
-            this.tabControl_evento_anterior.TabIndex = 68;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage13.Controls.Add(this.timeEdit_tempo_espera_evento_anterior);
-            this.tabPage13.Controls.Add(this.label8);
-            this.tabPage13.Location = new System.Drawing.Point(4, 25);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(563, 144);
-            this.tabPage13.TabIndex = 0;
-            this.tabPage13.Text = "Tempo";
-            // 
-            // timeEdit_tempo_espera_evento_anterior
-            // 
-            this.timeEdit_tempo_espera_evento_anterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 19);
-            this.timeEdit_tempo_espera_evento_anterior.Name = "timeEdit_tempo_espera_evento_anterior";
-            this.timeEdit_tempo_espera_evento_anterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(88, 20);
-            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 13);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Tempo de Espera";
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage14.Controls.Add(this.tabControl4);
-            this.tabPage14.Controls.Add(this.label18);
-            this.tabPage14.Controls.Add(this.comboBox_tipo_entrada_evento_anterior);
-            this.tabPage14.Location = new System.Drawing.Point(4, 25);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(563, 144);
-            this.tabPage14.TabIndex = 1;
-            this.tabPage14.Text = "Entrada";
-            // 
-            // tabControl4
-            // 
-            this.tabControl4.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl4.Controls.Add(this.tabPage15);
-            this.tabControl4.Controls.Add(this.tabPage16);
-            this.tabControl4.Location = new System.Drawing.Point(9, 45);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(548, 94);
-            this.tabControl4.TabIndex = 71;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.radioButton_OFF_evento_anterior);
-            this.tabPage15.Controls.Add(this.radioButton_ON_evento_anterior);
-            this.tabPage15.Location = new System.Drawing.Point(4, 25);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(540, 65);
-            this.tabPage15.TabIndex = 0;
-            this.tabPage15.Text = "Digital";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_OFF_evento_anterior
-            // 
-            this.radioButton_OFF_evento_anterior.AutoSize = true;
-            this.radioButton_OFF_evento_anterior.Location = new System.Drawing.Point(6, 29);
-            this.radioButton_OFF_evento_anterior.Name = "radioButton_OFF_evento_anterior";
-            this.radioButton_OFF_evento_anterior.Size = new System.Drawing.Size(45, 17);
-            this.radioButton_OFF_evento_anterior.TabIndex = 1;
-            this.radioButton_OFF_evento_anterior.Text = "OFF";
-            this.radioButton_OFF_evento_anterior.UseVisualStyleBackColor = true;
             // 
             // radioButton_ON_evento_anterior
             // 
             this.radioButton_ON_evento_anterior.AutoSize = true;
-            this.radioButton_ON_evento_anterior.Checked = true;
-            this.radioButton_ON_evento_anterior.Location = new System.Drawing.Point(6, 6);
+            this.radioButton_ON_evento_anterior.Location = new System.Drawing.Point(266, 101);
             this.radioButton_ON_evento_anterior.Name = "radioButton_ON_evento_anterior";
             this.radioButton_ON_evento_anterior.Size = new System.Drawing.Size(41, 17);
-            this.radioButton_ON_evento_anterior.TabIndex = 0;
-            this.radioButton_ON_evento_anterior.TabStop = true;
+            this.radioButton_ON_evento_anterior.TabIndex = 78;
             this.radioButton_ON_evento_anterior.Text = "ON";
             this.radioButton_ON_evento_anterior.UseVisualStyleBackColor = true;
             // 
-            // tabPage16
+            // radioButton_OFF_evento_anterior
             // 
-            this.tabPage16.Controls.Add(this.label20);
-            this.tabPage16.Controls.Add(this.label30);
-            this.tabPage16.Controls.Add(this.textBox_limite_temperatura_evento_anterior);
-            this.tabPage16.Location = new System.Drawing.Point(4, 25);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(540, 65);
-            this.tabPage16.TabIndex = 1;
-            this.tabPage16.Text = "Analógica";
-            this.tabPage16.UseVisualStyleBackColor = true;
+            this.radioButton_OFF_evento_anterior.AutoSize = true;
+            this.radioButton_OFF_evento_anterior.Checked = true;
+            this.radioButton_OFF_evento_anterior.Location = new System.Drawing.Point(215, 101);
+            this.radioButton_OFF_evento_anterior.Name = "radioButton_OFF_evento_anterior";
+            this.radioButton_OFF_evento_anterior.Size = new System.Drawing.Size(45, 17);
+            this.radioButton_OFF_evento_anterior.TabIndex = 77;
+            this.radioButton_OFF_evento_anterior.TabStop = true;
+            this.radioButton_OFF_evento_anterior.Text = "OFF";
+            this.radioButton_OFF_evento_anterior.UseVisualStyleBackColor = true;
+            // 
+            // textBox_setpoint
+            // 
+            this.textBox_setpoint.Location = new System.Drawing.Point(9, 137);
+            this.textBox_setpoint.Name = "textBox_setpoint";
+            this.textBox_setpoint.Size = new System.Drawing.Size(110, 20);
+            this.textBox_setpoint.TabIndex = 76;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(97, 22);
+            this.label20.Location = new System.Drawing.Point(6, 121);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(18, 13);
-            this.label20.TabIndex = 86;
-            this.label20.Text = "C°";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 3);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(112, 13);
-            this.label30.TabIndex = 82;
-            this.label30.Text = "Limite de Temperatura";
-            // 
-            // textBox_limite_temperatura_evento_anterior
-            // 
-            this.textBox_limite_temperatura_evento_anterior.Location = new System.Drawing.Point(6, 19);
-            this.textBox_limite_temperatura_evento_anterior.Name = "textBox_limite_temperatura_evento_anterior";
-            this.textBox_limite_temperatura_evento_anterior.Size = new System.Drawing.Size(85, 20);
-            this.textBox_limite_temperatura_evento_anterior.TabIndex = 83;
+            this.label20.Size = new System.Drawing.Size(50, 13);
+            this.label20.TabIndex = 75;
+            this.label20.Text = "Set Point";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 3);
+            this.label18.Location = new System.Drawing.Point(6, 81);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 13);
-            this.label18.TabIndex = 69;
+            this.label18.TabIndex = 74;
             this.label18.Text = "Entrada";
             // 
-            // comboBox_tipo_entrada_evento_anterior
+            // label8
             // 
-            this.comboBox_tipo_entrada_evento_anterior.FormattingEnabled = true;
-            this.comboBox_tipo_entrada_evento_anterior.Location = new System.Drawing.Point(9, 18);
-            this.comboBox_tipo_entrada_evento_anterior.Name = "comboBox_tipo_entrada_evento_anterior";
-            this.comboBox_tipo_entrada_evento_anterior.Size = new System.Drawing.Size(100, 21);
-            this.comboBox_tipo_entrada_evento_anterior.TabIndex = 68;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.TabIndex = 73;
+            this.label8.Text = "Tempo de Espera";
+            // 
+            // timeEdit_tempo_espera_evento_anterior
+            // 
+            this.timeEdit_tempo_espera_evento_anterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_espera_evento_anterior.Location = new System.Drawing.Point(9, 58);
+            this.timeEdit_tempo_espera_evento_anterior.Name = "timeEdit_tempo_espera_evento_anterior";
+            this.timeEdit_tempo_espera_evento_anterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(110, 20);
+            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
+            // 
+            // comboBox_IO
+            // 
+            this.comboBox_IO.FormattingEnabled = true;
+            this.comboBox_IO.Location = new System.Drawing.Point(9, 97);
+            this.comboBox_IO.Name = "comboBox_IO";
+            this.comboBox_IO.Size = new System.Drawing.Size(200, 21);
+            this.comboBox_IO.TabIndex = 72;
+            this.comboBox_IO.SelectedIndexChanged += new System.EventHandler(this.comboBox_IO_SelectedIndexChanged);
             // 
             // comboBox_evento_anterior_tipo
             // 
@@ -705,116 +607,228 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.Controls.Add(this.tabControl_evento_posterior);
+            this.tabPage5.Controls.Add(this.groupBox_tempo);
+            this.tabPage5.Controls.Add(this.groupBox_entrada);
+            this.tabPage5.Controls.Add(this.groupBox_peso);
             this.tabPage5.Controls.Add(this.comboBox_evento_posterior_tipo);
             this.tabPage5.Controls.Add(this.label10);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(702, 185);
+            this.tabPage5.Size = new System.Drawing.Size(755, 185);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Evento Posterior";
             // 
-            // tabControl_evento_posterior
+            // groupBox_tempo
             // 
-            this.tabControl_evento_posterior.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl_evento_posterior.Controls.Add(this.tabPage6);
-            this.tabControl_evento_posterior.Controls.Add(this.tabPage7);
-            this.tabControl_evento_posterior.Controls.Add(this.tabPage8);
-            this.tabControl_evento_posterior.Location = new System.Drawing.Point(124, 6);
-            this.tabControl_evento_posterior.Name = "tabControl_evento_posterior";
-            this.tabControl_evento_posterior.SelectedIndex = 0;
-            this.tabControl_evento_posterior.Size = new System.Drawing.Size(572, 172);
-            this.tabControl_evento_posterior.TabIndex = 74;
+            this.groupBox_tempo.Controls.Add(this.label24);
+            this.groupBox_tempo.Controls.Add(this.timeEdit_tempo_evento_posterior);
+            this.groupBox_tempo.Location = new System.Drawing.Point(589, 46);
+            this.groupBox_tempo.Name = "groupBox_tempo";
+            this.groupBox_tempo.Size = new System.Drawing.Size(124, 68);
+            this.groupBox_tempo.TabIndex = 75;
+            this.groupBox_tempo.TabStop = false;
+            this.groupBox_tempo.Visible = false;
             // 
-            // tabPage6
+            // label24
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Controls.Add(this.textBox_peso_limite);
-            this.tabPage6.Controls.Add(this.label25);
-            this.tabPage6.Controls.Add(this.label9);
-            this.tabPage6.Controls.Add(this.textBox_precorte);
-            this.tabPage6.Controls.Add(this.textBox_corte);
-            this.tabPage6.Controls.Add(this.label11);
-            this.tabPage6.Controls.Add(this.textBox_tempo_on);
-            this.tabPage6.Controls.Add(this.textBox_tempo_off);
-            this.tabPage6.Controls.Add(this.label12);
-            this.tabPage6.Controls.Add(this.label15);
-            this.tabPage6.Controls.Add(this.label13);
-            this.tabPage6.Controls.Add(this.label14);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(564, 143);
-            this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "Peso";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(40, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Tempo";
             // 
-            // textBox_peso_limite
+            // timeEdit_tempo_evento_posterior
             // 
-            this.textBox_peso_limite.Location = new System.Drawing.Point(8, 97);
-            this.textBox_peso_limite.Name = "textBox_peso_limite";
-            this.textBox_peso_limite.Size = new System.Drawing.Size(110, 20);
-            this.textBox_peso_limite.TabIndex = 67;
+            this.timeEdit_tempo_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_tempo_evento_posterior.Location = new System.Drawing.Point(9, 32);
+            this.timeEdit_tempo_evento_posterior.Name = "timeEdit_tempo_evento_posterior";
+            this.timeEdit_tempo_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
+            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
             // 
-            // label25
+            // groupBox_entrada
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 81);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(104, 13);
-            this.label25.TabIndex = 66;
-            this.label25.Text = "Limite de Segurança";
+            this.groupBox_entrada.Controls.Add(this.radioButton_OFF_evento_posterior);
+            this.groupBox_entrada.Controls.Add(this.radioButton_ON_evento_posterior);
+            this.groupBox_entrada.Controls.Add(this.label34);
+            this.groupBox_entrada.Controls.Add(this.textBox_setpoint_limite_evento_posterior);
+            this.groupBox_entrada.Controls.Add(this.label33);
+            this.groupBox_entrada.Controls.Add(this.comboBox_IO_evento_posterior);
+            this.groupBox_entrada.Controls.Add(this.label30);
+            this.groupBox_entrada.Controls.Add(this.textBox_setpoint_evento_posterior);
+            this.groupBox_entrada.Location = new System.Drawing.Point(268, 46);
+            this.groupBox_entrada.Name = "groupBox_entrada";
+            this.groupBox_entrada.Size = new System.Drawing.Size(315, 107);
+            this.groupBox_entrada.TabIndex = 75;
+            this.groupBox_entrada.TabStop = false;
+            this.groupBox_entrada.Visible = false;
+            // 
+            // radioButton_OFF_evento_posterior
+            // 
+            this.radioButton_OFF_evento_posterior.AutoSize = true;
+            this.radioButton_OFF_evento_posterior.Checked = true;
+            this.radioButton_OFF_evento_posterior.Location = new System.Drawing.Point(215, 33);
+            this.radioButton_OFF_evento_posterior.Name = "radioButton_OFF_evento_posterior";
+            this.radioButton_OFF_evento_posterior.Size = new System.Drawing.Size(45, 17);
+            this.radioButton_OFF_evento_posterior.TabIndex = 1;
+            this.radioButton_OFF_evento_posterior.TabStop = true;
+            this.radioButton_OFF_evento_posterior.Text = "OFF";
+            this.radioButton_OFF_evento_posterior.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ON_evento_posterior
+            // 
+            this.radioButton_ON_evento_posterior.AutoSize = true;
+            this.radioButton_ON_evento_posterior.Location = new System.Drawing.Point(266, 33);
+            this.radioButton_ON_evento_posterior.Name = "radioButton_ON_evento_posterior";
+            this.radioButton_ON_evento_posterior.Size = new System.Drawing.Size(41, 17);
+            this.radioButton_ON_evento_posterior.TabIndex = 0;
+            this.radioButton_ON_evento_posterior.Text = "ON";
+            this.radioButton_ON_evento_posterior.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(122, 56);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(80, 13);
+            this.label34.TabIndex = 85;
+            this.label34.Text = "Set Point Limite";
+            // 
+            // textBox_setpoint_limite_evento_posterior
+            // 
+            this.textBox_setpoint_limite_evento_posterior.Location = new System.Drawing.Point(125, 72);
+            this.textBox_setpoint_limite_evento_posterior.Name = "textBox_setpoint_limite_evento_posterior";
+            this.textBox_setpoint_limite_evento_posterior.Size = new System.Drawing.Size(110, 20);
+            this.textBox_setpoint_limite_evento_posterior.TabIndex = 86;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 16);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(44, 13);
+            this.label33.TabIndex = 80;
+            this.label33.Text = "Entrada";
+            // 
+            // comboBox_IO_evento_posterior
+            // 
+            this.comboBox_IO_evento_posterior.FormattingEnabled = true;
+            this.comboBox_IO_evento_posterior.Location = new System.Drawing.Point(9, 32);
+            this.comboBox_IO_evento_posterior.Name = "comboBox_IO_evento_posterior";
+            this.comboBox_IO_evento_posterior.Size = new System.Drawing.Size(200, 21);
+            this.comboBox_IO_evento_posterior.TabIndex = 79;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 56);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(50, 13);
+            this.label30.TabIndex = 81;
+            this.label30.Text = "Set Point";
+            // 
+            // textBox_setpoint_evento_posterior
+            // 
+            this.textBox_setpoint_evento_posterior.Location = new System.Drawing.Point(9, 72);
+            this.textBox_setpoint_evento_posterior.Name = "textBox_setpoint_evento_posterior";
+            this.textBox_setpoint_evento_posterior.Size = new System.Drawing.Size(110, 20);
+            this.textBox_setpoint_evento_posterior.TabIndex = 82;
+            // 
+            // groupBox_peso
+            // 
+            this.groupBox_peso.Controls.Add(this.label9);
+            this.groupBox_peso.Controls.Add(this.textBox_peso_limite);
+            this.groupBox_peso.Controls.Add(this.label11);
+            this.groupBox_peso.Controls.Add(this.label13);
+            this.groupBox_peso.Controls.Add(this.label25);
+            this.groupBox_peso.Controls.Add(this.label14);
+            this.groupBox_peso.Controls.Add(this.textBox_tempo_on);
+            this.groupBox_peso.Controls.Add(this.textBox_corte);
+            this.groupBox_peso.Controls.Add(this.label12);
+            this.groupBox_peso.Controls.Add(this.label15);
+            this.groupBox_peso.Controls.Add(this.textBox_tempo_off);
+            this.groupBox_peso.Controls.Add(this.textBox_precorte);
+            this.groupBox_peso.Location = new System.Drawing.Point(6, 46);
+            this.groupBox_peso.Name = "groupBox_peso";
+            this.groupBox_peso.Size = new System.Drawing.Size(256, 136);
+            this.groupBox_peso.TabIndex = 68;
+            this.groupBox_peso.TabStop = false;
+            this.groupBox_peso.Visible = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 3);
+            this.label9.Location = new System.Drawing.Point(6, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 55;
             this.label9.Text = "Pré-Corte";
             // 
-            // textBox_precorte
+            // textBox_peso_limite
             // 
-            this.textBox_precorte.Location = new System.Drawing.Point(8, 19);
-            this.textBox_precorte.Name = "textBox_precorte";
-            this.textBox_precorte.Size = new System.Drawing.Size(110, 20);
-            this.textBox_precorte.TabIndex = 56;
-            // 
-            // textBox_corte
-            // 
-            this.textBox_corte.Location = new System.Drawing.Point(8, 58);
-            this.textBox_corte.Name = "textBox_corte";
-            this.textBox_corte.Size = new System.Drawing.Size(110, 20);
-            this.textBox_corte.TabIndex = 58;
+            this.textBox_peso_limite.Location = new System.Drawing.Point(8, 110);
+            this.textBox_peso_limite.Name = "textBox_peso_limite";
+            this.textBox_peso_limite.Size = new System.Drawing.Size(110, 20);
+            this.textBox_peso_limite.TabIndex = 67;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 42);
+            this.label11.Location = new System.Drawing.Point(6, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 13);
             this.label11.TabIndex = 59;
             this.label11.Text = "Corte";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(121, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Tempo OFF";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 94);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(104, 13);
+            this.label25.TabIndex = 66;
+            this.label25.Text = "Limite de Segurança";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(200, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 64;
+            this.label14.Text = "mseg";
+            // 
             // textBox_tempo_on
             // 
-            this.textBox_tempo_on.Location = new System.Drawing.Point(124, 19);
+            this.textBox_tempo_on.Location = new System.Drawing.Point(124, 32);
             this.textBox_tempo_on.Name = "textBox_tempo_on";
             this.textBox_tempo_on.Size = new System.Drawing.Size(70, 20);
             this.textBox_tempo_on.TabIndex = 60;
             // 
-            // textBox_tempo_off
+            // textBox_corte
             // 
-            this.textBox_tempo_off.Location = new System.Drawing.Point(123, 58);
-            this.textBox_tempo_off.Name = "textBox_tempo_off";
-            this.textBox_tempo_off.Size = new System.Drawing.Size(70, 20);
-            this.textBox_tempo_off.TabIndex = 61;
+            this.textBox_corte.Location = new System.Drawing.Point(8, 71);
+            this.textBox_corte.Name = "textBox_corte";
+            this.textBox_corte.Size = new System.Drawing.Size(110, 20);
+            this.textBox_corte.TabIndex = 58;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(122, 3);
+            this.label12.Location = new System.Drawing.Point(122, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
             this.label12.TabIndex = 62;
@@ -823,223 +837,25 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(199, 61);
+            this.label15.Location = new System.Drawing.Point(199, 74);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 13);
             this.label15.TabIndex = 65;
             this.label15.Text = "mseg";
             // 
-            // label13
+            // textBox_tempo_off
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(121, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 63;
-            this.label13.Text = "Tempo OFF";
+            this.textBox_tempo_off.Location = new System.Drawing.Point(123, 71);
+            this.textBox_tempo_off.Name = "textBox_tempo_off";
+            this.textBox_tempo_off.Size = new System.Drawing.Size(70, 20);
+            this.textBox_tempo_off.TabIndex = 61;
             // 
-            // label14
+            // textBox_precorte
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(200, 22);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 13);
-            this.label14.TabIndex = 64;
-            this.label14.Text = "mseg";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage7.Controls.Add(this.tabControl3);
-            this.tabPage7.Controls.Add(this.label23);
-            this.tabPage7.Controls.Add(this.comboBox_tipo_entrada_evento_posterior);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(564, 143);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "Entrada";
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl3.Controls.Add(this.tabPage9);
-            this.tabControl3.Controls.Add(this.tabPage10);
-            this.tabControl3.Location = new System.Drawing.Point(6, 45);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(552, 94);
-            this.tabControl3.TabIndex = 70;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.radioButton_OFF_evento_posterior);
-            this.tabPage9.Controls.Add(this.radioButton_ON_evento_posterior);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(544, 65);
-            this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "Digital";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_OFF_evento_posterior
-            // 
-            this.radioButton_OFF_evento_posterior.AutoSize = true;
-            this.radioButton_OFF_evento_posterior.Location = new System.Drawing.Point(6, 29);
-            this.radioButton_OFF_evento_posterior.Name = "radioButton_OFF_evento_posterior";
-            this.radioButton_OFF_evento_posterior.Size = new System.Drawing.Size(45, 17);
-            this.radioButton_OFF_evento_posterior.TabIndex = 1;
-            this.radioButton_OFF_evento_posterior.Text = "OFF";
-            this.radioButton_OFF_evento_posterior.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_ON_evento_posterior
-            // 
-            this.radioButton_ON_evento_posterior.AutoSize = true;
-            this.radioButton_ON_evento_posterior.Checked = true;
-            this.radioButton_ON_evento_posterior.Location = new System.Drawing.Point(6, 6);
-            this.radioButton_ON_evento_posterior.Name = "radioButton_ON_evento_posterior";
-            this.radioButton_ON_evento_posterior.Size = new System.Drawing.Size(41, 17);
-            this.radioButton_ON_evento_posterior.TabIndex = 0;
-            this.radioButton_ON_evento_posterior.TabStop = true;
-            this.radioButton_ON_evento_posterior.Text = "ON";
-            this.radioButton_ON_evento_posterior.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.label28);
-            this.tabPage10.Controls.Add(this.label21);
-            this.tabPage10.Controls.Add(this.textBox_limite_temperatura_segurança);
-            this.tabPage10.Controls.Add(this.label27);
-            this.tabPage10.Controls.Add(this.label22);
-            this.tabPage10.Controls.Add(this.textBox_limite_temperatura_evento_posterior);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(544, 65);
-            this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "Analógica";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(212, 22);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(18, 13);
-            this.label28.TabIndex = 87;
-            this.label28.Text = "C°";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(97, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(18, 13);
-            this.label21.TabIndex = 86;
-            this.label21.Text = "C°";
-            // 
-            // textBox_limite_temperatura_segurança
-            // 
-            this.textBox_limite_temperatura_segurança.Location = new System.Drawing.Point(121, 19);
-            this.textBox_limite_temperatura_segurança.Name = "textBox_limite_temperatura_segurança";
-            this.textBox_limite_temperatura_segurança.Size = new System.Drawing.Size(85, 20);
-            this.textBox_limite_temperatura_segurança.TabIndex = 85;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(119, 3);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(104, 13);
-            this.label27.TabIndex = 84;
-            this.label27.Text = "Limite de Segurança";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 3);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(112, 13);
-            this.label22.TabIndex = 82;
-            this.label22.Text = "Limite de Temperatura";
-            // 
-            // textBox_limite_temperatura_evento_posterior
-            // 
-            this.textBox_limite_temperatura_evento_posterior.Location = new System.Drawing.Point(6, 19);
-            this.textBox_limite_temperatura_evento_posterior.Name = "textBox_limite_temperatura_evento_posterior";
-            this.textBox_limite_temperatura_evento_posterior.Size = new System.Drawing.Size(85, 20);
-            this.textBox_limite_temperatura_evento_posterior.TabIndex = 83;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 3);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(44, 13);
-            this.label23.TabIndex = 69;
-            this.label23.Text = "Entrada";
-            // 
-            // comboBox_tipo_entrada_evento_posterior
-            // 
-            this.comboBox_tipo_entrada_evento_posterior.FormattingEnabled = true;
-            this.comboBox_tipo_entrada_evento_posterior.Location = new System.Drawing.Point(9, 18);
-            this.comboBox_tipo_entrada_evento_posterior.Name = "comboBox_tipo_entrada_evento_posterior";
-            this.comboBox_tipo_entrada_evento_posterior.Size = new System.Drawing.Size(100, 21);
-            this.comboBox_tipo_entrada_evento_posterior.TabIndex = 68;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage8.Controls.Add(this.timeEdit_tempo_limite_evento_posterior);
-            this.tabPage8.Controls.Add(this.timeEdit_tempo_evento_posterior);
-            this.tabPage8.Controls.Add(this.label26);
-            this.tabPage8.Controls.Add(this.label24);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(564, 143);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "Tempo";
-            // 
-            // timeEdit_tempo_limite_evento_posterior
-            // 
-            this.timeEdit_tempo_limite_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_limite_evento_posterior.Location = new System.Drawing.Point(9, 60);
-            this.timeEdit_tempo_limite_evento_posterior.Name = "timeEdit_tempo_limite_evento_posterior";
-            this.timeEdit_tempo_limite_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_limite_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_limite_evento_posterior.Size = new System.Drawing.Size(101, 20);
-            this.timeEdit_tempo_limite_evento_posterior.TabIndex = 71;
-            // 
-            // timeEdit_tempo_evento_posterior
-            // 
-            this.timeEdit_tempo_evento_posterior.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_evento_posterior.Location = new System.Drawing.Point(9, 21);
-            this.timeEdit_tempo_evento_posterior.Name = "timeEdit_tempo_evento_posterior";
-            this.timeEdit_tempo_evento_posterior.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
-            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 44);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(104, 13);
-            this.label26.TabIndex = 68;
-            this.label26.Text = "Limite de Segurança";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 5);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(40, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Tempo";
+            this.textBox_precorte.Location = new System.Drawing.Point(8, 32);
+            this.textBox_precorte.Name = "textBox_precorte";
+            this.textBox_precorte.Size = new System.Drawing.Size(110, 20);
+            this.textBox_precorte.TabIndex = 56;
             // 
             // comboBox_evento_posterior_tipo
             // 
@@ -1073,7 +889,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(702, 185);
+            this.tabPage11.Size = new System.Drawing.Size(755, 185);
             this.tabPage11.TabIndex = 3;
             this.tabPage11.Text = "Segurança";
             // 
@@ -1173,7 +989,7 @@
             // 
             // timeEdit_intervalo
             // 
-            this.timeEdit_intervalo.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
+            this.timeEdit_intervalo.EditValue = "00:00:00";
             this.timeEdit_intervalo.Location = new System.Drawing.Point(842, 33);
             this.timeEdit_intervalo.Name = "timeEdit_intervalo";
             this.timeEdit_intervalo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1338,33 +1154,16 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tabControl_evento_anterior.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_espera_evento_anterior.Properties)).EndInit();
-            this.tabPage14.ResumeLayout(false);
-            this.tabPage14.PerformLayout();
-            this.tabControl4.ResumeLayout(false);
-            this.tabPage15.ResumeLayout(false);
-            this.tabPage15.PerformLayout();
-            this.tabPage16.ResumeLayout(false);
-            this.tabPage16.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabControl_evento_posterior.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage10.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_evento_posterior.Properties)).EndInit();
+            this.groupBox_tempo.ResumeLayout(false);
+            this.groupBox_tempo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_evento_posterior.Properties)).EndInit();
+            this.groupBox_entrada.ResumeLayout(false);
+            this.groupBox_entrada.PerformLayout();
+            this.groupBox_peso.ResumeLayout(false);
+            this.groupBox_peso.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_tempo_limite_total.Properties)).EndInit();
@@ -1406,10 +1205,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.ComboBox comboBox_evento_anterior_tipo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabControl tabControl_evento_posterior;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TextBox textBox_peso_limite;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label9;
@@ -1422,22 +1218,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.RadioButton radioButton_OFF_evento_posterior;
         private System.Windows.Forms.RadioButton radioButton_ON_evento_posterior;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox_limite_temperatura_segurança;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox_limite_temperatura_evento_posterior;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox comboBox_tipo_entrada_evento_posterior;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox_evento_posterior_tipo;
         private System.Windows.Forms.Label label10;
@@ -1460,19 +1242,6 @@
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.ToolStripMenuItem novaReceitaToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView_receitas;
-        private System.Windows.Forms.TabControl tabControl_evento_anterior;
-        private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox_tipo_entrada_evento_anterior;
-        private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.RadioButton radioButton_OFF_evento_anterior;
-        private System.Windows.Forms.RadioButton radioButton_ON_evento_anterior;
-        private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox_limite_temperatura_evento_anterior;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusDosDispositivosToolStripMenuItem;
         private System.Windows.Forms.Label label29;
@@ -1489,9 +1258,24 @@
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private DevExpress.XtraEditors.TimeEdit timeEdit_intervalo;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_espera_evento_anterior;
-        private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_evento_posterior;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_evento_posterior;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_total;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox_IO;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox_setpoint;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.RadioButton radioButton_ON_evento_anterior;
+        private System.Windows.Forms.RadioButton radioButton_OFF_evento_anterior;
+        private System.Windows.Forms.GroupBox groupBox_entrada;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox_setpoint_limite_evento_posterior;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBox_IO_evento_posterior;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox_setpoint_evento_posterior;
+        private System.Windows.Forms.GroupBox groupBox_peso;
+        private System.Windows.Forms.GroupBox groupBox_tempo;
     }
 }

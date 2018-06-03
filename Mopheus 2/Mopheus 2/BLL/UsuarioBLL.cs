@@ -19,8 +19,10 @@ namespace BLL
         {
             Usuario obj = new Usuario();
             obj.id = Convert.ToInt32(row["id"].ToString());
-            obj.usuario = row["usuario"].ToString();
+            obj.login = row["login"].ToString();
             obj.senha = row["senha"].ToString();
+            obj.Nome = row["Nome"].ToString();
+            obj.acesso = row["acesso"].ToString();
             if (row["dateinsert"].ToString() == "")
             {
                 obj.dateinsert = null;
@@ -43,31 +45,15 @@ namespace BLL
         public List<Usuario> consultaUsuarios()
         {
             List<Usuario> listusuario = new List<Usuario>();
+
             DAOGeral daogeral = new DAOGeral();
-            Usuario objusuario;
+            Usuario objusuario = new Usuario();
             DataTable dtusuario = daogeral.executaComRetorno("select * from " + table + " order by usuario");
-            if (dtusuario.Rows.Count > 0)
+            for (int i = 0; i < dtusuario.Rows.Count; i++)
             {
-                for (int i = 0; i < dtusuario.Rows.Count; i++)
-                {
-                    objusuario = new Usuario();
-                    objusuario = objusuario.convertToUsuario(dtusuario.Rows[i]);
-                    listusuario.Add(objusuario);
-                }
+                listusuario.Add(ConvertToClass(dtusuario.Rows[i]));
             }
             return listusuario;
-        }
-
-        public Usuario consultaUsuarioAutenticacao(string usuario,string senha)
-        {
-            DAOGeral daogeral = new DAOGeral();
-            Usuario objusuario = new Usuario(); ;
-            DataTable dtusuario = daogeral.executaComRetorno("select * from " + table + " where usuario = '" + usuario + "' and senha = '" + senha + "' order by usuario");
-            if (dtusuario.Rows.Count > 0)
-            {
-                objusuario = objusuario.convertToUsuario(dtusuario.Rows[0]);
-            }
-            return objusuario;
         }
     }
 }

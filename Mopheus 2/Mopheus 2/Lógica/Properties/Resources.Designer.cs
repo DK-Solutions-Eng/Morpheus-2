@@ -193,6 +193,16 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Login_16x {
+            get {
+                object obj = ResourceManager.GetObject("Login_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap logo_aeph_do_brasil {
             get {
                 object obj = ResourceManager.GetObject("logo-aeph-do-brasil", resourceCulture);
@@ -336,6 +346,16 @@ namespace Mopheus_2.Properties {
         public static System.Drawing.Bitmap Upload_16x {
             get {
                 object obj = ResourceManager.GetObject("Upload_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap User_noHalo_16x {
+            get {
+                object obj = ResourceManager.GetObject("User_noHalo_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

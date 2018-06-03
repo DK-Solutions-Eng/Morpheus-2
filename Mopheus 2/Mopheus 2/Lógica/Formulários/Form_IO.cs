@@ -62,7 +62,15 @@ namespace Mopheus_2
                     {
                         if (item.model == "ControlMix" || item.type_model != "4-TC" || item.type_model != "4-AI")
                         {
-                            comboBox_device.Items.Add(item.full_name);
+                            if(item.model == "Indicador")
+                            {
+
+                            }
+                            else
+                            {
+                                comboBox_device.Items.Add(item.full_name);
+                            }
+                                
                         }
                     }
                 }
@@ -337,6 +345,11 @@ namespace Mopheus_2
                             comboBox_produto.Items.Add(item.descricao_completa);
                     }
                 }
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

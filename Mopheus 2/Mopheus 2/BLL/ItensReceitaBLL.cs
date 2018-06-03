@@ -197,7 +197,7 @@ namespace BLL
             obj.tempo_espera_evento_anterior = row["tempo_espera_evento_anterior"].ToString();
             obj.entrada_evento_anterior = row["entrada_evento_anterior"].ToString();
             obj.status_entrada_digital_evento_anterior = Convert.ToBoolean(row["status_entrada_digital_evento_anterior"].ToString());
-            obj.temperatura_evento_anterior = Convert.ToInt32(row["temperatura_evento_anterior"].ToString());
+            obj.setpoint_evento_anterior = Convert.ToInt32(row["setpoint_evento_anterior"].ToString());
             obj.tipo_evento_posterior = row["tipo_evento_posterior"].ToString();
             obj.pre_corte = Convert.ToInt32(row["pre_corte"].ToString());
             obj.corte = Convert.ToInt32(row["corte"].ToString());
@@ -206,10 +206,9 @@ namespace BLL
             obj.limite_peso_seguranca_evento_posterior = Convert.ToInt32(row["limite_peso_seguranca_evento_posterior"].ToString());
             obj.entrada_evento_posterior = row["entrada_evento_posterior"].ToString();
             obj.status_entrada_digital_evento_posterior = Convert.ToBoolean(row["status_entrada_digital_evento_posterior"].ToString());
-            obj.temperatura_evento_posterior = Convert.ToInt32(row["temperatura_evento_posterior"].ToString());
-            obj.limite_temperatura_evento_posterior = Convert.ToInt32(row["limite_temperatura_evento_posterior"].ToString());
+            obj.setpoint_evento_posterior = Convert.ToInt32(row["setpoint_evento_posterior"].ToString());
+            obj.setpoint_limite_evento_posterior = Convert.ToInt32(row["setpoint_limite_evento_posterior"].ToString());
             obj.tempo_evento_posterior = (row["tempo_evento_posterior"].ToString());
-            obj.tempo_seguranca_evento_posterior = (row["tempo_seguranca_evento_posterior"].ToString());
             obj.tempo_limite_total = (row["tempo_limite_total"].ToString());
             obj.alerta_emergencia = Convert.ToBoolean(row["alerta_emergencia"].ToString());
             obj.pausar_receita = Convert.ToBoolean(row["pausar_receita"].ToString());

@@ -16,7 +16,7 @@ namespace Entidades
         public string tempo_espera_evento_anterior { get; set; }
         public string entrada_evento_anterior { get; set; }
         public bool status_entrada_digital_evento_anterior { get; set; }
-        public int temperatura_evento_anterior { get; set; }
+        public int setpoint_evento_anterior { get; set; }
         public string tipo_evento_posterior { get; set; }
         public double pre_corte { get; set; }
         public double corte { get; set; }
@@ -25,10 +25,9 @@ namespace Entidades
         public int limite_peso_seguranca_evento_posterior { get; set; }
         public string entrada_evento_posterior { get; set; }
         public bool status_entrada_digital_evento_posterior { get; set; }
-        public int temperatura_evento_posterior { get; set; }
-        public int limite_temperatura_evento_posterior { get; set; }
+        public int setpoint_evento_posterior { get; set; }
+        public int setpoint_limite_evento_posterior { get; set; }
         public string tempo_evento_posterior { get; set; }
-        public string tempo_seguranca_evento_posterior { get; set; }
         public string tempo_limite_total { get; set; }
         public bool alerta_emergencia { get; set; }
         public bool pausar_receita { get; set; }
