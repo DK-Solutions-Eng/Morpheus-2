@@ -31,11 +31,11 @@ namespace Mopheus_2
             comboBox_tipo_acesso.Items.Add("Operador");
             comboBox_tipo_acesso.Items.Add("Recebedor");
 
-            atualiza_grid_usuarios("");
+            atualiza_grid("");
 
 
         }
-        private void atualiza_grid_usuarios(string filtro)
+        private void atualiza_grid(string filtro)
         {
             int linhaSelecionada = 0, primeiraLinha = 0;
             if (dataGridView_usuarios.CurrentRow != null)
@@ -52,10 +52,11 @@ namespace Mopheus_2
                 dataGridView_usuarios.Columns["id"].Visible = false;
                 dataGridView_usuarios.Columns["dateinsert"].Visible = false;
                 dataGridView_usuarios.Columns["dateupdate"].Visible = false;
-                dataGridView_usuarios.Columns["Nome"].Width = 265;
+                dataGridView_usuarios.Columns["Nome"].Width = 267;
                 dataGridView_usuarios.Columns["login"].Width = 150;
                 dataGridView_usuarios.Columns["senha"].Width = 150;
                 dataGridView_usuarios.Columns["acesso"].Width = 150;
+
             }
 
             
@@ -89,7 +90,7 @@ namespace Mopheus_2
                     Thread.CurrentThread.CurrentCulture = new CultureInfo(ConfigurationManager.AppSettings["current"]);
 
                     usuariobll.insert(usuario);
-                    atualiza_grid_usuarios("");
+                    atualiza_grid("");
 
                     textBox_nome_completo.Clear();
                     textBox_login.Clear();
@@ -119,17 +120,17 @@ namespace Mopheus_2
                     return;
                 }
 
-                var confirmResult = MessageBox.Show("Você realmente deseja deletar este item?", "Confirmação de exclusão!", MessageBoxButtons.YesNo);
+                var confirmResult = MessageBox.Show("Você realmente deseja excluir este usuário?", "Confirmação de exclusão!", MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
                     usuariobll.delete(Convert.ToInt32(dataGridView_usuarios.Rows[dataGridView_usuarios.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
                 }
 
-                atualiza_grid_usuarios("");
+                atualiza_grid("");
             }
             catch (Exception ex)
             {
-                atualiza_grid_usuarios("");
+                atualiza_grid("");
             }
         }
 
@@ -149,11 +150,7 @@ namespace Mopheus_2
                     //m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
                     contextMenuStrip1.Show(dataGridView_usuarios, new Point(e.X, e.Y));
                 }
-
-                
             }
-
-
         }
     }
 }

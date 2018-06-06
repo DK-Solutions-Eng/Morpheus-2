@@ -152,10 +152,16 @@
     <Compile Include="Formulários\Form_Sobre.Designer.cs">
       <DependentUpon>Form_Sobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Device_Satus.cs">
+    <Compile Include="Formulários\Form_CARREGAMENTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Device_Satus.Designer.cs">
+    <Compile Include="Formulários\Form_CARREGAMENTO.Designer.cs">
+      <DependentUpon>Form_CARREGAMENTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\Form_Device_Satus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Form_Device_Satus.Designer.cs">
       <DependentUpon>Form_Device_Satus.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\Form_FORNECEDOR.cs">
@@ -218,7 +224,10 @@
     <EmbeddedResource Include="Formulários\Form_USERS.resx">
       <DependentUpon>Form_USERS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Device_Satus.resx">
+    <EmbeddedResource Include="Formulários\Form_CARREGAMENTO.resx">
+      <DependentUpon>Form_CARREGAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Form_Device_Satus.resx">
       <DependentUpon>Form_Device_Satus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Form_FORNECEDOR.resx">
@@ -303,6 +312,8 @@
     <None Include="IMAGENS\morpheus.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\LineArrow_16x.png" />
+    <None Include="Resources\Print_16x.png" />
     <None Include="Resources\User_noHalo_16x.png" />
     <None Include="Resources\Login_16x.png" />
     <None Include="Resources\ComponentInstallStatus_16x.png" />

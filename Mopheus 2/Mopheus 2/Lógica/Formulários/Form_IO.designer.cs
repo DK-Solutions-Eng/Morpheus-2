@@ -120,26 +120,26 @@
             this.dataGridView_IO.AllowUserToResizeRows = false;
             this.dataGridView_IO.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_IO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_IO.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView_IO.Location = new System.Drawing.Point(12, 52);
             this.dataGridView_IO.Name = "dataGridView_IO";
             this.dataGridView_IO.ReadOnly = true;
             this.dataGridView_IO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView_IO.Size = new System.Drawing.Size(925, 397);
             this.dataGridView_IO.TabIndex = 7;
+            this.dataGridView_IO.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_IO_MouseClick);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excluirToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 26);
             // 
             // excluirToolStripMenuItem
             // 
             this.excluirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 

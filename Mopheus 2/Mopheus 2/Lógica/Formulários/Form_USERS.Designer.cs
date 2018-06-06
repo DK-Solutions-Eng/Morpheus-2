@@ -52,6 +52,7 @@
             this.dataGridView_usuarios.AllowUserToDeleteRows = false;
             this.dataGridView_usuarios.AllowUserToResizeColumns = false;
             this.dataGridView_usuarios.AllowUserToResizeRows = false;
+            this.dataGridView_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_usuarios.Location = new System.Drawing.Point(12, 51);
             this.dataGridView_usuarios.Name = "dataGridView_usuarios";

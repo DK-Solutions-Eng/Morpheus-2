@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_MATERIA_PRIMA));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_descricao_full = new System.Windows.Forms.TextBox();
@@ -37,7 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView_mp = new System.Windows.Forms.DataGridView();
             this.button_save = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_mp)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -102,6 +106,7 @@
             this.dataGridView_mp.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_mp.Size = new System.Drawing.Size(633, 498);
             this.dataGridView_mp.TabIndex = 6;
+            this.dataGridView_mp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_mp_MouseClick);
             // 
             // button_save
             // 
@@ -114,6 +119,21 @@
             this.button_save.Text = "Salvar";
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // Form_MATERIA_PRIMA
             // 
@@ -136,6 +156,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Matéria Prima";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_mp)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +172,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView_mp;
         private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

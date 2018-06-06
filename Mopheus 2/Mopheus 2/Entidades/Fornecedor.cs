@@ -9,5 +9,6 @@ namespace Entidades
     {
         public string nome_completo { get; set; }
         public string nome_resumido { get; set; }
+
     }
 }

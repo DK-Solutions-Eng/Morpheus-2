@@ -82,5 +82,49 @@ namespace Mopheus_2
             }
 
         }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var itemselecionado = dataGridView_mp.Rows[dataGridView_mp.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+                if (string.IsNullOrEmpty(itemselecionado))
+                {
+                    MessageBox.Show("Selecione um item para deletar!");
+                    return;
+                }
+
+                var confirmResult = MessageBox.Show("Você realmente deseja deletar este item?", "Confirmação de exclusão!", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    mpbll.delete(Convert.ToInt32(dataGridView_mp.Rows[dataGridView_mp.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
+                }
+
+                atualiza_grid("");
+            }
+            catch (Exception ex)
+            {
+                atualiza_grid("");
+            }
+        }
+
+        private void dataGridView_mp_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                //ContextMenu m = new ContextMenu();
+                //m.MenuItems.Add(new MenuItem("Cut"));
+                //m.MenuItems.Add(new MenuItem("Copy"));
+                //m.MenuItems.Add(new MenuItem("Paste"));
+
+                int currentMouseOverRow = dataGridView_mp.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    //m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                    contextMenuStrip1.Show(dataGridView_mp, new Point(e.X, e.Y));
+                }
+            }
+        }
     }
 }

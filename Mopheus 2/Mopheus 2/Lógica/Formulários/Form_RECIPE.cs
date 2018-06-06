@@ -20,16 +20,16 @@ namespace Mopheus_2
 {
     public partial class Form_receita : Form
     {
-        ReceitaBLL bll = new ReceitaBLL("Receita");
+        ReceitaBLL receitabll = new ReceitaBLL("Receita");
         Receita obj;
         ItensReceita objitensreceita;
-        ItensReceitaBLL bllitensreceita = new ItensReceitaBLL("ItensReceita");
+        ItensReceitaBLL itensreceitabll = new ItensReceitaBLL("ItensReceita");
 
         ReleBLL relebll = new ReleBLL("Rele");
         Rele rele = new Rele();
 
         Network network = new Network();
-        NetworkBLL netbll = new NetworkBLL("Network");
+        NetworkBLL networkbll = new NetworkBLL("Network");
 
         public Form_receita()
         {
@@ -77,7 +77,7 @@ namespace Mopheus_2
             comboBox_evento_posterior_tipo.Items.Add("Tempo");
             //comboBox_evento_posterior_tipo.SelectedIndex = 0;
 
-            List<Network> list = netbll.getAllCustom();
+            List<Network> list = networkbll.getAllCustom();
             if (list != null)
             {
                 foreach (Network item in list)
@@ -209,7 +209,27 @@ namespace Mopheus_2
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var itemselecionado = dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+                if (string.IsNullOrEmpty(itemselecionado))
+                {
+                    MessageBox.Show("Selecione um item para deletar!");
+                    return;
+                }
 
+                var confirmResult = MessageBox.Show("Você realmente deseja deletar este item?", "Confirmação de exclusão!", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    receitabll.delete(Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
+                }
+
+                atualiza_receitas("");
+            }
+            catch (Exception ex)
+            {
+                atualiza_receitas("");
+            }
         }
 
         private void Form_receita_Load(object sender, EventArgs e)
@@ -217,13 +237,14 @@ namespace Mopheus_2
 
 
         }
+
         private void dataGridView_receitas_DoubleClick(object sender, EventArgs e)
         {
             try
             {
                 if (dataGridView_receitas.Rows[dataGridView_receitas.SelectedCells[0].RowIndex].Cells[0].Value != null)
                 {
-                    Receita obj = bll.get(Convert.ToInt32(dataGridView_receitas.Rows[dataGridView_receitas.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
+                    Receita obj = receitabll.get(Convert.ToInt32(dataGridView_receitas.Rows[dataGridView_receitas.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
                     show_data_recipe(obj);
                 }
             }
@@ -255,10 +276,11 @@ namespace Mopheus_2
                 primeiraLinha = dataGridView_receitas.FirstDisplayedScrollingRowIndex;
                 linhaSelecionada = dataGridView_receitas.CurrentRow.Index;
             }
-            dataGridView_receitas.DataSource = bll.getAll(filtro, "NOME");
+            dataGridView_receitas.DataSource = receitabll.getAll(filtro, "NOME");
             dataGridView_receitas.Refresh();
             dataGridView_receitas.ClearSelection();
         }
+
         private void disable_all_itens()
         {
             groupBox1.Enabled = false;
@@ -273,9 +295,10 @@ namespace Mopheus_2
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
         }
+
         public void carregaItensReceita(int? id_receita)
         {
-            dataGridView_itens_receita.DataSource = bllitensreceita.getCustomReceita(id_receita);
+            dataGridView_itens_receita.DataSource = itensreceitabll.getCustomReceita(id_receita);
             dataGridView_itens_receita.Refresh();
             dataGridView_itens_receita.ClearSelection();
             if (dataGridView_itens_receita.DataSource != null)
@@ -293,6 +316,7 @@ namespace Mopheus_2
                 excluirToolStripMenuItem.Enabled = false;
             }
         }
+
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             /*
@@ -363,21 +387,18 @@ namespace Mopheus_2
             }
             */
 
-
-
-
             obj = new Receita();
             if (string.IsNullOrEmpty(textBox_id.Text))
             {
                 obj.nome = textBox_nome_receita.Text;
                 obj.dateinsert = DateTime.Now;
-                bll.insert(obj);
-                obj = bll.getCustomUltimo();
+                receitabll.insert(obj);
+                obj = receitabll.getCustomUltimo();
                 textBox_id.Text = obj.id.ToString();
             }
             else
             {
-                obj = bll.get(Convert.ToInt32(textBox_id.Text));
+                obj = receitabll.get(Convert.ToInt32(textBox_id.Text));
             }
 
             if (objitensreceita != null)
@@ -450,7 +471,7 @@ namespace Mopheus_2
 
                 //considero as linhas do grid porque por padrao ele conta o cabeçalho... resumindo seria a nova linha
                 objitensreceita.sequencia = 0;
-                bllitensreceita.update(objitensreceita);
+                itensreceitabll.update(objitensreceita);
                 carregaItensReceita(obj.id);
                 clean_itens_receita();
                 objitensreceita = null;
@@ -528,18 +549,18 @@ namespace Mopheus_2
                 //considero as linhas do grid porque por padrao ele conta o cabeçalho... resumindo seria a nova linha
                 item.sequencia = 0;
                 //bllitensreceita.getCustomReceita(obj.id) == null ? 1 : bllitensreceita.getCustomReceita(obj.id).Rows.Count + 1;
-                bllitensreceita.insert(item);
+                itensreceitabll.insert(item);
                 carregaItensReceita(obj.id);
                 clean_itens_receita();
                 tabControl2.SelectedIndex = 0;
                 textBox_etapa.Focus();
             }
 
-            bllitensreceita.ordenaSequencia(obj.id);
+            itensreceitabll.ordenaSequencia(obj.id);
             carregaItensReceita(obj.id);
 
             //verifica se tem item para a receita
-            DataTable dt = bllitensreceita.getCustomReceita(Convert.ToInt32(textBox_id.Text));
+            DataTable dt = itensreceitabll.getCustomReceita(Convert.ToInt32(textBox_id.Text));
             if (dt == null)
             {
                 MessageBox.Show("Adicione pelo menos um item na receita!");
@@ -553,7 +574,7 @@ namespace Mopheus_2
             {
                 obj.nome = textBox_nome_receita.Text;
                 obj.dateinsert = DateTime.Now;
-                bll.insert(obj);
+                receitabll.insert(obj);
                 MessageBox.Show("Receita salva com sucesso!");
             }
             else
@@ -562,11 +583,11 @@ namespace Mopheus_2
                 obj.nome = textBox_nome_receita.Text;
                 obj.dateupdate = DateTime.Now;
                 obj.dateinsert = this.obj.dateinsert;
-                bll.update(obj);
+                receitabll.update(obj);
                 MessageBox.Show("Receita atualizada com sucesso!");
             }
             tabControl1.SelectedIndex = 0;
-            atualiza("");
+            atualiza_itens_receita("");
             carregaItensReceita(0);
             clean_itens_receita();
         }
@@ -613,17 +634,17 @@ namespace Mopheus_2
             #endregion
         }
 
-        public void atualiza(string filtro)
+        public void atualiza_itens_receita(string filtro)
         {
             int linhaSelecionada = 0, primeiraLinha = 0;
-            if (dataGridView_receitas.CurrentRow != null)
+            if (dataGridView_itens_receita.CurrentRow != null)
             {
-                primeiraLinha = dataGridView_receitas.FirstDisplayedScrollingRowIndex;
-                linhaSelecionada = dataGridView_receitas.CurrentRow.Index;
+                primeiraLinha = dataGridView_itens_receita.FirstDisplayedScrollingRowIndex;
+                linhaSelecionada = dataGridView_itens_receita.CurrentRow.Index;
             }
-            dataGridView_receitas.DataSource = bll.getAll(filtro, "NOME");
-            dataGridView_receitas.Refresh();
-            dataGridView_receitas.ClearSelection();
+            dataGridView_itens_receita.DataSource = receitabll.getAll(filtro, "NOME");
+            dataGridView_itens_receita.Refresh();
+            dataGridView_itens_receita.ClearSelection();
         }
 
         private void descenderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -635,7 +656,7 @@ namespace Mopheus_2
                     int sequencia = Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
                     if (sequencia != 1)
                     {
-                        bllitensreceita.updateCustomMoveAbaixoSequencia(sequencia, Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[29].Value.ToString()));
+                        itensreceitabll.updateCustomMoveAbaixoSequencia(sequencia, Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[29].Value.ToString()));
                         carregaItensReceita(obj.id);
                         dataGridView_itens_receita.ClearSelection();
                         dataGridView_itens_receita.CurrentCell = dataGridView_itens_receita.Rows[(sequencia - 2)].Cells[0];
@@ -660,7 +681,7 @@ namespace Mopheus_2
 
             
 
-            List<Network> listnet = netbll.getAllCustom();
+            List<Network> listnet = networkbll.getAllCustom();
             foreach (Network item in listnet)
             {
                 if(comboBox_device.Text==item.full_name)
@@ -808,6 +829,57 @@ namespace Mopheus_2
                     textBox_rele.Text = item.IO.ToString();
                 }
             }
+        }
+
+        private void ascenderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[9].Value != null)
+                {
+                    int sequencia = Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+                    if (sequencia != 1)
+                    {
+                        itensreceitabll.updateCustomMoveAbaixoSequencia(sequencia, Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[9].Value.ToString()));
+                        carregaItensReceita(obj.id);
+                        dataGridView_itens_receita.ClearSelection();
+                        dataGridView_itens_receita.CurrentCell = dataGridView_itens_receita.Rows[(sequencia - 2)].Cells[0];
+                        dataGridView_itens_receita.Rows[(sequencia - 2)].Selected = true;
+                        clean_itens_receita();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void editarEtapaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var confirmResult = MessageBox.Show("Você deseja editar esse item?","Edição",MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    if (dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[9].Value != null)
+                    {
+                        ItensReceita obj = itensreceitabll.get(Convert.ToInt32(dataGridView_itens_receita.Rows[dataGridView_itens_receita.SelectedCells[0].RowIndex].Cells[9].Value.ToString()));
+                        mostrar_ItensReceita(obj);
+                        //cboObjetivo.Enabled = true;
+                        //enableButtonItensReceita(false, true, true, true);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public void mostrar_ItensReceita(ItensReceita obj)
+        {
+
         }
     }
 }

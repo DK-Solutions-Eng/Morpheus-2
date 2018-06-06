@@ -194,3 +194,4 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Diagram.v17.2.Core.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_USERS.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_LOGIN.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_CARREGAMENTO.resources

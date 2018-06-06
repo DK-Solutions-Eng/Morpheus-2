@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using Entidades;
 
 
 namespace Mopheus_2
@@ -25,6 +26,25 @@ namespace Mopheus_2
             timer1.Enabled = true;
             timer1.Start();
 
+            hide_menus();
+        }
+
+        private void hide_menus()
+        {
+            loginToolStripMenuItem.Visible = true;
+            receitaToolStripMenuItem.Visible = false;
+            lerLogsToolStripMenuItem.Visible = false;
+            carregamentoToolStripMenuItem.Visible = false;
+            statusDosDispositivosToolStripMenuItem.Visible = false;
+            sairToolStripMenuItem.Visible = true;
+            comunicaçãoToolStripMenuItem.Visible = false;
+            redeStripMenuItem.Visible = false;
+            entradaESaídasToolStripMenuItem.Visible = false;
+            matériaPrimaToolStripMenuItem.Visible = false;
+            fornecedoresToolStripMenuItem.Visible = false;
+            usuáriosToolStripMenuItem.Visible = false;
+            helpToolStripMenuItem.Visible = true;
+            sobreToolStripMenuItem.Visible = true;
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +78,8 @@ namespace Mopheus_2
 
         private void Form_PRINCIPAL_Load(object sender, EventArgs e)
         {
-            
+            toolStripStatusLabel2.Text = Global.user;
+            verifica_acesso();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,7 +108,7 @@ namespace Mopheus_2
 
         private void Form_PRINCIPAL_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente sair?", "Atenção!", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja realmente sair?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -178,9 +199,12 @@ namespace Mopheus_2
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            hide_menus();
             Form_LOGIN form_LOGIN;
             form_LOGIN = new Form_LOGIN();
             form_LOGIN.ShowDialog();
+            toolStripStatusLabel2.Text = Global.user;
+            verifica_acesso();
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -188,6 +212,99 @@ namespace Mopheus_2
             Form_USERS form_USER;
             form_USER = new Form_USERS();
             form_USER.ShowDialog();
+        }
+
+        private void verifica_acesso()
+        {
+            switch (Global.acesso)
+            {
+                case "Administrador":
+                    loginToolStripMenuItem.Visible = true;
+                    receitaToolStripMenuItem.Visible = true;
+                    carregamentoToolStripMenuItem.Visible = true;
+                    lerLogsToolStripMenuItem.Visible = true;
+                    statusDosDispositivosToolStripMenuItem.Visible = true;
+                    sairToolStripMenuItem.Visible = true;
+                    comunicaçãoToolStripMenuItem.Visible = true;
+                    redeStripMenuItem.Visible = true;
+                    entradaESaídasToolStripMenuItem.Visible = true;
+                    matériaPrimaToolStripMenuItem.Visible = true;
+                    fornecedoresToolStripMenuItem.Visible = true;
+                    usuáriosToolStripMenuItem.Visible = true;
+                    helpToolStripMenuItem.Visible = true;
+                    sobreToolStripMenuItem.Visible = true;
+                    break;
+                case "Full":
+                    loginToolStripMenuItem.Visible = true;
+                    receitaToolStripMenuItem.Visible = true;
+                    carregamentoToolStripMenuItem.Visible = true;
+                    lerLogsToolStripMenuItem.Visible = true;
+                    statusDosDispositivosToolStripMenuItem.Visible = true;
+                    sairToolStripMenuItem.Visible = true;
+                    comunicaçãoToolStripMenuItem.Visible = true;
+                    redeStripMenuItem.Visible = true;
+                    entradaESaídasToolStripMenuItem.Visible = true;
+                    matériaPrimaToolStripMenuItem.Visible = true;
+                    fornecedoresToolStripMenuItem.Visible = true;
+                    usuáriosToolStripMenuItem.Visible = true;
+                    helpToolStripMenuItem.Visible = true;
+                    sobreToolStripMenuItem.Visible = true;
+                    break;
+                case "Recebedor":
+                    loginToolStripMenuItem.Visible = true;
+                    receitaToolStripMenuItem.Visible = false;
+                    carregamentoToolStripMenuItem.Visible = true;
+                    lerLogsToolStripMenuItem.Visible = false;
+                    statusDosDispositivosToolStripMenuItem.Visible = false;
+                    sairToolStripMenuItem.Visible = true;
+                    comunicaçãoToolStripMenuItem.Visible = false;
+                    redeStripMenuItem.Visible = false;
+                    entradaESaídasToolStripMenuItem.Visible = false;
+                    matériaPrimaToolStripMenuItem.Visible = false;
+                    fornecedoresToolStripMenuItem.Visible = false;
+                    usuáriosToolStripMenuItem.Visible = false;
+                    helpToolStripMenuItem.Visible = true;
+                    sobreToolStripMenuItem.Visible = true;
+                    break;
+                case "Operador":
+                    loginToolStripMenuItem.Visible = true;
+                    receitaToolStripMenuItem.Visible = true;
+                    carregamentoToolStripMenuItem.Visible = false;
+                    lerLogsToolStripMenuItem.Visible = false;
+                    statusDosDispositivosToolStripMenuItem.Visible = true;
+                    sairToolStripMenuItem.Visible = true;
+                    comunicaçãoToolStripMenuItem.Visible = false;
+                    redeStripMenuItem.Visible = false;
+                    entradaESaídasToolStripMenuItem.Visible = false;
+                    matériaPrimaToolStripMenuItem.Visible = false;
+                    fornecedoresToolStripMenuItem.Visible = false;
+                    usuáriosToolStripMenuItem.Visible = false;
+                    helpToolStripMenuItem.Visible = true;
+                    sobreToolStripMenuItem.Visible = true;
+                    break;
+                case "Supervisor":
+                    loginToolStripMenuItem.Visible = true;
+                    receitaToolStripMenuItem.Visible = true;
+                    carregamentoToolStripMenuItem.Visible = false;
+                    lerLogsToolStripMenuItem.Visible = false;
+                    statusDosDispositivosToolStripMenuItem.Visible = true;
+                    sairToolStripMenuItem.Visible = true;
+                    comunicaçãoToolStripMenuItem.Visible = true;
+                    redeStripMenuItem.Visible = true;
+                    entradaESaídasToolStripMenuItem.Visible = true;
+                    matériaPrimaToolStripMenuItem.Visible = false;
+                    fornecedoresToolStripMenuItem.Visible = false;
+                    usuáriosToolStripMenuItem.Visible = false;
+                    helpToolStripMenuItem.Visible = true;
+                    sobreToolStripMenuItem.Visible = true;
+                    break;
+            }
+        }
+
+        private void carregamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CARREGAMENTO form_carregamento = new Form_CARREGAMENTO();
+            form_carregamento.ShowDialog();
         }
     }
 }

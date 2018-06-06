@@ -302,7 +302,11 @@ namespace Mopheus_2
                 linhaSelecionada = dataGridView_IO.CurrentRow.Index;
                 dataGridView_IO.Columns["id"].Visible = false;
                 dataGridView_IO.Columns["device"].Width = 120;
-                dataGridView_IO.Columns["descricao"].Width = 250;
+                dataGridView_IO.Columns["descricao"].Width = 300;
+                dataGridView_IO.Columns["dateinsert"].Visible = false;
+                dataGridView_IO.Columns["dateupdate"].Visible = false;
+                dataGridView_IO.Columns["funcao"].Width = 265;
+                dataGridView_IO.Columns["parent"].Visible = false;
             }
 
             dataGridView_IO.Refresh();
@@ -312,7 +316,11 @@ namespace Mopheus_2
             {
                 dataGridView_IO.Columns["id"].Visible = false;
                 dataGridView_IO.Columns["device"].Width = 120;
-                dataGridView_IO.Columns["descricao"].Width = 250;
+                dataGridView_IO.Columns["descricao"].Width = 300;
+                dataGridView_IO.Columns["dateinsert"].Visible = false;
+                dataGridView_IO.Columns["dateupdate"].Visible = false;
+                dataGridView_IO.Columns["funcao"].Width = 265;
+                dataGridView_IO.Columns["parent"].Visible = false;
             }
         }
 
@@ -349,7 +357,46 @@ namespace Mopheus_2
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var itemselecionado = dataGridView_IO.Rows[dataGridView_IO.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+                if (string.IsNullOrEmpty(itemselecionado))
+                {
+                    MessageBox.Show("Selecione um item para deletar!");
+                    return;
+                }
 
+                var confirmResult = MessageBox.Show("Você realmente deseja excluir este usuário?", "Confirmação de exclusão!", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    relebll.delete(Convert.ToInt32(dataGridView_IO.Rows[dataGridView_IO.SelectedCells[0].RowIndex].Cells[0].Value.ToString()));
+                }
+
+                atualiza_grid("");
+            }
+            catch (Exception ex)
+            {
+                atualiza_grid("");
+            }
+        }
+
+        private void dataGridView_IO_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                //ContextMenu m = new ContextMenu();
+                //m.MenuItems.Add(new MenuItem("Cut"));
+                //m.MenuItems.Add(new MenuItem("Copy"));
+                //m.MenuItems.Add(new MenuItem("Paste"));
+
+                int currentMouseOverRow = dataGridView_IO.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    //m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                    contextMenuStrip1.Show(dataGridView_IO, new Point(e.X, e.Y));
+                }
+            }
         }
     }
 }

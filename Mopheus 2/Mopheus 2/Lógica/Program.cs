@@ -33,18 +33,21 @@ namespace Mopheus_2
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+
             Form_Splash frmSplash = new Form_Splash();
             frmSplash.Show();
             Application.DoEvents();
-            
             Thread.Sleep(2000);
-
-           //Fecha formulário de apresentação
-
             frmSplash.Dispose();
 
-            //Inicia a aplicação com o Form_MAIN
-            Application.Run(new Form_MAIN());            
+            Form_LOGIN login = new Form_LOGIN();
+            //login.Show();
+
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form_MAIN());
+            }
         }
 
         

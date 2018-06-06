@@ -10,5 +10,9 @@ namespace Entidades
         public static bool serial_port_status { get; set; }
 
         public static bool god_mode { get; set; }
+
+        public static string user {get;set;}
+
+        public static string acesso { get; set; }
     }
 }

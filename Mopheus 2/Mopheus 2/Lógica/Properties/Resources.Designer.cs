@@ -193,6 +193,16 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap LineArrow_16x {
+            get {
+                object obj = ResourceManager.GetObject("LineArrow_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Login_16x {
             get {
                 object obj = ResourceManager.GetObject("Login_16x", resourceCulture);
@@ -266,6 +276,16 @@ namespace Mopheus_2.Properties {
         public static System.Drawing.Bitmap PlayVideo_16x {
             get {
                 object obj = ResourceManager.GetObject("PlayVideo_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Print_16x {
+            get {
+                object obj = ResourceManager.GetObject("Print_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

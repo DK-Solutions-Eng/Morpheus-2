@@ -206,6 +206,7 @@
             // 
             // imprimirToolStripMenuItem
             // 
+            this.imprimirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Print_16x;
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
@@ -366,6 +367,7 @@
             this.editarEtapaToolStripMenuItem.Name = "editarEtapaToolStripMenuItem";
             this.editarEtapaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.editarEtapaToolStripMenuItem.Text = "Editar Etapa";
+            this.editarEtapaToolStripMenuItem.Click += new System.EventHandler(this.editarEtapaToolStripMenuItem_Click);
             // 
             // ascenderToolStripMenuItem
             // 
@@ -373,6 +375,7 @@
             this.ascenderToolStripMenuItem.Name = "ascenderToolStripMenuItem";
             this.ascenderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.ascenderToolStripMenuItem.Text = "Nível Acima";
+            this.ascenderToolStripMenuItem.Click += new System.EventHandler(this.ascenderToolStripMenuItem_Click);
             // 
             // descenderToolStripMenuItem
             // 

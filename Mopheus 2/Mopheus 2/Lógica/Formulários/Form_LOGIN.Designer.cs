@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_LOGIN));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.textBox_senha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
+            this.button_cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,19 +46,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // textBox1
+            // textBox_login
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox_login.Location = new System.Drawing.Point(12, 25);
+            this.textBox_login.Name = "textBox_login";
+            this.textBox_login.Size = new System.Drawing.Size(234, 20);
+            this.textBox_login.TabIndex = 1;
             // 
-            // textBox2
+            // textBox_senha
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBox_senha.Location = new System.Drawing.Point(12, 64);
+            this.textBox_senha.Name = "textBox_senha";
+            this.textBox_senha.PasswordChar = '*';
+            this.textBox_senha.Size = new System.Drawing.Size(234, 20);
+            this.textBox_senha.TabIndex = 3;
             // 
             // label2
             // 
@@ -72,22 +74,37 @@
             // 
             this.button_save.Image = global::Mopheus_2.Properties.Resources.Login_16x;
             this.button_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_save.Location = new System.Drawing.Point(89, 90);
+            this.button_save.Location = new System.Drawing.Point(40, 90);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
             this.button_save.TabIndex = 16;
             this.button_save.Text = "Login";
             this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // button_cancel
+            // 
+            this.button_cancel.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
+            this.button_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_cancel.Location = new System.Drawing.Point(139, 90);
+            this.button_cancel.Name = "button_cancel";
+            this.button_cancel.Size = new System.Drawing.Size(75, 23);
+            this.button_cancel.TabIndex = 17;
+            this.button_cancel.Text = "Cancelar";
+            this.button_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 122);
+            this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_save);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_senha);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -103,9 +120,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.TextBox textBox_senha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Button button_cancel;
     }
 }

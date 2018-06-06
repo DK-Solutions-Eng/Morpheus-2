@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_FORNECEDOR));
             this.button_save = new System.Windows.Forms.Button();
             this.dataGridView_fornecedor = new System.Windows.Forms.DataGridView();
@@ -35,7 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_nome_completo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fornecedor)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_save
@@ -56,6 +60,7 @@
             this.dataGridView_fornecedor.AllowUserToDeleteRows = false;
             this.dataGridView_fornecedor.AllowUserToResizeColumns = false;
             this.dataGridView_fornecedor.AllowUserToResizeRows = false;
+            this.dataGridView_fornecedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_fornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_fornecedor.Location = new System.Drawing.Point(12, 51);
             this.dataGridView_fornecedor.Name = "dataGridView_fornecedor";
@@ -63,6 +68,7 @@
             this.dataGridView_fornecedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_fornecedor.Size = new System.Drawing.Size(507, 498);
             this.dataGridView_fornecedor.TabIndex = 14;
+            this.dataGridView_fornecedor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_fornecedor_MouseClick);
             // 
             // textBox_nome_resumido
             // 
@@ -96,6 +102,21 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nome Completo";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
+            // 
             // Form_FORNECEDOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +136,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Fornecedor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fornecedor)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +150,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_nome_completo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }
