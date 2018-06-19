@@ -68,20 +68,6 @@ C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\L
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.pdb
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe.licenses
 C:\Users\Lucas Tadeu\Documents\Visual Studio 2017\Projects\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Device_Status.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_IO.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_receita.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_REDE.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Splash.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Sobre.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Device_Status.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Properties.Resources.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.GenerateResource.cache
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe.licenses
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CoreCompileInputs.cache
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.pdb
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Morpheus2_DataBase.mdf
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Morpheus2_DataBase_log.ldf
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.exe.config
@@ -90,62 +76,33 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.pdb
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.pdb
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.pdb
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.pdb
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CopyComplete
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Data.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Printing.v17.2.Core.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraEditors.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Pdf.v17.2.Core.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Data.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Printing.v17.2.Core.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraEditors.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Pdf.v17.2.Core.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MAIN.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Data.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Printing.v17.2.Core.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Sparkline.v17.2.Core.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Utils.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraEditors.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Pdf.v17.2.Core.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraLayout.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraTreeList.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraLayout.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraTreeList.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraLayout.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraTreeList.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.BonusSkins.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Images.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraBars.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraNavBar.v17.2.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraBars.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraNavBar.v17.2.xml
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraBars.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraNavBar.v17.2.resources.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.DEVICE_PROPERTIES.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MATERIA_PRIMA.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_FORNECEDOR.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Charts.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.CodeParser.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Data.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.DataAccess.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Images.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Office.v17.2.Core.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Pdf.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.PivotGrid.v17.2.Core.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Printing.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.RichEdit.v17.2.Export.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.UI.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Xpo.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraBars.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraCharts.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraEditors.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraGauges.v17.2.Core.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraLayout.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraNavBar.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraPrinting.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraReports.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraTreeList.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraRichEdit.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraVerticalGrid.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.DataAccess.v17.2.UI.dll
@@ -155,17 +112,31 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraGrid.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Diagram.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraDiagram.v17.2.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Data.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.DataAccess.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Office.v17.2.Core.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Pdf.v17.2.Core.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.PivotGrid.v17.2.Core.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Printing.v17.2.Core.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.RichEdit.v17.2.Core.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Utils.v17.2.UI.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Xpo.v17.2.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraBars.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraCharts.v17.2.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraEditors.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraGauges.v17.2.Core.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraLayout.v17.2.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraNavBar.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraPrinting.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraReports.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraTreeList.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraRichEdit.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraVerticalGrid.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.DataAccess.v17.2.UI.xml
@@ -174,17 +145,27 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraGrid.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Diagram.v17.2.Core.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraDiagram.v17.2.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Data.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.DataAccess.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Office.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Pdf.v17.2.Core.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.PivotGrid.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Printing.v17.2.Core.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.RichEdit.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Sparkline.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Utils.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Utils.v17.2.UI.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Xpo.v17.2.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraBars.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraCharts.v17.2.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraEditors.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraGauges.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraLayout.v17.2.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraNavBar.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraPrinting.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraReports.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraReports.v17.2.Extensions.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraTreeList.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraRichEdit.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraVerticalGrid.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.DataAccess.v17.2.UI.resources.dll
@@ -192,6 +173,25 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraPivotGrid.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.XtraGrid.v17.2.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\pt\DevExpress.Diagram.v17.2.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.DEVICE_PROPERTIES.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_IO.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MAIN.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_receita.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_REDE.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Splash.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Sobre.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_USERS.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_LOGIN.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_CARREGAMENTO.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_Device_Status.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_FORNECEDOR.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_MATERIA_PRIMA.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Form_LOGIN.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus_2.Properties.Resources.resources
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.GenerateResource.cache
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe.licenses
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CopyComplete
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.pdb

@@ -1,4 +1,7 @@
-﻿namespace Mopheus_2
+﻿using System.Threading;
+using System.Globalization;
+
+namespace Mopheus_2
 {
     partial class Form_receita
     {
@@ -208,6 +211,8 @@
             // 
             this.imprimirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Print_16x;
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+P";
+            this.imprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
@@ -226,7 +231,7 @@
             // 
             this.enviarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Upload_16x;
             this.enviarReceitaToolStripMenuItem.Name = "enviarReceitaToolStripMenuItem";
-            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.enviarReceitaToolStripMenuItem.Text = "Enviar Receita";
             this.enviarReceitaToolStripMenuItem.Click += new System.EventHandler(this.enviarReceitaToolStripMenuItem_Click);
             // 
@@ -234,21 +239,21 @@
             // 
             this.executarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
             this.executarReceitaToolStripMenuItem.Name = "executarReceitaToolStripMenuItem";
-            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.executarReceitaToolStripMenuItem.Text = "Executar Receita";
             // 
             // pausarReceitaToolStripMenuItem
             // 
             this.pausarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
             this.pausarReceitaToolStripMenuItem.Name = "pausarReceitaToolStripMenuItem";
-            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.pausarReceitaToolStripMenuItem.Text = "Pausar Receita";
             // 
             // pararReceitaToolStripMenuItem
             // 
             this.pararReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
             this.pararReceitaToolStripMenuItem.Name = "pararReceitaToolStripMenuItem";
-            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.pararReceitaToolStripMenuItem.Text = "Parar Receita";
             // 
             // visualizarToolStripMenuItem
@@ -352,6 +357,7 @@
             this.novaEtapaToolStripMenuItem.Name = "novaEtapaToolStripMenuItem";
             this.novaEtapaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.novaEtapaToolStripMenuItem.Text = "Adicionar Etapa";
+            this.novaEtapaToolStripMenuItem.Click += new System.EventHandler(this.novaEtapaToolStripMenuItem_Click);
             // 
             // excluirToolStripMenuItem
             // 
@@ -430,7 +436,7 @@
             this.textBox_etapa.Location = new System.Drawing.Point(9, 19);
             this.textBox_etapa.Name = "textBox_etapa";
             this.textBox_etapa.Size = new System.Drawing.Size(250, 20);
-            this.textBox_etapa.TabIndex = 57;
+            this.textBox_etapa.TabIndex = 17;
             // 
             // label31
             // 
@@ -438,7 +444,7 @@
             this.label31.Location = new System.Drawing.Point(6, 3);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(90, 13);
-            this.label31.TabIndex = 56;
+            this.label31.TabIndex = 21;
             this.label31.Text = "Etapa da Receita";
             // 
             // comboBox_produto
@@ -447,7 +453,7 @@
             this.comboBox_produto.Location = new System.Drawing.Point(391, 18);
             this.comboBox_produto.Name = "comboBox_produto";
             this.comboBox_produto.Size = new System.Drawing.Size(250, 21);
-            this.comboBox_produto.TabIndex = 54;
+            this.comboBox_produto.TabIndex = 19;
             this.comboBox_produto.SelectedIndexChanged += new System.EventHandler(this.comboBox_produto_SelectedIndexChanged);
             // 
             // label3
@@ -456,7 +462,7 @@
             this.label3.Location = new System.Drawing.Point(644, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 35;
+            this.label3.TabIndex = 24;
             this.label3.Text = "Relé";
             // 
             // textBox_rele
@@ -465,7 +471,7 @@
             this.textBox_rele.Location = new System.Drawing.Point(647, 19);
             this.textBox_rele.Name = "textBox_rele";
             this.textBox_rele.Size = new System.Drawing.Size(50, 20);
-            this.textBox_rele.TabIndex = 55;
+            this.textBox_rele.TabIndex = 20;
             // 
             // label2
             // 
@@ -473,7 +479,7 @@
             this.label2.Location = new System.Drawing.Point(388, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 13);
-            this.label2.TabIndex = 34;
+            this.label2.TabIndex = 23;
             this.label2.Text = "Produto/Acionamento/Sensoriamento";
             // 
             // label5
@@ -482,16 +488,17 @@
             this.label5.Location = new System.Drawing.Point(262, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 36;
+            this.label5.TabIndex = 22;
             this.label5.Text = "Processo";
             // 
             // comboBox_processo
             // 
             this.comboBox_processo.FormattingEnabled = true;
+            this.comboBox_processo.ItemHeight = 13;
             this.comboBox_processo.Location = new System.Drawing.Point(265, 18);
             this.comboBox_processo.Name = "comboBox_processo";
             this.comboBox_processo.Size = new System.Drawing.Size(120, 21);
-            this.comboBox_processo.TabIndex = 37;
+            this.comboBox_processo.TabIndex = 18;
             // 
             // tabPage4
             // 
@@ -519,7 +526,7 @@
             this.radioButton_ON_evento_anterior.Location = new System.Drawing.Point(266, 101);
             this.radioButton_ON_evento_anterior.Name = "radioButton_ON_evento_anterior";
             this.radioButton_ON_evento_anterior.Size = new System.Drawing.Size(41, 17);
-            this.radioButton_ON_evento_anterior.TabIndex = 78;
+            this.radioButton_ON_evento_anterior.TabIndex = 29;
             this.radioButton_ON_evento_anterior.Text = "ON";
             this.radioButton_ON_evento_anterior.UseVisualStyleBackColor = true;
             // 
@@ -530,7 +537,7 @@
             this.radioButton_OFF_evento_anterior.Location = new System.Drawing.Point(215, 101);
             this.radioButton_OFF_evento_anterior.Name = "radioButton_OFF_evento_anterior";
             this.radioButton_OFF_evento_anterior.Size = new System.Drawing.Size(45, 17);
-            this.radioButton_OFF_evento_anterior.TabIndex = 77;
+            this.radioButton_OFF_evento_anterior.TabIndex = 28;
             this.radioButton_OFF_evento_anterior.TabStop = true;
             this.radioButton_OFF_evento_anterior.Text = "OFF";
             this.radioButton_OFF_evento_anterior.UseVisualStyleBackColor = true;
@@ -540,7 +547,8 @@
             this.textBox_setpoint.Location = new System.Drawing.Point(9, 137);
             this.textBox_setpoint.Name = "textBox_setpoint";
             this.textBox_setpoint.Size = new System.Drawing.Size(110, 20);
-            this.textBox_setpoint.TabIndex = 76;
+            this.textBox_setpoint.TabIndex = 30;
+            this.textBox_setpoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_setpoint_KeyPress);
             // 
             // label20
             // 
@@ -548,7 +556,7 @@
             this.label20.Location = new System.Drawing.Point(6, 121);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 13);
-            this.label20.TabIndex = 75;
+            this.label20.TabIndex = 34;
             this.label20.Text = "Set Point";
             // 
             // label18
@@ -557,7 +565,7 @@
             this.label18.Location = new System.Drawing.Point(6, 81);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 13);
-            this.label18.TabIndex = 74;
+            this.label18.TabIndex = 33;
             this.label18.Text = "Entrada";
             // 
             // label8
@@ -566,7 +574,7 @@
             this.label8.Location = new System.Drawing.Point(6, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 13);
-            this.label8.TabIndex = 73;
+            this.label8.TabIndex = 32;
             this.label8.Text = "Tempo de Espera";
             // 
             // timeEdit_tempo_espera_evento_anterior
@@ -578,7 +586,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_tempo_espera_evento_anterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(110, 20);
-            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 61;
+            this.timeEdit_tempo_espera_evento_anterior.TabIndex = 26;
             // 
             // comboBox_IO
             // 
@@ -586,7 +594,7 @@
             this.comboBox_IO.Location = new System.Drawing.Point(9, 97);
             this.comboBox_IO.Name = "comboBox_IO";
             this.comboBox_IO.Size = new System.Drawing.Size(200, 21);
-            this.comboBox_IO.TabIndex = 72;
+            this.comboBox_IO.TabIndex = 27;
             this.comboBox_IO.SelectedIndexChanged += new System.EventHandler(this.comboBox_IO_SelectedIndexChanged);
             // 
             // comboBox_evento_anterior_tipo
@@ -595,7 +603,7 @@
             this.comboBox_evento_anterior_tipo.Location = new System.Drawing.Point(9, 18);
             this.comboBox_evento_anterior_tipo.Name = "comboBox_evento_anterior_tipo";
             this.comboBox_evento_anterior_tipo.Size = new System.Drawing.Size(110, 21);
-            this.comboBox_evento_anterior_tipo.TabIndex = 58;
+            this.comboBox_evento_anterior_tipo.TabIndex = 25;
             this.comboBox_evento_anterior_tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox_evento_anterior_tipo_SelectedIndexChanged);
             // 
             // label1
@@ -604,7 +612,7 @@
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 59;
+            this.label1.TabIndex = 31;
             this.label1.Text = "Tipo";
             // 
             // tabPage5
@@ -640,6 +648,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(40, 13);
             this.label24.TabIndex = 0;
+            this.label24.Tag = "55";
             this.label24.Text = "Tempo";
             // 
             // timeEdit_tempo_evento_posterior
@@ -651,7 +660,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_tempo_evento_posterior.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_tempo_evento_posterior.Size = new System.Drawing.Size(101, 20);
-            this.timeEdit_tempo_evento_posterior.TabIndex = 70;
+            this.timeEdit_tempo_evento_posterior.TabIndex = 54;
             // 
             // groupBox_entrada
             // 
@@ -677,7 +686,7 @@
             this.radioButton_OFF_evento_posterior.Location = new System.Drawing.Point(215, 33);
             this.radioButton_OFF_evento_posterior.Name = "radioButton_OFF_evento_posterior";
             this.radioButton_OFF_evento_posterior.Size = new System.Drawing.Size(45, 17);
-            this.radioButton_OFF_evento_posterior.TabIndex = 1;
+            this.radioButton_OFF_evento_posterior.TabIndex = 47;
             this.radioButton_OFF_evento_posterior.TabStop = true;
             this.radioButton_OFF_evento_posterior.Text = "OFF";
             this.radioButton_OFF_evento_posterior.UseVisualStyleBackColor = true;
@@ -688,7 +697,7 @@
             this.radioButton_ON_evento_posterior.Location = new System.Drawing.Point(266, 33);
             this.radioButton_ON_evento_posterior.Name = "radioButton_ON_evento_posterior";
             this.radioButton_ON_evento_posterior.Size = new System.Drawing.Size(41, 17);
-            this.radioButton_ON_evento_posterior.TabIndex = 0;
+            this.radioButton_ON_evento_posterior.TabIndex = 48;
             this.radioButton_ON_evento_posterior.Text = "ON";
             this.radioButton_ON_evento_posterior.UseVisualStyleBackColor = true;
             // 
@@ -698,7 +707,7 @@
             this.label34.Location = new System.Drawing.Point(122, 56);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(80, 13);
-            this.label34.TabIndex = 85;
+            this.label34.TabIndex = 53;
             this.label34.Text = "Set Point Limite";
             // 
             // textBox_setpoint_limite_evento_posterior
@@ -706,7 +715,7 @@
             this.textBox_setpoint_limite_evento_posterior.Location = new System.Drawing.Point(125, 72);
             this.textBox_setpoint_limite_evento_posterior.Name = "textBox_setpoint_limite_evento_posterior";
             this.textBox_setpoint_limite_evento_posterior.Size = new System.Drawing.Size(110, 20);
-            this.textBox_setpoint_limite_evento_posterior.TabIndex = 86;
+            this.textBox_setpoint_limite_evento_posterior.TabIndex = 50;
             // 
             // label33
             // 
@@ -714,7 +723,7 @@
             this.label33.Location = new System.Drawing.Point(6, 16);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(44, 13);
-            this.label33.TabIndex = 80;
+            this.label33.TabIndex = 51;
             this.label33.Text = "Entrada";
             // 
             // comboBox_IO_evento_posterior
@@ -723,7 +732,7 @@
             this.comboBox_IO_evento_posterior.Location = new System.Drawing.Point(9, 32);
             this.comboBox_IO_evento_posterior.Name = "comboBox_IO_evento_posterior";
             this.comboBox_IO_evento_posterior.Size = new System.Drawing.Size(200, 21);
-            this.comboBox_IO_evento_posterior.TabIndex = 79;
+            this.comboBox_IO_evento_posterior.TabIndex = 46;
             // 
             // label30
             // 
@@ -731,7 +740,7 @@
             this.label30.Location = new System.Drawing.Point(6, 56);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(50, 13);
-            this.label30.TabIndex = 81;
+            this.label30.TabIndex = 52;
             this.label30.Text = "Set Point";
             // 
             // textBox_setpoint_evento_posterior
@@ -739,7 +748,7 @@
             this.textBox_setpoint_evento_posterior.Location = new System.Drawing.Point(9, 72);
             this.textBox_setpoint_evento_posterior.Name = "textBox_setpoint_evento_posterior";
             this.textBox_setpoint_evento_posterior.Size = new System.Drawing.Size(110, 20);
-            this.textBox_setpoint_evento_posterior.TabIndex = 82;
+            this.textBox_setpoint_evento_posterior.TabIndex = 49;
             // 
             // groupBox_peso
             // 
@@ -768,7 +777,7 @@
             this.label9.Location = new System.Drawing.Point(6, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 55;
+            this.label9.TabIndex = 41;
             this.label9.Text = "Pré-Corte";
             // 
             // textBox_peso_limite
@@ -776,7 +785,7 @@
             this.textBox_peso_limite.Location = new System.Drawing.Point(8, 110);
             this.textBox_peso_limite.Name = "textBox_peso_limite";
             this.textBox_peso_limite.Size = new System.Drawing.Size(110, 20);
-            this.textBox_peso_limite.TabIndex = 67;
+            this.textBox_peso_limite.TabIndex = 40;
             // 
             // label11
             // 
@@ -784,7 +793,7 @@
             this.label11.Location = new System.Drawing.Point(6, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 13);
-            this.label11.TabIndex = 59;
+            this.label11.TabIndex = 43;
             this.label11.Text = "Corte";
             // 
             // label13
@@ -793,7 +802,7 @@
             this.label13.Location = new System.Drawing.Point(121, 55);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 63;
+            this.label13.TabIndex = 44;
             this.label13.Text = "Tempo OFF";
             // 
             // label25
@@ -802,7 +811,7 @@
             this.label25.Location = new System.Drawing.Point(6, 94);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(104, 13);
-            this.label25.TabIndex = 66;
+            this.label25.TabIndex = 45;
             this.label25.Text = "Limite de Segurança";
             // 
             // label14
@@ -819,14 +828,14 @@
             this.textBox_tempo_on.Location = new System.Drawing.Point(124, 32);
             this.textBox_tempo_on.Name = "textBox_tempo_on";
             this.textBox_tempo_on.Size = new System.Drawing.Size(70, 20);
-            this.textBox_tempo_on.TabIndex = 60;
+            this.textBox_tempo_on.TabIndex = 37;
             // 
             // textBox_corte
             // 
             this.textBox_corte.Location = new System.Drawing.Point(8, 71);
             this.textBox_corte.Name = "textBox_corte";
             this.textBox_corte.Size = new System.Drawing.Size(110, 20);
-            this.textBox_corte.TabIndex = 58;
+            this.textBox_corte.TabIndex = 38;
             // 
             // label12
             // 
@@ -834,7 +843,7 @@
             this.label12.Location = new System.Drawing.Point(122, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 62;
+            this.label12.TabIndex = 42;
             this.label12.Text = "Tempo ON";
             // 
             // label15
@@ -851,14 +860,14 @@
             this.textBox_tempo_off.Location = new System.Drawing.Point(123, 71);
             this.textBox_tempo_off.Name = "textBox_tempo_off";
             this.textBox_tempo_off.Size = new System.Drawing.Size(70, 20);
-            this.textBox_tempo_off.TabIndex = 61;
+            this.textBox_tempo_off.TabIndex = 39;
             // 
             // textBox_precorte
             // 
             this.textBox_precorte.Location = new System.Drawing.Point(8, 32);
             this.textBox_precorte.Name = "textBox_precorte";
             this.textBox_precorte.Size = new System.Drawing.Size(110, 20);
-            this.textBox_precorte.TabIndex = 56;
+            this.textBox_precorte.TabIndex = 36;
             // 
             // comboBox_evento_posterior_tipo
             // 
@@ -866,7 +875,7 @@
             this.comboBox_evento_posterior_tipo.Location = new System.Drawing.Point(8, 19);
             this.comboBox_evento_posterior_tipo.Name = "comboBox_evento_posterior_tipo";
             this.comboBox_evento_posterior_tipo.Size = new System.Drawing.Size(110, 21);
-            this.comboBox_evento_posterior_tipo.TabIndex = 54;
+            this.comboBox_evento_posterior_tipo.TabIndex = 35;
             this.comboBox_evento_posterior_tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox_evento_posterior_tipo_SelectedIndexChanged);
             // 
             // label10
@@ -905,15 +914,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_tempo_limite_total.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_tempo_limite_total.Size = new System.Drawing.Size(67, 20);
-            this.timeEdit_tempo_limite_total.TabIndex = 7;
+            this.timeEdit_tempo_limite_total.TabIndex = 56;
             // 
             // comboBox_saida_emergencia
             // 
             this.comboBox_saida_emergencia.FormattingEnabled = true;
-            this.comboBox_saida_emergencia.Location = new System.Drawing.Point(6, 130);
+            this.comboBox_saida_emergencia.Location = new System.Drawing.Point(106, 102);
             this.comboBox_saida_emergencia.Name = "comboBox_saida_emergencia";
             this.comboBox_saida_emergencia.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_saida_emergencia.TabIndex = 6;
+            this.comboBox_saida_emergencia.TabIndex = 60;
             this.comboBox_saida_emergencia.Visible = false;
             // 
             // checkBox_saida
@@ -922,7 +931,7 @@
             this.checkBox_saida.Location = new System.Drawing.Point(6, 106);
             this.checkBox_saida.Name = "checkBox_saida";
             this.checkBox_saida.Size = new System.Drawing.Size(94, 17);
-            this.checkBox_saida.TabIndex = 5;
+            this.checkBox_saida.TabIndex = 59;
             this.checkBox_saida.Text = "Acionar Saída";
             this.checkBox_saida.UseVisualStyleBackColor = true;
             this.checkBox_saida.CheckedChanged += new System.EventHandler(this.checkBox_saida_CheckedChanged);
@@ -933,7 +942,7 @@
             this.checkBox_pausar.Location = new System.Drawing.Point(6, 82);
             this.checkBox_pausar.Name = "checkBox_pausar";
             this.checkBox_pausar.Size = new System.Drawing.Size(99, 17);
-            this.checkBox_pausar.TabIndex = 4;
+            this.checkBox_pausar.TabIndex = 58;
             this.checkBox_pausar.Text = "Pausar Receita";
             this.checkBox_pausar.UseVisualStyleBackColor = true;
             // 
@@ -943,7 +952,7 @@
             this.checkBox_alerta.Location = new System.Drawing.Point(6, 58);
             this.checkBox_alerta.Name = "checkBox_alerta";
             this.checkBox_alerta.Size = new System.Drawing.Size(127, 17);
-            this.checkBox_alerta.TabIndex = 3;
+            this.checkBox_alerta.TabIndex = 57;
             this.checkBox_alerta.Text = "Alerta de Emergência";
             this.checkBox_alerta.UseVisualStyleBackColor = true;
             // 
@@ -953,7 +962,7 @@
             this.label29.Location = new System.Drawing.Point(6, 42);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(32, 13);
-            this.label29.TabIndex = 2;
+            this.label29.TabIndex = 62;
             this.label29.Text = "Ação";
             // 
             // label19
@@ -962,7 +971,7 @@
             this.label19.Location = new System.Drawing.Point(3, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 13);
-            this.label19.TabIndex = 0;
+            this.label19.TabIndex = 61;
             this.label19.Text = "Tempo Limite";
             // 
             // groupBox1
@@ -999,7 +1008,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_intervalo.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_intervalo.Size = new System.Drawing.Size(112, 20);
-            this.timeEdit_intervalo.TabIndex = 18;
+            this.timeEdit_intervalo.TabIndex = 8;
             // 
             // label32
             // 
@@ -1007,16 +1016,17 @@
             this.label32.Location = new System.Drawing.Point(695, 16);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(56, 13);
-            this.label32.TabIndex = 22;
+            this.label32.TabIndex = 14;
             this.label32.Text = "Repetição";
             // 
             // comboBox_repeticao
             // 
             this.comboBox_repeticao.FormattingEnabled = true;
+            this.comboBox_repeticao.ItemHeight = 13;
             this.comboBox_repeticao.Location = new System.Drawing.Point(695, 32);
             this.comboBox_repeticao.Name = "comboBox_repeticao";
             this.comboBox_repeticao.Size = new System.Drawing.Size(80, 21);
-            this.comboBox_repeticao.TabIndex = 21;
+            this.comboBox_repeticao.TabIndex = 6;
             this.comboBox_repeticao.SelectedIndexChanged += new System.EventHandler(this.comboBox_repeticao_SelectedIndexChanged);
             // 
             // label_intervalo
@@ -1025,7 +1035,7 @@
             this.label_intervalo.Location = new System.Drawing.Point(839, 16);
             this.label_intervalo.Name = "label_intervalo";
             this.label_intervalo.Size = new System.Drawing.Size(115, 13);
-            this.label_intervalo.TabIndex = 20;
+            this.label_intervalo.TabIndex = 16;
             this.label_intervalo.Text = "Intervalo de Repetição";
             // 
             // textBox_vezes
@@ -1033,7 +1043,7 @@
             this.textBox_vezes.Location = new System.Drawing.Point(781, 32);
             this.textBox_vezes.Name = "textBox_vezes";
             this.textBox_vezes.Size = new System.Drawing.Size(55, 20);
-            this.textBox_vezes.TabIndex = 18;
+            this.textBox_vezes.TabIndex = 7;
             // 
             // label_vezez
             // 
@@ -1041,7 +1051,7 @@
             this.label_vezez.Location = new System.Drawing.Point(778, 16);
             this.label_vezez.Name = "label_vezez";
             this.label_vezez.Size = new System.Drawing.Size(36, 13);
-            this.label_vezez.TabIndex = 17;
+            this.label_vezez.TabIndex = 15;
             this.label_vezez.Text = "Vezes";
             // 
             // label17
@@ -1050,7 +1060,7 @@
             this.label17.Location = new System.Drawing.Point(636, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 13);
-            this.label17.TabIndex = 16;
+            this.label17.TabIndex = 13;
             this.label17.Text = "Linhas";
             // 
             // textBox_linhas
@@ -1059,7 +1069,7 @@
             this.textBox_linhas.Location = new System.Drawing.Point(639, 32);
             this.textBox_linhas.Name = "textBox_linhas";
             this.textBox_linhas.Size = new System.Drawing.Size(50, 20);
-            this.textBox_linhas.TabIndex = 15;
+            this.textBox_linhas.TabIndex = 5;
             // 
             // textBox_endereco
             // 
@@ -1067,7 +1077,7 @@
             this.textBox_endereco.Location = new System.Drawing.Point(583, 32);
             this.textBox_endereco.Name = "textBox_endereco";
             this.textBox_endereco.Size = new System.Drawing.Size(50, 20);
-            this.textBox_endereco.TabIndex = 14;
+            this.textBox_endereco.TabIndex = 4;
             // 
             // label16
             // 
@@ -1075,7 +1085,7 @@
             this.label16.Location = new System.Drawing.Point(580, 16);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 13;
+            this.label16.TabIndex = 12;
             this.label16.Text = "Endereço";
             // 
             // label7
@@ -1084,16 +1094,17 @@
             this.label7.Location = new System.Drawing.Point(424, 16);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 11;
             this.label7.Text = "Dispositivo";
             // 
             // comboBox_device
             // 
             this.comboBox_device.FormattingEnabled = true;
+            this.comboBox_device.ItemHeight = 13;
             this.comboBox_device.Location = new System.Drawing.Point(427, 31);
             this.comboBox_device.Name = "comboBox_device";
             this.comboBox_device.Size = new System.Drawing.Size(150, 21);
-            this.comboBox_device.TabIndex = 11;
+            this.comboBox_device.TabIndex = 3;
             this.comboBox_device.SelectedIndexChanged += new System.EventHandler(this.comboBox_device_SelectedIndexChanged);
             // 
             // textBox_nome_receita
@@ -1101,7 +1112,7 @@
             this.textBox_nome_receita.Location = new System.Drawing.Point(70, 32);
             this.textBox_nome_receita.Name = "textBox_nome_receita";
             this.textBox_nome_receita.Size = new System.Drawing.Size(351, 20);
-            this.textBox_nome_receita.TabIndex = 10;
+            this.textBox_nome_receita.TabIndex = 2;
             // 
             // label6
             // 
@@ -1109,7 +1120,7 @@
             this.label6.Location = new System.Drawing.Point(67, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 9;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Nome da Receita";
             // 
             // label4
@@ -1118,16 +1129,16 @@
             this.label4.Location = new System.Drawing.Point(6, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 9;
             this.label4.Text = "ID Receita";
             // 
             // textBox_id
             // 
-            this.textBox_id.Enabled = false;
             this.textBox_id.Location = new System.Drawing.Point(9, 32);
             this.textBox_id.Name = "textBox_id";
+            this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(55, 20);
-            this.textBox_id.TabIndex = 8;
+            this.textBox_id.TabIndex = 1;
             // 
             // Form_receita
             // 

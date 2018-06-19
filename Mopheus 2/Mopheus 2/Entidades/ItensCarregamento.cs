@@ -12,5 +12,6 @@ namespace Entidades
         public double peso_inicial { get; set; }
         public DateTime? data_final { get; set; }
         public double peso_final { get; set; }
+        
     }
 }

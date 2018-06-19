@@ -47,12 +47,13 @@ namespace BLL
             obj.fornecedor = row["fornecedor"].ToString();
             obj.produto = row["produto"].ToString();
             obj.numero_nota = row["numero_nota"].ToString();
-            obj.peso_nota_fiscal = Convert.ToInt32(row["peso_nota_fiscal"].ToString());
-            obj.peso_real = Convert.ToInt32(row["peso_real"].ToString());
-            obj.peso_diferenca = Convert.ToInt32(row["peso_diferenca"].ToString());
-            obj.tara = Convert.ToInt32(row["tara"].ToString());
+            obj.peso_nota_fiscal = Convert.ToDecimal(row["peso_nota_fiscal"].ToString());
+            obj.peso_real = Convert.ToDecimal(row["peso_real"].ToString());
+            obj.peso_diferenca = Convert.ToDecimal(row["peso_diferenca"].ToString());
+            obj.tara = Convert.ToDecimal(row["tara"].ToString());
             obj.recebedor = row["recebedor"].ToString();
             obj.device = row["device"].ToString();
+            obj.current_user= row["current_user"].ToString();
             if (row["dateinsert"].ToString() == "")
             {
                 obj.dateinsert = null;

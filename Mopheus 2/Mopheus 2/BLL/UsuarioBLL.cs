@@ -48,7 +48,7 @@ namespace BLL
 
             DAOGeral daogeral = new DAOGeral();
             Usuario objusuario = new Usuario();
-            DataTable dtusuario = daogeral.executaComRetorno("select * from " + table + " order by usuario");
+            DataTable dtusuario = daogeral.executaComRetorno("select * from " + table + " order by Nome");
             for (int i = 0; i < dtusuario.Rows.Count; i++)
             {
                 listusuario.Add(ConvertToClass(dtusuario.Rows[i]));

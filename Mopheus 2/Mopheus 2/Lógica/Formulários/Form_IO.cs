@@ -112,8 +112,14 @@ namespace Mopheus_2
             {
                 case "5-DI/12-RO":
                     comboBox_tipo.Items.Clear();
-                    comboBox_tipo.Items.Add("Entrada Digital");
-                    comboBox_tipo.Items.Add("Saída a Relé");            
+                    if (comboBox_funcao.Text != "Produto")
+                    {
+                        comboBox_tipo.Items.Add("Entrada Digital");
+                    }
+                    else
+                    {
+                        comboBox_tipo.Items.Add("Saída a Relé");
+                    }
                     break;
                 case "0-DI/12-RO":
                     comboBox_tipo.Items.Clear();
@@ -122,34 +128,52 @@ namespace Mopheus_2
                     break;
                 case "8-DI/9-RO":
                     comboBox_tipo.Items.Clear();
-                    comboBox_tipo.Items.Add("Entrada Digital");
-                    comboBox_tipo.Items.Add("Saída a Relé");
+                    if (comboBox_funcao.Text != "Produto")
+                    {
+                        comboBox_tipo.Items.Add("Entrada Digital");
+                    }
+                    else
+                    {
+                        comboBox_tipo.Items.Add("Saída a Relé");
+                    }
                     break;
                 case "4-TC":
                     comboBox_tipo.Items.Clear();
                     //comboBox_tipo.Items.Add("Entrada Digital");
                     //comboBox_tipo.Items.Add("Saída a Relé");
-                    comboBox_tipo.Items.Add("Termopar-K");
-                    comboBox_tipo.Items.Add("Termopar-J");
-                    comboBox_tipo.Items.Add("Termopar-T");
-                    comboBox_tipo.Items.Add("Termopar-N");
-                    comboBox_tipo.Items.Add("Termopar-S");
-                    comboBox_tipo.Items.Add("Termopar-E");
-                    comboBox_tipo.Items.Add("Termopar-B");
-                    comboBox_tipo.Items.Add("Termopar-R");
+                    if (comboBox_funcao.Text != "Produto")
+                    {
+                        comboBox_tipo.Items.Add("Termopar-K");
+                        comboBox_tipo.Items.Add("Termopar-J");
+                        comboBox_tipo.Items.Add("Termopar-T");
+                        comboBox_tipo.Items.Add("Termopar-N");
+                        comboBox_tipo.Items.Add("Termopar-S");
+                        comboBox_tipo.Items.Add("Termopar-E");
+                        comboBox_tipo.Items.Add("Termopar-B");
+                        comboBox_tipo.Items.Add("Termopar-R");
+                    }
                     break;
                 case "4-AI":
                     comboBox_tipo.Items.Clear();
                     //comboBox_tipo.Items.Add("Entrada Digital");
                     //comboBox_tipo.Items.Add("Saída a Relé");
-                    comboBox_tipo.Items.Add("AI-Tensão");
-                    comboBox_tipo.Items.Add("AI-Corrente");
+                    if (comboBox_funcao.Text != "Produto")
+                    {
+                        comboBox_tipo.Items.Add("AI-Tensão");
+                        comboBox_tipo.Items.Add("AI-Corrente");
+                    }
                     break;
                 default:
                     comboBox_tipo.Items.Clear();
-                    comboBox_tipo.Items.Add("Entrada Digital");
-                    comboBox_tipo.Items.Add("Saída a Relé");
-                    comboBox_tipo.Items.Add("Entrada Analógica");
+                    if (comboBox_funcao.Text != "Produto")
+                    {
+                        comboBox_tipo.Items.Add("Entrada Digital");
+                        comboBox_tipo.Items.Add("Entrada Analógica");
+                    }
+                    else
+                    {
+                        comboBox_tipo.Items.Add("Saída a Relé");
+                    }              
                     break;
             }
         }
@@ -326,7 +350,17 @@ namespace Mopheus_2
 
         private void comboBox_funcao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox_funcao.SelectedIndex==0)
+            comboBox_device.Items.Clear();
+            comboBox_device.Text = "";
+            comboBox_tipo.Items.Clear();
+            comboBox_tipo.Text = "";
+            comboBox_IO.Items.Clear();
+            comboBox_IO.Text = "";
+            //comboBox_produto.Items.Clear();
+            //comboBox_produto.Text = "";
+            textBox_description.Clear();
+
+            if (comboBox_funcao.SelectedIndex==0)
             {
                 textBox_description.Visible = false;
                 comboBox_produto.Location = new Point(556, 25);

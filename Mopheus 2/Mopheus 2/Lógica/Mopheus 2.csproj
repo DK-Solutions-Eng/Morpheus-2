@@ -188,11 +188,6 @@
     <Compile Include="Formulários\Form_LOGIN.Designer.cs">
       <DependentUpon>Form_LOGIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Morpheus2_DataBaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Morpheus2_DataBaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serial_Comumnication.cs" />
@@ -250,17 +245,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Morpheus2_DataBaseDataSet.xsc">
-      <DependentUpon>Morpheus2_DataBaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Morpheus2_DataBaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Morpheus2_DataBaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Morpheus2_DataBaseDataSet.xss">
-      <DependentUpon>Morpheus2_DataBaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -312,6 +296,7 @@
     <None Include="IMAGENS\morpheus.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Visible_16x.png" />
     <None Include="Resources\LineArrow_16x.png" />
     <None Include="Resources\Print_16x.png" />
     <None Include="Resources\User_noHalo_16x.png" />
@@ -337,8 +322,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Morpheus2_DataBase_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Morpheus2_DataBase.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="morpheus.ico" />
     <None Include="Resources\Stop_grey_16x.png" />

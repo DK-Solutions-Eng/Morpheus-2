@@ -33,7 +33,7 @@
             this.textBox_login = new System.Windows.Forms.TextBox();
             this.textBox_senha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_save = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,6 +52,7 @@
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.Size = new System.Drawing.Size(234, 20);
             this.textBox_login.TabIndex = 1;
+            this.textBox_login.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_login_KeyUp);
             // 
             // textBox_senha
             // 
@@ -60,6 +61,7 @@
             this.textBox_senha.PasswordChar = '*';
             this.textBox_senha.Size = new System.Drawing.Size(234, 20);
             this.textBox_senha.TabIndex = 3;
+            this.textBox_senha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_senha_KeyUp);
             // 
             // label2
             // 
@@ -70,17 +72,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Senha";
             // 
-            // button_save
+            // button_login
             // 
-            this.button_save.Image = global::Mopheus_2.Properties.Resources.Login_16x;
-            this.button_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_save.Location = new System.Drawing.Point(40, 90);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(75, 23);
-            this.button_save.TabIndex = 16;
-            this.button_save.Text = "Login";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.button_login.Image = global::Mopheus_2.Properties.Resources.Login_16x;
+            this.button_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_login.Location = new System.Drawing.Point(40, 90);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(75, 23);
+            this.button_login.TabIndex = 4;
+            this.button_login.Text = "Login";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_cancel
             // 
@@ -89,7 +91,7 @@
             this.button_cancel.Location = new System.Drawing.Point(139, 90);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(75, 23);
-            this.button_cancel.TabIndex = 17;
+            this.button_cancel.TabIndex = 5;
             this.button_cancel.Text = "Cancelar";
             this.button_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_cancel.UseVisualStyleBackColor = true;
@@ -101,7 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 122);
             this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.button_save);
+            this.Controls.Add(this.button_login);
             this.Controls.Add(this.textBox_senha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_login);
@@ -123,7 +125,7 @@
         private System.Windows.Forms.TextBox textBox_login;
         private System.Windows.Forms.TextBox textBox_senha;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.Button button_cancel;
     }
 }

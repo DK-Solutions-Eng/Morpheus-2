@@ -10,11 +10,12 @@ namespace Entidades
         public string fornecedor { get; set; }
         public string produto { get; set; }
         public string numero_nota { get; set; }
-        public int peso_nota_fiscal { get; set; }
-        public int peso_real { get; set; }
-        public int peso_diferenca { get; set; }
-        public int tara { get; set; }
+        public decimal peso_nota_fiscal { get; set; }
+        public decimal peso_real { get; set; }
+        public decimal peso_diferenca { get; set; }
+        public decimal tara { get; set; }
         public string recebedor { get; set; }
         public string device { get; set; }
+        public string current_user { get; set; }
     }
 }

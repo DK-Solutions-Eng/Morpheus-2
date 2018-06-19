@@ -53,6 +53,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -160,7 +161,7 @@
             this.comunicaçãoToolStripMenuItem.Name = "comunicaçãoToolStripMenuItem";
             this.comunicaçãoToolStripMenuItem.ShortcutKeyDisplayString = "F5";
             this.comunicaçãoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.comunicaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comunicaçãoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.comunicaçãoToolStripMenuItem.Text = "Comunicação";
             this.comunicaçãoToolStripMenuItem.Click += new System.EventHandler(this.comunicaçãoToolStripMenuItem_Click);
             // 
@@ -170,7 +171,7 @@
             this.redeStripMenuItem.Name = "redeStripMenuItem";
             this.redeStripMenuItem.ShortcutKeyDisplayString = "F6";
             this.redeStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.redeStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.redeStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.redeStripMenuItem.Text = "Rede";
             this.redeStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -180,7 +181,7 @@
             this.entradaESaídasToolStripMenuItem.Name = "entradaESaídasToolStripMenuItem";
             this.entradaESaídasToolStripMenuItem.ShortcutKeyDisplayString = "F7";
             this.entradaESaídasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.entradaESaídasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entradaESaídasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.entradaESaídasToolStripMenuItem.Text = "Entrada e Saídas";
             this.entradaESaídasToolStripMenuItem.Click += new System.EventHandler(this.entradaESaídasToolStripMenuItem_Click);
             // 
@@ -190,7 +191,7 @@
             this.matériaPrimaToolStripMenuItem.Name = "matériaPrimaToolStripMenuItem";
             this.matériaPrimaToolStripMenuItem.ShortcutKeyDisplayString = "F8";
             this.matériaPrimaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
-            this.matériaPrimaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matériaPrimaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.matériaPrimaToolStripMenuItem.Text = "Matéria Prima";
             this.matériaPrimaToolStripMenuItem.Click += new System.EventHandler(this.matériaPrimaToolStripMenuItem_Click);
             // 
@@ -200,7 +201,7 @@
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
             this.fornecedoresToolStripMenuItem.ShortcutKeyDisplayString = "F9";
             this.fornecedoresToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
@@ -210,7 +211,7 @@
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+U";
             this.usuáriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
@@ -245,7 +246,8 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 439);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(884, 22);
@@ -275,6 +277,12 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Morpheus 2";
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel3.Text = "ACESSO";
             // 
             // Form_MAIN
             // 
@@ -331,6 +339,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripMenuItem carregamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
 

@@ -22,6 +22,8 @@ namespace Mopheus_2
         Usuario usuario = new Usuario();
         UsuarioBLL usuariobll = new UsuarioBLL("Usuario");
 
+        bool show_senha = false;
+
         public Form_USERS()
         {
             InitializeComponent();
@@ -32,6 +34,15 @@ namespace Mopheus_2
             comboBox_tipo_acesso.Items.Add("Recebedor");
 
             atualiza_grid("");
+
+            if (Global.acesso == "Full")
+            {
+                show_senha = true;
+            }
+            else
+            {
+                show_senha = false;
+            }
 
 
         }
@@ -58,20 +69,21 @@ namespace Mopheus_2
                 dataGridView_usuarios.Columns["acesso"].Width = 150;
 
             }
-
-            
         }
 
         private void dataGridView_usuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (show_senha == false)
             {
-                if (e.Value != null)
+                if (e.ColumnIndex == 3)
                 {
-                    e.Value = new string('*', e.Value.ToString().Length);
+                    if (e.Value != null)
+                    {
+                        e.Value = new string('*', e.Value.ToString().Length);
+                    }
+                    else
+                        e.Value = "Null";
                 }
-                else
-                    e.Value = "Null";
             }
         }
 

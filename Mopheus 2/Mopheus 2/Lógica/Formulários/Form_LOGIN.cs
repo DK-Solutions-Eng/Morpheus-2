@@ -90,5 +90,21 @@ namespace Mopheus_2
                 Global.god_mode = false;
             }
         }
+
+        private void textBox_login_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                button_save_Click(sender, e);
+            }
+        }
+
+        private void textBox_senha_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_save_Click(sender, e);
+            }
+        }
     }
 }

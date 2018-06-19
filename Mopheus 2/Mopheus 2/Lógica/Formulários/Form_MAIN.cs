@@ -79,6 +79,7 @@ namespace Mopheus_2
         private void Form_PRINCIPAL_Load(object sender, EventArgs e)
         {
             toolStripStatusLabel2.Text = Global.user;
+            toolStripStatusLabel3.Text = Global.acesso;
             verifica_acesso();
         }
 
@@ -204,6 +205,7 @@ namespace Mopheus_2
             form_LOGIN = new Form_LOGIN();
             form_LOGIN.ShowDialog();
             toolStripStatusLabel2.Text = Global.user;
+            toolStripStatusLabel3.Text = Global.acesso;
             verifica_acesso();
         }
 
