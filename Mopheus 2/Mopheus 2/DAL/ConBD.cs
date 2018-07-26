@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -48,7 +49,7 @@ namespace DAL
         public void open()
         {
             this.connectionString = ConfigurationManager.ConnectionStrings["stringdeconexao"].ToString();
-            //this.connectionString = 
+            //MessageBox.Show(this.connectionString);
             this.connection = new SqlConnection(this.connectionString);
             this.connection.Open();
         }
@@ -91,6 +92,9 @@ namespace DAL
             command.Connection = this.connection;
             command.Transaction = transaction;        
             command.CommandText = query;
+            //MessageBox.Show(command.Connection.ToString());
+            //MessageBox.Show(command.Transaction.ToString());
+            //MessageBox.Show(command.CommandText.ToString());
             command.ExecuteNonQuery();
             // Attempt to commit the transaction.
             transaction.Commit();          

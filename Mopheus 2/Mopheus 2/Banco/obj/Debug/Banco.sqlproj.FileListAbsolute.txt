@@ -18,3 +18,7 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\bin\D
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\Banco.sqlprojResolveAssemblyReference.cache
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\Banco.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\Banco.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\Model.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\refactor.xml
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\postdeploy.sql
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\Debug\predeploy.sql

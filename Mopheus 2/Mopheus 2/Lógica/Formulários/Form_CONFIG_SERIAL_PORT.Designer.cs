@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CONFIG_SERIAL_PORT));
             this.button_conectar = new System.Windows.Forms.Button();
             this.comboBox_porta_arduino = new System.Windows.Forms.ComboBox();
             this.comboBox_Speed = new System.Windows.Forms.ComboBox();
@@ -229,10 +228,11 @@
             this.ClientSize = new System.Drawing.Size(401, 409);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_CONFIG_SERIAL_PORT";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comunicação";
             this.Load += new System.EventHandler(this.Form_CONFIG_SERIAL_PORT_Load);

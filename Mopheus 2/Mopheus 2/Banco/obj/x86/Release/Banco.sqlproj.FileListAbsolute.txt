@@ -1,0 +1,5 @@
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\bin\Release\Banco.dacpac
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\bin\Release\Banco.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\bin\Release\Banco.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\x86\Release\Banco.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Banco\obj\x86\Release\Banco.pdb

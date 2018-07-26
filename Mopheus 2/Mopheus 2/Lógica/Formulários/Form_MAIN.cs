@@ -10,6 +10,13 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using Entidades;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.IO.Ports;
+using System.Threading;
+using System.Configuration;
+using Microsoft.VisualBasic;
+using Common;
 
 
 namespace Mopheus_2
@@ -17,8 +24,6 @@ namespace Mopheus_2
     public partial class Form_MAIN : Form
     {
         Form_CONFIG_SERIAL_PORT form_config_serial;
-
-
 
         public Form_MAIN()
         {
@@ -161,7 +166,7 @@ namespace Mopheus_2
 
         private void lerLogsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Função em desenvolvimento, aguarde!", "Atenção!");
         }
 
         private void matériaPrimaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,6 +240,7 @@ namespace Mopheus_2
                     usuáriosToolStripMenuItem.Visible = true;
                     helpToolStripMenuItem.Visible = true;
                     sobreToolStripMenuItem.Visible = true;
+                    atualizarDataEHoraToolStripMenuItem.Visible = true;
                     break;
                 case "Full":
                     loginToolStripMenuItem.Visible = true;
@@ -251,6 +257,7 @@ namespace Mopheus_2
                     usuáriosToolStripMenuItem.Visible = true;
                     helpToolStripMenuItem.Visible = true;
                     sobreToolStripMenuItem.Visible = true;
+                    atualizarDataEHoraToolStripMenuItem.Visible = true;
                     break;
                 case "Recebedor":
                     loginToolStripMenuItem.Visible = true;
@@ -267,6 +274,7 @@ namespace Mopheus_2
                     usuáriosToolStripMenuItem.Visible = false;
                     helpToolStripMenuItem.Visible = true;
                     sobreToolStripMenuItem.Visible = true;
+                    atualizarDataEHoraToolStripMenuItem.Visible = false;
                     break;
                 case "Operador":
                     loginToolStripMenuItem.Visible = true;
@@ -283,12 +291,13 @@ namespace Mopheus_2
                     usuáriosToolStripMenuItem.Visible = false;
                     helpToolStripMenuItem.Visible = true;
                     sobreToolStripMenuItem.Visible = true;
+                    atualizarDataEHoraToolStripMenuItem.Visible = false;
                     break;
                 case "Supervisor":
                     loginToolStripMenuItem.Visible = true;
                     receitaToolStripMenuItem.Visible = true;
                     carregamentoToolStripMenuItem.Visible = false;
-                    lerLogsToolStripMenuItem.Visible = false;
+                    lerLogsToolStripMenuItem.Visible = true;
                     statusDosDispositivosToolStripMenuItem.Visible = true;
                     sairToolStripMenuItem.Visible = true;
                     comunicaçãoToolStripMenuItem.Visible = true;
@@ -299,6 +308,7 @@ namespace Mopheus_2
                     usuáriosToolStripMenuItem.Visible = false;
                     helpToolStripMenuItem.Visible = true;
                     sobreToolStripMenuItem.Visible = true;
+                    atualizarDataEHoraToolStripMenuItem.Visible = true;
                     break;
             }
         }
@@ -307,6 +317,96 @@ namespace Mopheus_2
         {
             Form_CARREGAMENTO form_carregamento = new Form_CARREGAMENTO();
             form_carregamento.ShowDialog();
+        }
+
+        private void atualizarDataEHoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String hora;
+            String data;
+            String dia_semana;
+            byte[] cmd_data_hora;
+            cmd_data_hora = new byte[12];
+            UInt16 crc;
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
+            hora = DateTime.Now.ToLongTimeString().ToString();
+            data = DateTime.Now.ToShortDateString().ToString();
+            dia_semana = DateTime.Now.DayOfWeek.ToString().ToUpper();
+            byte temp_dia_semana = 0;
+            switch (dia_semana)
+            {
+                case "SUNDAY":
+                    temp_dia_semana = 1;
+                    break;
+                case "MONDAY":
+                    temp_dia_semana = 2;
+                    break;
+                case "TUESDAY":
+                    temp_dia_semana = 3;
+                    break;
+                case "WEDNESDAY":
+                    temp_dia_semana = 4;
+                    break;
+                case "THURSDAY":
+                    temp_dia_semana = 5;
+                    break;
+                case "FRIDAY":
+                    temp_dia_semana = 6;
+                    break;
+                case "SATURDAY":
+                    temp_dia_semana = 7;
+                    break;
+                default:
+                    break;
+            }
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(ConfigurationManager.AppSettings["current"]);
+
+            cmd_data_hora[0] = 0x00;
+            cmd_data_hora[1] = 0x60;
+            cmd_data_hora[2] = temp_dia_semana;
+            //dia
+            cmd_data_hora[3] = Convert.ToByte(data.Substring(0, 2));    //00/00/0000
+            //mes
+            cmd_data_hora[4] = Convert.ToByte(data.Substring(3, 2));
+            //ano high
+            cmd_data_hora[5] = Convert.ToByte(data.Substring(6, 2));
+            //ano low
+            cmd_data_hora[6] = Convert.ToByte(data.Substring(8, 2));
+            //hora
+            cmd_data_hora[7] = Convert.ToByte(hora.Substring(0, 2));    //00:00:00
+            //minuto
+            cmd_data_hora[8] = Convert.ToByte(hora.Substring(3, 2));
+            //segundo
+            cmd_data_hora[9] = Convert.ToByte(hora.Substring(6, 2));
+
+            crc = Crc16.ComputeCrc(cmd_data_hora);
+            cmd_data_hora[10] = Convert.ToByte(crc >> 8);
+            cmd_data_hora[11] = Convert.ToByte(crc & 0xff);
+
+            if (Serial_Comumnication.serial_port.IsOpen)
+            {
+                try
+                {
+                    //Serial_Comumnication.serial_port.Write(60.ToString() + temp_dia_semana.ToString() + data + hora);
+                    Serial_Comumnication.serialPort.Write(cmd_data_hora,0,cmd_data_hora.Length);
+                    MessageBox.Show("Dia da Semana: " + dia_semana + "\r\n" + "Data: " + data + "\r\n" + "Horário: " + hora + "\r\n", "Atualização de Data e Hora");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Erro no envio do comando! Verificar a comunicação serial.", "Atualização de Data e Hora");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Porta Serial não configurada!", "Atualização de Data e Hora");
+            }
+
+        }
+
+        private void statusDosDispositivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Função em desenvolvimento, aguarde!", "Atenção!");
         }
     }
 }

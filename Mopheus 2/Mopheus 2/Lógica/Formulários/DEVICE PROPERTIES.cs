@@ -21,10 +21,10 @@ namespace Mopheus_2
         NetworkBLL bll = new NetworkBLL("Network");
         Network device = new Network();
 
-        public DEVICE_PROPERTIES(int id, string name, string model, string type_model, string full_name, int addr, int baud_rate, string parent, DateTime? dateinsert, DateTime? dateupdate)
+        public DEVICE_PROPERTIES(int id, string name, string model, string type_model, string type_control, string full_name, int addr, int baud_rate, string parent, DateTime? dateinsert, DateTime? dateupdate)
         {
             InitializeComponent();
-            load_components(name, model, baud_rate, addr,type_model);
+            load_components(name, model, baud_rate, addr, type_model, type_control);
 
 
             device.id = id;
@@ -42,7 +42,7 @@ namespace Mopheus_2
 
         }
 
-        private void load_components(string name, string model, int baud_rate, int addr,string type_model)
+        private void load_components(string name, string model, int baud_rate, int addr, string type_model, string type_control)
         {
             comboBox_Speed.Items.Add("9600");
             comboBox_Speed.Items.Add("19200");
@@ -54,8 +54,16 @@ namespace Mopheus_2
             textBox_addr_device.Text = addr.ToString();
             textBox_name_device.Text = name;
             comboBox_Speed.Text = baud_rate.ToString();
-            comboBox_type_model.SelectedIndex = (comboBox_type_model.FindStringExact(type_model));            
+            comboBox_type_model.SelectedIndex = (comboBox_type_model.FindStringExact(type_model));
+
+            comboBox_type_control.SelectedIndex = (comboBox_type_control.FindStringExact(type_control));
+
+            label5.Visible = false;
+            comboBox_type_control.Visible = false;
+
+
         }
+
         private void load_models(string model)
         {
             switch (model)
@@ -63,15 +71,14 @@ namespace Mopheus_2
                 case "ControlMix":
                     comboBox_type_model.Items.Clear();
                     comboBox_type_model.Items.Add("5-DI/12-RO");
-                    
-                    if(Global.god_mode)
+
+                    if (Global.god_mode)
                     {
                         comboBox_type_model.Items.Add("4-DI/1-AI-12-RO");
                         comboBox_type_model.Items.Add("3-DI/2-AI-12-RO");
                         comboBox_type_model.Items.Add("2-DI/3-AI-12-RO");
                         comboBox_type_model.Items.Add("1-DI/4-AI-12-RO");
                         comboBox_type_model.Items.Add("0-DI/5-AI-12-RO");
-                        comboBox_type_model.Items.Add("4-DI/1-AI-12-RO");
                     }
                     comboBox_type_model.SelectedIndex = 0;
                     break;
@@ -90,6 +97,26 @@ namespace Mopheus_2
                     comboBox_type_model.Items.Add("Orion");
                     comboBox_type_model.SelectedIndex = 0;
                     break;
+                case "Inversor":
+                    comboBox_type_model.Items.Clear();
+                    comboBox_type_model.Items.Add("OMRON MX2");
+                    comboBox_type_model.Items.Add("WEG CFW08");
+                    comboBox_type_model.Items.Add("WEG CFW09");
+                    comboBox_type_model.Items.Add("Telemecanique Altivar 31");
+                    comboBox_type_model.Items.Add("Telemecanique Altivar 312");
+
+                    //comboBox_tipo_de_controle.Items.Add("Analógico");
+                    comboBox_type_control.Items.Add("MODBUS-RTU");
+                    //comboBox_tipo_de_controle.Items.Add("MODBUS-TCP");
+                    //comboBox_tipo_de_controle.Items.Add("CAN-OPEN");
+
+                    label5.Visible = true;
+                    comboBox_type_control.Visible = true;
+
+                    comboBox_type_model.SelectedIndex = 0;
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -97,6 +124,7 @@ namespace Mopheus_2
         {
             device.name = textBox_name_device.Text;
             device.type_model = comboBox_type_model.Text;
+            device.type_control = comboBox_type_control.Text;
             device.addr = Convert.ToInt32(textBox_addr_device.Text);
             device.baud_rate = Convert.ToInt32(comboBox_Speed.Text);
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
@@ -106,7 +134,7 @@ namespace Mopheus_2
             bll.update(device);
 
             this.Close();
-            
+
         }
     }
 }

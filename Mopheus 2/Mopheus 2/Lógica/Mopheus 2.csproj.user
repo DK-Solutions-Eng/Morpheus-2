@@ -5,13 +5,19 @@
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />
-    <BootstrapperUrlHistory />
+    <BootstrapperUrlHistory>C:\Users\Lucas Tadeu\Downloads</BootstrapperUrlHistory>
     <ErrorReportUrlHistory />
     <FallbackCulture>pt-BR</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <EnableSQLServerDebugging>true</EnableSQLServerDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <EnableSQLServerDebugging>true</EnableSQLServerDebugging>
   </PropertyGroup>
 </Project>

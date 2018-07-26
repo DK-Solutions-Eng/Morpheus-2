@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Software de Configuração do Dosador Universal ControlMix")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AEPH do Brasil")]
-[assembly: AssemblyProduct("Mopheus 2")]
+[assembly: AssemblyProduct("Mopheus II")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 // Definir ComVisible como false torna os tipos neste assembly invisíveis
 // para componentes COM. Caso precise acessar um tipo neste assembly de
 // COM, defina o atributo ComVisible como true nesse tipo.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
 [assembly: Guid("44fb3990-fb8b-42af-88c1-74d93579d4e3")]

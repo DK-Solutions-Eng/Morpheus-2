@@ -38,18 +38,27 @@ namespace Mopheus_2
             this.novaReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adionarItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copiarItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enviarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.executarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pausarReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pararReceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetarControlMixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarDataEHoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusDosDispositivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_receitas = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip_receita = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.adicionarreceitatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarreceitatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirreceitatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView_itens_receita = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip_etapas_receita = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -59,8 +68,24 @@ namespace Mopheus_2
             this.ascenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_pausar_receita = new System.Windows.Forms.Button();
+            this.button_executar_receita = new System.Windows.Forms.Button();
+            this.button_parar_receita = new System.Windows.Forms.Button();
+            this.button_enviar_receita = new System.Windows.Forms.Button();
+            this.button_copiar = new System.Windows.Forms.Button();
+            this.button_add_item = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox_estado_saida = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox_inversor = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox_addr_inversor = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox_velocidade_hz = new System.Windows.Forms.TextBox();
+            this.checkBox_velocidade = new System.Windows.Forms.CheckBox();
             this.textBox_etapa = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.comboBox_produto = new System.Windows.Forms.ComboBox();
@@ -72,12 +97,12 @@ namespace Mopheus_2
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.radioButton_ON_evento_anterior = new System.Windows.Forms.RadioButton();
             this.radioButton_OFF_evento_anterior = new System.Windows.Forms.RadioButton();
-            this.textBox_setpoint = new System.Windows.Forms.TextBox();
+            this.textBox_setpoint_evento_anterior = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.timeEdit_tempo_espera_evento_anterior = new DevExpress.XtraEditors.TimeEdit();
-            this.comboBox_IO = new System.Windows.Forms.ComboBox();
+            this.comboBox_IO_evento_anterior = new System.Windows.Forms.ComboBox();
             this.comboBox_evento_anterior_tipo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -94,6 +119,17 @@ namespace Mopheus_2
             this.label30 = new System.Windows.Forms.Label();
             this.textBox_setpoint_evento_posterior = new System.Windows.Forms.TextBox();
             this.groupBox_peso = new System.Windows.Forms.GroupBox();
+            this.textBox_addr_indicador = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.comboBox_indicador = new System.Windows.Forms.ComboBox();
+            this.textBox_passos = new System.Windows.Forms.TextBox();
+            this.button_dosagem_incremental = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox_peso_total = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox_incremento = new System.Windows.Forms.TextBox();
+            this.checkBox_dosagem_incremental = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_peso_limite = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -137,6 +173,7 @@ namespace Mopheus_2
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).BeginInit();
+            this.contextMenuStrip_receita.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).BeginInit();
             this.contextMenuStrip_etapas_receita.SuspendLayout();
@@ -160,11 +197,12 @@ namespace Mopheus_2
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.receitasToolStripMenuItem,
+            this.editarToolStripMenuItem,
             this.comandosToolStripMenuItem,
             this.visualizarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -174,6 +212,7 @@ namespace Mopheus_2
             this.novaReceitaToolStripMenuItem,
             this.carregarToolStripMenuItem,
             this.salvarToolStripMenuItem,
+            this.exportarReceitaToolStripMenuItem,
             this.imprimirToolStripMenuItem});
             this.receitasToolStripMenuItem.Name = "receitasToolStripMenuItem";
             this.receitasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -185,7 +224,7 @@ namespace Mopheus_2
             this.novaReceitaToolStripMenuItem.Name = "novaReceitaToolStripMenuItem";
             this.novaReceitaToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N";
             this.novaReceitaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.novaReceitaToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.novaReceitaToolStripMenuItem.Text = "Nova Receita";
             this.novaReceitaToolStripMenuItem.Click += new System.EventHandler(this.novaReceitaToolStripMenuItem_Click);
             // 
@@ -194,18 +233,28 @@ namespace Mopheus_2
             this.carregarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.OpenFolder_16x;
             this.carregarToolStripMenuItem.Name = "carregarToolStripMenuItem";
             this.carregarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.carregarToolStripMenuItem.Text = "Abrir";
+            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.carregarToolStripMenuItem.Text = "Abrir Receita";
             // 
             // salvarToolStripMenuItem
             // 
-            this.salvarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Save_16x_32;
+            this.salvarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.SaveTable_16x;
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
             this.salvarToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
             this.salvarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar no Banco de Dados";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
+            // 
+            // exportarReceitaToolStripMenuItem
+            // 
+            this.exportarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.ExportTableToFile_16x;
+            this.exportarReceitaToolStripMenuItem.Name = "exportarReceitaToolStripMenuItem";
+            this.exportarReceitaToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+E";
+            this.exportarReceitaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.exportarReceitaToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.exportarReceitaToolStripMenuItem.Text = "Exportar Receita";
+            this.exportarReceitaToolStripMenuItem.Click += new System.EventHandler(this.exportarReceitaToolStripMenuItem_Click);
             // 
             // imprimirToolStripMenuItem
             // 
@@ -213,8 +262,34 @@ namespace Mopheus_2
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
             this.imprimirToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+P";
             this.imprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir Receita";
+            this.imprimirToolStripMenuItem.Click += new System.EventHandler(this.imprimirToolStripMenuItem_Click);
+            // 
+            // editarToolStripMenuItem
+            // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adionarItemToolStripMenuItem,
+            this.copiarItemToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Text = "Editar";
+            // 
+            // adionarItemToolStripMenuItem
+            // 
+            this.adionarItemToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Add_16x;
+            this.adionarItemToolStripMenuItem.Name = "adionarItemToolStripMenuItem";
+            this.adionarItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adionarItemToolStripMenuItem.Text = "Adicionar Item";
+            this.adionarItemToolStripMenuItem.Click += new System.EventHandler(this.button_add_item_Click);
+            // 
+            // copiarItemToolStripMenuItem
+            // 
+            this.copiarItemToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.ASX_Copy_blue_16x;
+            this.copiarItemToolStripMenuItem.Name = "copiarItemToolStripMenuItem";
+            this.copiarItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copiarItemToolStripMenuItem.Text = "Copiar Item";
+            this.copiarItemToolStripMenuItem.Click += new System.EventHandler(this.button_copiar_Click);
             // 
             // comandosToolStripMenuItem
             // 
@@ -222,7 +297,9 @@ namespace Mopheus_2
             this.enviarReceitaToolStripMenuItem,
             this.executarReceitaToolStripMenuItem,
             this.pausarReceitaToolStripMenuItem,
-            this.pararReceitaToolStripMenuItem});
+            this.pararReceitaToolStripMenuItem,
+            this.resetarControlMixToolStripMenuItem,
+            this.atualizarDataEHoraToolStripMenuItem});
             this.comandosToolStripMenuItem.Name = "comandosToolStripMenuItem";
             this.comandosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.comandosToolStripMenuItem.Text = "Comandos";
@@ -231,7 +308,7 @@ namespace Mopheus_2
             // 
             this.enviarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Upload_16x;
             this.enviarReceitaToolStripMenuItem.Name = "enviarReceitaToolStripMenuItem";
-            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.enviarReceitaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.enviarReceitaToolStripMenuItem.Text = "Enviar Receita";
             this.enviarReceitaToolStripMenuItem.Click += new System.EventHandler(this.enviarReceitaToolStripMenuItem_Click);
             // 
@@ -239,22 +316,37 @@ namespace Mopheus_2
             // 
             this.executarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
             this.executarReceitaToolStripMenuItem.Name = "executarReceitaToolStripMenuItem";
-            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.executarReceitaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.executarReceitaToolStripMenuItem.Text = "Executar Receita";
             // 
             // pausarReceitaToolStripMenuItem
             // 
             this.pausarReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
             this.pausarReceitaToolStripMenuItem.Name = "pausarReceitaToolStripMenuItem";
-            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pausarReceitaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.pausarReceitaToolStripMenuItem.Text = "Pausar Receita";
             // 
             // pararReceitaToolStripMenuItem
             // 
             this.pararReceitaToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
             this.pararReceitaToolStripMenuItem.Name = "pararReceitaToolStripMenuItem";
-            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.pararReceitaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.pararReceitaToolStripMenuItem.Text = "Parar Receita";
+            // 
+            // resetarControlMixToolStripMenuItem
+            // 
+            this.resetarControlMixToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
+            this.resetarControlMixToolStripMenuItem.Name = "resetarControlMixToolStripMenuItem";
+            this.resetarControlMixToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.resetarControlMixToolStripMenuItem.Text = "Resetar ControlMix";
+            // 
+            // atualizarDataEHoraToolStripMenuItem
+            // 
+            this.atualizarDataEHoraToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.History_16x;
+            this.atualizarDataEHoraToolStripMenuItem.Name = "atualizarDataEHoraToolStripMenuItem";
+            this.atualizarDataEHoraToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.atualizarDataEHoraToolStripMenuItem.Text = "Atualizar Data e Hora";
+            this.atualizarDataEHoraToolStripMenuItem.Click += new System.EventHandler(this.atualizarDataEHoraToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem
             // 
@@ -271,11 +363,6 @@ namespace Mopheus_2
             this.statusDosDispositivosToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.statusDosDispositivosToolStripMenuItem.Text = "Status dos Dispositivos";
             this.statusDosDispositivosToolStripMenuItem.Click += new System.EventHandler(this.statusDosDispositivosToolStripMenuItem_Click);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
             // 
             // tabControl1
             // 
@@ -307,11 +394,45 @@ namespace Mopheus_2
             this.dataGridView_receitas.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView_receitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_receitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_receitas.ContextMenuStrip = this.contextMenuStrip_receita;
             this.dataGridView_receitas.Location = new System.Drawing.Point(6, 6);
             this.dataGridView_receitas.Name = "dataGridView_receitas";
             this.dataGridView_receitas.Size = new System.Drawing.Size(966, 584);
             this.dataGridView_receitas.TabIndex = 0;
             this.dataGridView_receitas.DoubleClick += new System.EventHandler(this.dataGridView_receitas_DoubleClick);
+            // 
+            // contextMenuStrip_receita
+            // 
+            this.contextMenuStrip_receita.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adicionarreceitatoolStripMenuItem,
+            this.editarreceitatoolStripMenuItem,
+            this.excluirreceitatoolStripMenuItem});
+            this.contextMenuStrip_receita.Name = "contextMenuStrip_etapas_receita";
+            this.contextMenuStrip_receita.Size = new System.Drawing.Size(167, 70);
+            // 
+            // adicionarreceitatoolStripMenuItem
+            // 
+            this.adicionarreceitatoolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Add_16x;
+            this.adicionarreceitatoolStripMenuItem.Name = "adicionarreceitatoolStripMenuItem";
+            this.adicionarreceitatoolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.adicionarreceitatoolStripMenuItem.Text = "Adicionar Receita";
+            this.adicionarreceitatoolStripMenuItem.Click += new System.EventHandler(this.novaReceitaToolStripMenuItem_Click);
+            // 
+            // editarreceitatoolStripMenuItem
+            // 
+            this.editarreceitatoolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.ASX_Edit_grey_16x;
+            this.editarreceitatoolStripMenuItem.Name = "editarreceitatoolStripMenuItem";
+            this.editarreceitatoolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.editarreceitatoolStripMenuItem.Text = "Editar Receita";
+            this.editarreceitatoolStripMenuItem.Click += new System.EventHandler(this.dataGridView_receitas_DoubleClick);
+            // 
+            // excluirreceitatoolStripMenuItem
+            // 
+            this.excluirreceitatoolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
+            this.excluirreceitatoolStripMenuItem.Name = "excluirreceitatoolStripMenuItem";
+            this.excluirreceitatoolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.excluirreceitatoolStripMenuItem.Text = "Excluir Receita";
+            this.excluirreceitatoolStripMenuItem.Click += new System.EventHandler(this.excluirreceitatoolStripMenuItem_Click);
             // 
             // tabPage2
             // 
@@ -334,10 +455,10 @@ namespace Mopheus_2
             this.dataGridView_itens_receita.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_itens_receita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_itens_receita.ContextMenuStrip = this.contextMenuStrip_etapas_receita;
-            this.dataGridView_itens_receita.Location = new System.Drawing.Point(6, 324);
+            this.dataGridView_itens_receita.Location = new System.Drawing.Point(6, 391);
             this.dataGridView_itens_receita.Name = "dataGridView_itens_receita";
             this.dataGridView_itens_receita.ReadOnly = true;
-            this.dataGridView_itens_receita.Size = new System.Drawing.Size(962, 266);
+            this.dataGridView_itens_receita.Size = new System.Drawing.Size(962, 200);
             this.dataGridView_itens_receita.TabIndex = 17;
             // 
             // contextMenuStrip_etapas_receita
@@ -393,13 +514,87 @@ namespace Mopheus_2
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button_pausar_receita);
+            this.groupBox2.Controls.Add(this.button_executar_receita);
+            this.groupBox2.Controls.Add(this.button_parar_receita);
+            this.groupBox2.Controls.Add(this.button_enviar_receita);
+            this.groupBox2.Controls.Add(this.button_copiar);
+            this.groupBox2.Controls.Add(this.button_add_item);
             this.groupBox2.Controls.Add(this.tabControl2);
             this.groupBox2.Location = new System.Drawing.Point(6, 78);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(775, 240);
+            this.groupBox2.Size = new System.Drawing.Size(962, 307);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados da Receita";
+            // 
+            // button_pausar_receita
+            // 
+            this.button_pausar_receita.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
+            this.button_pausar_receita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pausar_receita.Location = new System.Drawing.Point(804, 210);
+            this.button_pausar_receita.Name = "button_pausar_receita";
+            this.button_pausar_receita.Size = new System.Drawing.Size(150, 23);
+            this.button_pausar_receita.TabIndex = 31;
+            this.button_pausar_receita.Text = "Pausar Receita";
+            this.button_pausar_receita.UseVisualStyleBackColor = true;
+            // 
+            // button_executar_receita
+            // 
+            this.button_executar_receita.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
+            this.button_executar_receita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_executar_receita.Location = new System.Drawing.Point(804, 181);
+            this.button_executar_receita.Name = "button_executar_receita";
+            this.button_executar_receita.Size = new System.Drawing.Size(150, 23);
+            this.button_executar_receita.TabIndex = 30;
+            this.button_executar_receita.Text = "Executar Receita";
+            this.button_executar_receita.UseVisualStyleBackColor = true;
+            // 
+            // button_parar_receita
+            // 
+            this.button_parar_receita.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
+            this.button_parar_receita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_parar_receita.Location = new System.Drawing.Point(804, 239);
+            this.button_parar_receita.Name = "button_parar_receita";
+            this.button_parar_receita.Size = new System.Drawing.Size(150, 23);
+            this.button_parar_receita.TabIndex = 29;
+            this.button_parar_receita.Text = "Parar Receita";
+            this.button_parar_receita.UseVisualStyleBackColor = true;
+            // 
+            // button_enviar_receita
+            // 
+            this.button_enviar_receita.Image = global::Mopheus_2.Properties.Resources.Upload_16x;
+            this.button_enviar_receita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_enviar_receita.Location = new System.Drawing.Point(804, 152);
+            this.button_enviar_receita.Name = "button_enviar_receita";
+            this.button_enviar_receita.Size = new System.Drawing.Size(150, 23);
+            this.button_enviar_receita.TabIndex = 28;
+            this.button_enviar_receita.Text = "Enviar Receita";
+            this.button_enviar_receita.UseVisualStyleBackColor = true;
+            // 
+            // button_copiar
+            // 
+            this.button_copiar.Image = global::Mopheus_2.Properties.Resources.ASX_Copy_blue_16x;
+            this.button_copiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_copiar.Location = new System.Drawing.Point(804, 70);
+            this.button_copiar.Name = "button_copiar";
+            this.button_copiar.Size = new System.Drawing.Size(150, 23);
+            this.button_copiar.TabIndex = 27;
+            this.button_copiar.Text = "Copiar Item";
+            this.button_copiar.UseVisualStyleBackColor = true;
+            this.button_copiar.Click += new System.EventHandler(this.button_copiar_Click);
+            // 
+            // button_add_item
+            // 
+            this.button_add_item.Image = global::Mopheus_2.Properties.Resources.Add_16x;
+            this.button_add_item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_add_item.Location = new System.Drawing.Point(804, 41);
+            this.button_add_item.Name = "button_add_item";
+            this.button_add_item.Size = new System.Drawing.Size(150, 23);
+            this.button_add_item.TabIndex = 26;
+            this.button_add_item.Text = "Adicionar Item";
+            this.button_add_item.UseVisualStyleBackColor = true;
+            this.button_add_item.Click += new System.EventHandler(this.button_add_item_Click);
             // 
             // tabControl2
             // 
@@ -410,12 +605,22 @@ namespace Mopheus_2
             this.tabControl2.Location = new System.Drawing.Point(6, 19);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(763, 211);
+            this.tabControl2.Size = new System.Drawing.Size(794, 282);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.comboBox_estado_saida);
+            this.tabPage3.Controls.Add(this.label27);
+            this.tabPage3.Controls.Add(this.comboBox_inversor);
+            this.tabPage3.Controls.Add(this.label26);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.textBox_addr_inversor);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.textBox_velocidade_hz);
+            this.tabPage3.Controls.Add(this.checkBox_velocidade);
             this.tabPage3.Controls.Add(this.textBox_etapa);
             this.tabPage3.Controls.Add(this.label31);
             this.tabPage3.Controls.Add(this.comboBox_produto);
@@ -427,9 +632,100 @@ namespace Mopheus_2
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(755, 185);
+            this.tabPage3.Size = new System.Drawing.Size(786, 256);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Principal";
+            // 
+            // comboBox_estado_saida
+            // 
+            this.comboBox_estado_saida.FormattingEnabled = true;
+            this.comboBox_estado_saida.ItemHeight = 13;
+            this.comboBox_estado_saida.Location = new System.Drawing.Point(703, 18);
+            this.comboBox_estado_saida.Name = "comboBox_estado_saida";
+            this.comboBox_estado_saida.Size = new System.Drawing.Size(77, 21);
+            this.comboBox_estado_saida.TabIndex = 17;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(700, 2);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(40, 13);
+            this.label27.TabIndex = 32;
+            this.label27.Text = "Estado";
+            // 
+            // comboBox_inversor
+            // 
+            this.comboBox_inversor.FormattingEnabled = true;
+            this.comboBox_inversor.ItemHeight = 13;
+            this.comboBox_inversor.Location = new System.Drawing.Point(9, 81);
+            this.comboBox_inversor.Name = "comboBox_inversor";
+            this.comboBox_inversor.Size = new System.Drawing.Size(150, 21);
+            this.comboBox_inversor.TabIndex = 17;
+            this.comboBox_inversor.SelectedIndexChanged += new System.EventHandler(this.comboBox_inversor_SelectedIndexChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 105);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.TabIndex = 30;
+            this.label26.Text = "Velocidade";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 65);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(45, 13);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Inversor";
+            // 
+            // textBox_addr_inversor
+            // 
+            this.textBox_addr_inversor.Enabled = false;
+            this.textBox_addr_inversor.Location = new System.Drawing.Point(165, 81);
+            this.textBox_addr_inversor.Name = "textBox_addr_inversor";
+            this.textBox_addr_inversor.ReadOnly = true;
+            this.textBox_addr_inversor.Size = new System.Drawing.Size(50, 20);
+            this.textBox_addr_inversor.TabIndex = 17;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(162, 65);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 13);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "Endereço";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(57, 124);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(20, 13);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "Hz";
+            // 
+            // textBox_velocidade_hz
+            // 
+            this.textBox_velocidade_hz.Location = new System.Drawing.Point(9, 121);
+            this.textBox_velocidade_hz.Name = "textBox_velocidade_hz";
+            this.textBox_velocidade_hz.Size = new System.Drawing.Size(45, 20);
+            this.textBox_velocidade_hz.TabIndex = 26;
+            // 
+            // checkBox_velocidade
+            // 
+            this.checkBox_velocidade.AutoSize = true;
+            this.checkBox_velocidade.Location = new System.Drawing.Point(9, 45);
+            this.checkBox_velocidade.Name = "checkBox_velocidade";
+            this.checkBox_velocidade.Size = new System.Drawing.Size(136, 17);
+            this.checkBox_velocidade.TabIndex = 25;
+            this.checkBox_velocidade.Text = "Controle de Velocidade";
+            this.checkBox_velocidade.UseVisualStyleBackColor = true;
+            this.checkBox_velocidade.CheckedChanged += new System.EventHandler(this.checkBox_velocidade_CheckedChanged);
             // 
             // textBox_etapa
             // 
@@ -505,18 +801,18 @@ namespace Mopheus_2
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage4.Controls.Add(this.radioButton_ON_evento_anterior);
             this.tabPage4.Controls.Add(this.radioButton_OFF_evento_anterior);
-            this.tabPage4.Controls.Add(this.textBox_setpoint);
+            this.tabPage4.Controls.Add(this.textBox_setpoint_evento_anterior);
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.timeEdit_tempo_espera_evento_anterior);
-            this.tabPage4.Controls.Add(this.comboBox_IO);
+            this.tabPage4.Controls.Add(this.comboBox_IO_evento_anterior);
             this.tabPage4.Controls.Add(this.comboBox_evento_anterior_tipo);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(755, 185);
+            this.tabPage4.Size = new System.Drawing.Size(786, 256);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Evento Anterior";
             // 
@@ -542,13 +838,13 @@ namespace Mopheus_2
             this.radioButton_OFF_evento_anterior.Text = "OFF";
             this.radioButton_OFF_evento_anterior.UseVisualStyleBackColor = true;
             // 
-            // textBox_setpoint
+            // textBox_setpoint_evento_anterior
             // 
-            this.textBox_setpoint.Location = new System.Drawing.Point(9, 137);
-            this.textBox_setpoint.Name = "textBox_setpoint";
-            this.textBox_setpoint.Size = new System.Drawing.Size(110, 20);
-            this.textBox_setpoint.TabIndex = 30;
-            this.textBox_setpoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_setpoint_KeyPress);
+            this.textBox_setpoint_evento_anterior.Location = new System.Drawing.Point(9, 137);
+            this.textBox_setpoint_evento_anterior.Name = "textBox_setpoint_evento_anterior";
+            this.textBox_setpoint_evento_anterior.Size = new System.Drawing.Size(110, 20);
+            this.textBox_setpoint_evento_anterior.TabIndex = 30;
+            this.textBox_setpoint_evento_anterior.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_setpoint_KeyPress);
             // 
             // label20
             // 
@@ -588,19 +884,19 @@ namespace Mopheus_2
             this.timeEdit_tempo_espera_evento_anterior.Size = new System.Drawing.Size(110, 20);
             this.timeEdit_tempo_espera_evento_anterior.TabIndex = 26;
             // 
-            // comboBox_IO
+            // comboBox_IO_evento_anterior
             // 
-            this.comboBox_IO.FormattingEnabled = true;
-            this.comboBox_IO.Location = new System.Drawing.Point(9, 97);
-            this.comboBox_IO.Name = "comboBox_IO";
-            this.comboBox_IO.Size = new System.Drawing.Size(200, 21);
-            this.comboBox_IO.TabIndex = 27;
-            this.comboBox_IO.SelectedIndexChanged += new System.EventHandler(this.comboBox_IO_SelectedIndexChanged);
+            this.comboBox_IO_evento_anterior.FormattingEnabled = true;
+            this.comboBox_IO_evento_anterior.Location = new System.Drawing.Point(9, 97);
+            this.comboBox_IO_evento_anterior.Name = "comboBox_IO_evento_anterior";
+            this.comboBox_IO_evento_anterior.Size = new System.Drawing.Size(200, 21);
+            this.comboBox_IO_evento_anterior.TabIndex = 27;
+            this.comboBox_IO_evento_anterior.SelectedIndexChanged += new System.EventHandler(this.comboBox_IO_SelectedIndexChanged);
             // 
             // comboBox_evento_anterior_tipo
             // 
             this.comboBox_evento_anterior_tipo.FormattingEnabled = true;
-            this.comboBox_evento_anterior_tipo.Location = new System.Drawing.Point(9, 18);
+            this.comboBox_evento_anterior_tipo.Location = new System.Drawing.Point(9, 19);
             this.comboBox_evento_anterior_tipo.Name = "comboBox_evento_anterior_tipo";
             this.comboBox_evento_anterior_tipo.Size = new System.Drawing.Size(110, 21);
             this.comboBox_evento_anterior_tipo.TabIndex = 25;
@@ -626,7 +922,7 @@ namespace Mopheus_2
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(755, 185);
+            this.tabPage5.Size = new System.Drawing.Size(786, 256);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Evento Posterior";
             // 
@@ -634,7 +930,7 @@ namespace Mopheus_2
             // 
             this.groupBox_tempo.Controls.Add(this.label24);
             this.groupBox_tempo.Controls.Add(this.timeEdit_tempo_evento_posterior);
-            this.groupBox_tempo.Location = new System.Drawing.Point(589, 46);
+            this.groupBox_tempo.Location = new System.Drawing.Point(656, 46);
             this.groupBox_tempo.Name = "groupBox_tempo";
             this.groupBox_tempo.Size = new System.Drawing.Size(124, 68);
             this.groupBox_tempo.TabIndex = 75;
@@ -672,7 +968,7 @@ namespace Mopheus_2
             this.groupBox_entrada.Controls.Add(this.comboBox_IO_evento_posterior);
             this.groupBox_entrada.Controls.Add(this.label30);
             this.groupBox_entrada.Controls.Add(this.textBox_setpoint_evento_posterior);
-            this.groupBox_entrada.Location = new System.Drawing.Point(268, 46);
+            this.groupBox_entrada.Location = new System.Drawing.Point(335, 46);
             this.groupBox_entrada.Name = "groupBox_entrada";
             this.groupBox_entrada.Size = new System.Drawing.Size(315, 107);
             this.groupBox_entrada.TabIndex = 75;
@@ -733,6 +1029,7 @@ namespace Mopheus_2
             this.comboBox_IO_evento_posterior.Name = "comboBox_IO_evento_posterior";
             this.comboBox_IO_evento_posterior.Size = new System.Drawing.Size(200, 21);
             this.comboBox_IO_evento_posterior.TabIndex = 46;
+            this.comboBox_IO_evento_posterior.SelectedIndexChanged += new System.EventHandler(this.comboBox_IO_evento_posterior_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -752,6 +1049,17 @@ namespace Mopheus_2
             // 
             // groupBox_peso
             // 
+            this.groupBox_peso.Controls.Add(this.textBox_addr_indicador);
+            this.groupBox_peso.Controls.Add(this.label37);
+            this.groupBox_peso.Controls.Add(this.label36);
+            this.groupBox_peso.Controls.Add(this.comboBox_indicador);
+            this.groupBox_peso.Controls.Add(this.textBox_passos);
+            this.groupBox_peso.Controls.Add(this.button_dosagem_incremental);
+            this.groupBox_peso.Controls.Add(this.label28);
+            this.groupBox_peso.Controls.Add(this.textBox_peso_total);
+            this.groupBox_peso.Controls.Add(this.label35);
+            this.groupBox_peso.Controls.Add(this.textBox_incremento);
+            this.groupBox_peso.Controls.Add(this.checkBox_dosagem_incremental);
             this.groupBox_peso.Controls.Add(this.label9);
             this.groupBox_peso.Controls.Add(this.textBox_peso_limite);
             this.groupBox_peso.Controls.Add(this.label11);
@@ -766,10 +1074,108 @@ namespace Mopheus_2
             this.groupBox_peso.Controls.Add(this.textBox_precorte);
             this.groupBox_peso.Location = new System.Drawing.Point(6, 46);
             this.groupBox_peso.Name = "groupBox_peso";
-            this.groupBox_peso.Size = new System.Drawing.Size(256, 136);
+            this.groupBox_peso.Size = new System.Drawing.Size(323, 204);
             this.groupBox_peso.TabIndex = 68;
             this.groupBox_peso.TabStop = false;
             this.groupBox_peso.Visible = false;
+            // 
+            // textBox_addr_indicador
+            // 
+            this.textBox_addr_indicador.Enabled = false;
+            this.textBox_addr_indicador.Location = new System.Drawing.Point(261, 110);
+            this.textBox_addr_indicador.Name = "textBox_addr_indicador";
+            this.textBox_addr_indicador.ReadOnly = true;
+            this.textBox_addr_indicador.Size = new System.Drawing.Size(50, 20);
+            this.textBox_addr_indicador.TabIndex = 76;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(258, 94);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(53, 13);
+            this.label37.TabIndex = 77;
+            this.label37.Text = "Endereço";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(122, 94);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(51, 13);
+            this.label36.TabIndex = 75;
+            this.label36.Text = "Indicador";
+            // 
+            // comboBox_indicador
+            // 
+            this.comboBox_indicador.FormattingEnabled = true;
+            this.comboBox_indicador.Location = new System.Drawing.Point(125, 109);
+            this.comboBox_indicador.Name = "comboBox_indicador";
+            this.comboBox_indicador.Size = new System.Drawing.Size(130, 21);
+            this.comboBox_indicador.TabIndex = 74;
+            this.comboBox_indicador.SelectedIndexChanged += new System.EventHandler(this.comboBox_indicador_SelectedIndexChanged);
+            // 
+            // textBox_passos
+            // 
+            this.textBox_passos.Enabled = false;
+            this.textBox_passos.Location = new System.Drawing.Point(160, 173);
+            this.textBox_passos.Name = "textBox_passos";
+            this.textBox_passos.ReadOnly = true;
+            this.textBox_passos.Size = new System.Drawing.Size(70, 20);
+            this.textBox_passos.TabIndex = 72;
+            // 
+            // button_dosagem_incremental
+            // 
+            this.button_dosagem_incremental.Location = new System.Drawing.Point(236, 171);
+            this.button_dosagem_incremental.Name = "button_dosagem_incremental";
+            this.button_dosagem_incremental.Size = new System.Drawing.Size(75, 23);
+            this.button_dosagem_incremental.TabIndex = 73;
+            this.button_dosagem_incremental.Text = "Calcular";
+            this.button_dosagem_incremental.UseVisualStyleBackColor = true;
+            this.button_dosagem_incremental.Click += new System.EventHandler(this.button_dosagem_incremental_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(82, 157);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(60, 13);
+            this.label28.TabIndex = 70;
+            this.label28.Text = "Incremento";
+            // 
+            // textBox_peso_total
+            // 
+            this.textBox_peso_total.Location = new System.Drawing.Point(8, 173);
+            this.textBox_peso_total.Name = "textBox_peso_total";
+            this.textBox_peso_total.Size = new System.Drawing.Size(70, 20);
+            this.textBox_peso_total.TabIndex = 67;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 157);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(31, 13);
+            this.label35.TabIndex = 69;
+            this.label35.Text = "Total";
+            // 
+            // textBox_incremento
+            // 
+            this.textBox_incremento.Location = new System.Drawing.Point(84, 173);
+            this.textBox_incremento.Name = "textBox_incremento";
+            this.textBox_incremento.Size = new System.Drawing.Size(70, 20);
+            this.textBox_incremento.TabIndex = 68;
+            // 
+            // checkBox_dosagem_incremental
+            // 
+            this.checkBox_dosagem_incremental.AutoSize = true;
+            this.checkBox_dosagem_incremental.Location = new System.Drawing.Point(9, 137);
+            this.checkBox_dosagem_incremental.Name = "checkBox_dosagem_incremental";
+            this.checkBox_dosagem_incremental.Size = new System.Drawing.Size(129, 17);
+            this.checkBox_dosagem_incremental.TabIndex = 66;
+            this.checkBox_dosagem_incremental.Text = "Dosagem Incremental";
+            this.checkBox_dosagem_incremental.UseVisualStyleBackColor = true;
+            this.checkBox_dosagem_incremental.CheckedChanged += new System.EventHandler(this.checkBox_dosagem_automatica_CheckedChanged);
             // 
             // label9
             // 
@@ -799,11 +1205,11 @@ namespace Mopheus_2
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(121, 55);
+            this.label13.Location = new System.Drawing.Point(158, 157);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 44;
-            this.label13.Text = "Tempo OFF";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 71;
+            this.label13.Text = "Passos";
             // 
             // label25
             // 
@@ -857,7 +1263,7 @@ namespace Mopheus_2
             // 
             // textBox_tempo_off
             // 
-            this.textBox_tempo_off.Location = new System.Drawing.Point(123, 71);
+            this.textBox_tempo_off.Location = new System.Drawing.Point(124, 71);
             this.textBox_tempo_off.Name = "textBox_tempo_off";
             this.textBox_tempo_off.Size = new System.Drawing.Size(70, 20);
             this.textBox_tempo_off.TabIndex = 39;
@@ -872,7 +1278,7 @@ namespace Mopheus_2
             // comboBox_evento_posterior_tipo
             // 
             this.comboBox_evento_posterior_tipo.FormattingEnabled = true;
-            this.comboBox_evento_posterior_tipo.Location = new System.Drawing.Point(8, 19);
+            this.comboBox_evento_posterior_tipo.Location = new System.Drawing.Point(9, 19);
             this.comboBox_evento_posterior_tipo.Name = "comboBox_evento_posterior_tipo";
             this.comboBox_evento_posterior_tipo.Size = new System.Drawing.Size(110, 21);
             this.comboBox_evento_posterior_tipo.TabIndex = 35;
@@ -901,14 +1307,14 @@ namespace Mopheus_2
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(755, 185);
+            this.tabPage11.Size = new System.Drawing.Size(786, 256);
             this.tabPage11.TabIndex = 3;
             this.tabPage11.Text = "Segurança";
             // 
             // timeEdit_tempo_limite_total
             // 
             this.timeEdit_tempo_limite_total.EditValue = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
-            this.timeEdit_tempo_limite_total.Location = new System.Drawing.Point(6, 19);
+            this.timeEdit_tempo_limite_total.Location = new System.Drawing.Point(9, 19);
             this.timeEdit_tempo_limite_total.Name = "timeEdit_tempo_limite_total";
             this.timeEdit_tempo_limite_total.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -919,7 +1325,7 @@ namespace Mopheus_2
             // comboBox_saida_emergencia
             // 
             this.comboBox_saida_emergencia.FormattingEnabled = true;
-            this.comboBox_saida_emergencia.Location = new System.Drawing.Point(106, 102);
+            this.comboBox_saida_emergencia.Location = new System.Drawing.Point(109, 104);
             this.comboBox_saida_emergencia.Name = "comboBox_saida_emergencia";
             this.comboBox_saida_emergencia.Size = new System.Drawing.Size(121, 21);
             this.comboBox_saida_emergencia.TabIndex = 60;
@@ -928,7 +1334,7 @@ namespace Mopheus_2
             // checkBox_saida
             // 
             this.checkBox_saida.AutoSize = true;
-            this.checkBox_saida.Location = new System.Drawing.Point(6, 106);
+            this.checkBox_saida.Location = new System.Drawing.Point(9, 106);
             this.checkBox_saida.Name = "checkBox_saida";
             this.checkBox_saida.Size = new System.Drawing.Size(94, 17);
             this.checkBox_saida.TabIndex = 59;
@@ -939,7 +1345,7 @@ namespace Mopheus_2
             // checkBox_pausar
             // 
             this.checkBox_pausar.AutoSize = true;
-            this.checkBox_pausar.Location = new System.Drawing.Point(6, 82);
+            this.checkBox_pausar.Location = new System.Drawing.Point(9, 82);
             this.checkBox_pausar.Name = "checkBox_pausar";
             this.checkBox_pausar.Size = new System.Drawing.Size(99, 17);
             this.checkBox_pausar.TabIndex = 58;
@@ -949,7 +1355,7 @@ namespace Mopheus_2
             // checkBox_alerta
             // 
             this.checkBox_alerta.AutoSize = true;
-            this.checkBox_alerta.Location = new System.Drawing.Point(6, 58);
+            this.checkBox_alerta.Location = new System.Drawing.Point(9, 58);
             this.checkBox_alerta.Name = "checkBox_alerta";
             this.checkBox_alerta.Size = new System.Drawing.Size(127, 17);
             this.checkBox_alerta.TabIndex = 57;
@@ -959,7 +1365,7 @@ namespace Mopheus_2
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 42);
+            this.label29.Location = new System.Drawing.Point(9, 42);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(32, 13);
             this.label29.TabIndex = 62;
@@ -968,7 +1374,7 @@ namespace Mopheus_2
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 3);
+            this.label19.Location = new System.Drawing.Point(6, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 13);
             this.label19.TabIndex = 61;
@@ -1068,6 +1474,7 @@ namespace Mopheus_2
             this.textBox_linhas.Enabled = false;
             this.textBox_linhas.Location = new System.Drawing.Point(639, 32);
             this.textBox_linhas.Name = "textBox_linhas";
+            this.textBox_linhas.ReadOnly = true;
             this.textBox_linhas.Size = new System.Drawing.Size(50, 20);
             this.textBox_linhas.TabIndex = 5;
             // 
@@ -1076,6 +1483,7 @@ namespace Mopheus_2
             this.textBox_endereco.Enabled = false;
             this.textBox_endereco.Location = new System.Drawing.Point(583, 32);
             this.textBox_endereco.Name = "textBox_endereco";
+            this.textBox_endereco.ReadOnly = true;
             this.textBox_endereco.Size = new System.Drawing.Size(50, 20);
             this.textBox_endereco.TabIndex = 4;
             // 
@@ -1144,21 +1552,25 @@ namespace Mopheus_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 653);
+            this.ClientSize = new System.Drawing.Size(1004, 653);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_receita";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receitas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_receita_FormClosing);
             this.Load += new System.EventHandler(this.Form_receita_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receitas)).EndInit();
+            this.contextMenuStrip_receita.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_itens_receita)).EndInit();
             this.contextMenuStrip_etapas_receita.ResumeLayout(false);
@@ -1200,7 +1612,6 @@ namespace Mopheus_2
         private System.Windows.Forms.ToolStripMenuItem executarReceitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pausarReceitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pararReceitaToolStripMenuItem;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1275,10 +1686,10 @@ namespace Mopheus_2
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_evento_posterior;
         private DevExpress.XtraEditors.TimeEdit timeEdit_tempo_limite_total;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox_IO;
+        private System.Windows.Forms.ComboBox comboBox_IO_evento_anterior;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox_setpoint;
+        private System.Windows.Forms.TextBox textBox_setpoint_evento_anterior;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.RadioButton radioButton_ON_evento_anterior;
         private System.Windows.Forms.RadioButton radioButton_OFF_evento_anterior;
@@ -1291,5 +1702,42 @@ namespace Mopheus_2
         private System.Windows.Forms.TextBox textBox_setpoint_evento_posterior;
         private System.Windows.Forms.GroupBox groupBox_peso;
         private System.Windows.Forms.GroupBox groupBox_tempo;
+        private System.Windows.Forms.ToolStripMenuItem exportarReceitaToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_receita;
+        private System.Windows.Forms.ToolStripMenuItem adicionarreceitatoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excluirreceitatoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarreceitatoolStripMenuItem;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox_velocidade_hz;
+        private System.Windows.Forms.CheckBox checkBox_velocidade;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox_addr_inversor;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBox_inversor;
+        private System.Windows.Forms.ComboBox comboBox_estado_saida;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adionarItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copiarItemToolStripMenuItem;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox_peso_total;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox_incremento;
+        private System.Windows.Forms.CheckBox checkBox_dosagem_incremental;
+        private System.Windows.Forms.Button button_dosagem_incremental;
+        private System.Windows.Forms.TextBox textBox_passos;
+        private System.Windows.Forms.Button button_pausar_receita;
+        private System.Windows.Forms.Button button_executar_receita;
+        private System.Windows.Forms.Button button_parar_receita;
+        private System.Windows.Forms.Button button_enviar_receita;
+        private System.Windows.Forms.Button button_copiar;
+        private System.Windows.Forms.Button button_add_item;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ComboBox comboBox_indicador;
+        private System.Windows.Forms.ToolStripMenuItem resetarControlMixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarDataEHoraToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox_addr_indicador;
+        private System.Windows.Forms.Label label37;
     }
 }

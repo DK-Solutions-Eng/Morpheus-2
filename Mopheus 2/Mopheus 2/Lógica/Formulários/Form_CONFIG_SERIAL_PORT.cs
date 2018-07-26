@@ -65,7 +65,7 @@ namespace Mopheus_2
                     if (Serial_Comumnication.serial_port.IsOpen)
                     {
                         button_conectar.Text = "DESCONECTAR";
-                        MessageBox.Show("Porta serial aberta com sucesso!");
+                        MessageBox.Show("Porta serial aberta com sucesso!","Sucesso");
                     }
                 }
             }

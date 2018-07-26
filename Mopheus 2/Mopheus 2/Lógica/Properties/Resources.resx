@@ -136,8 +136,11 @@
   <data name="UIAboutBox_16x_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UIAboutBox_16x_32.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Property_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Property_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ASX_Copy_blue_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ASX_Copy_blue_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExportTableToFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExportTableToFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LineArrow_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LineArrow_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +148,17 @@
   <data name="serial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMAGENS\serial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SerialPort_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SerialPort_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="History_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\History_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ComponentInstallStatus_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ComponentInstallStatus_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Network_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AutoArrangeShapes_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AutoArrangeShapes_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pause_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pause_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +175,9 @@
   <data name="User_noHalo_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User_noHalo_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SaveTable_16x_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveTable_16x_32.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo-aeph-do-brasil_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMAGENS\logo-aeph-do-brasil_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,14 +190,20 @@
   <data name="Add_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Visible_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Visible_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OpenFolder_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OpenFolder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HelpApplication_16x_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HelpApplication_16x_32.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CSTest_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CSTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SerialPort_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SerialPort_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveTable_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveTable_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMAGENS\clp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +220,9 @@
   <data name="NewFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CSTest_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CSTest_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ASX_Edit_grey_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ASX_Edit_grey_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,7 +232,10 @@
   <data name="Login_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Visible_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Visible_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Property_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Property_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inversor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMAGENS\inversor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -75,7 +75,6 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.pdb
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.dll
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.BonusSkins.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Charts.v17.2.Core.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.CodeParser.v17.2.dll
@@ -114,7 +113,6 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.XtraDiagram.v17.2.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\BLL.pdb
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Common.pdb
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DAL.pdb
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Entidades.pdb
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.Data.v17.2.xml
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\DevExpress.DataAccess.v17.2.xml
@@ -195,3 +193,9 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.csproj.CopyComplete
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.pdb
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.exe.manifest
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\Mopheus 2.application
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.exe.manifest
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\Debug\Mopheus 2.application
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\'.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\Debug\'.pdb

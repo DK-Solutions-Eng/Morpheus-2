@@ -15,6 +15,7 @@ using System.IO.Ports;
 using System.Threading;
 using System.Configuration;
 using Microsoft.VisualBasic;
+using Common;
 
 namespace Mopheus_2
 {
@@ -29,9 +30,18 @@ namespace Mopheus_2
         Usuario user = new Usuario();
         UsuarioBLL usuariobll = new UsuarioBLL("Usuario");
 
-
         Materia_PrimaBLL mpbll = new Materia_PrimaBLL("Materia_Prima");
         Materia_Prima mp=new Materia_Prima();
+
+        ReleBLL relebll = new ReleBLL("Rele");
+        Rele rele = new Rele();
+
+        Network network = new Network();
+        NetworkBLL networkbll = new NetworkBLL("Network");
+
+        byte leitura_indicador = 0;
+
+        byte[] pacote_modbus = new byte[8];
 
         public Form_CARREGAMENTO()
         {
@@ -118,6 +128,8 @@ namespace Mopheus_2
         {
             if (tabControl1.SelectedIndex == 1)
             {
+                leitura_indicador = 0;
+
                 carregamento.fornecedor = comboBox_Fornecedor.Text;
                 carregamento.produto = comboBox_Produto.Text;
                 carregamento.numero_nota = textBox_NumeroNota.Text;
@@ -162,6 +174,8 @@ namespace Mopheus_2
                 groupBox1.Enabled = false;
                 comboBox_device.Enabled = false;
                 textBox_peso.Enabled = false;
+
+                
             }
             else
             {
@@ -215,7 +229,7 @@ namespace Mopheus_2
         {
             if (tabControl1.SelectedIndex == 1)
             {
-
+                leitura_indicador = 1;
             }
             else
             {
@@ -227,11 +241,52 @@ namespace Mopheus_2
         {
             if (tabControl1.SelectedIndex == 1)
             {
-
+                leitura_indicador = 2;
             }
             else
             {
                 MessageBox.Show("Esse comando só funciona na aba \"Dados\"!");
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            switch(leitura_indicador)
+            {
+                case 0:
+                    break;
+                case 1:
+                    try
+                    {
+                        List<Rele> list = relebll.getCustomListRele();
+
+                        List<Network> listnet = networkbll.getAllCustom();
+                        foreach (Network item in listnet)
+                        {
+                            if (comboBox_device.Text == item.full_name)
+                            {
+                                pacote_modbus[0] = Convert.ToByte(item.addr);
+                            }
+                        }
+
+                        pacote_modbus[1] = 0x03;
+                        pacote_modbus[2] = 0x00;
+                        pacote_modbus[3] = 0x10;
+                        pacote_modbus[4] = 0x00;
+                        pacote_modbus[5] = 0x02;
+                        pacote_modbus[6] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) >> 8);
+                        pacote_modbus[7] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) & 0xff);
+                        Serial_Comumnication.serial_port.Write(pacote_modbus, 0, pacote_modbus.Length);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Erro ao enviar mensagem pela porta serial!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
             }
         }
     }

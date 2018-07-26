@@ -26,6 +26,7 @@ namespace Entidades
         public string parent { get; set; }
         public string full_name { get; set; }
         public string type_model { get; set; }
+        public string type_control { get; set; }
 
 
     }

@@ -13,6 +13,11 @@ namespace Entidades
         public string processo { get; set; }
         public string produto { get; set; }
         public string rele { get; set; }
+        public int estado_saida { get; set; }
+        public int controle_velocidade { get; set; }
+        public string name_inversor { get; set; }
+        public int addr_inversor { get; set; }
+        public int velocidade { get; set; }
         public string tipo_evento_anterior { get; set; }
         public string tempo_espera_evento_anterior { get; set; }
         public string entrada_evento_anterior { get; set; }
@@ -24,6 +29,8 @@ namespace Entidades
         public int tempo_on { get; set; }
         public int tempo_off { get; set; }
         public int limite_peso_seguranca_evento_posterior { get; set; }
+        public string indicador_name { get; set; }
+        public int indicador_addr { get; set; }
         public string entrada_evento_posterior { get; set; }
         public int status_entrada_digital_evento_posterior { get; set; }
         public int setpoint_evento_posterior { get; set; }

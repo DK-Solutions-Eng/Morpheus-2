@@ -15,13 +15,16 @@ namespace DAL
             try
             {
                 open();
+                //MessageBox.Show(query);
                 execute(query);
                 close();
             }
             catch(Exception ex)
             {
+                MessageBox.Show(ex.ToString());
                 try
                 {
+                    
                     open();
                     execute("INSERT INTO LOG VALUES('" + RemoveCaracteresEspeciais(ex.Message, true, true) + "','" + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString() + "')");
                     close();
@@ -46,8 +49,10 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
                 try
                 {
+                    
                     open();
                     execute("INSERT INTO LOG VALUES('" + RemoveCaracteresEspeciais(ex.Message, true, true) + "','" + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString() + "')");
                     close();

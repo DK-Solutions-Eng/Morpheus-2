@@ -59,6 +59,12 @@ namespace BLL
             daogeral.executaComRetorno("DELETE FROM " + this.table + " WHERE ID = " + id);
         }
 
+        public void delete_by_campo(string campo,int id)
+        {
+            DAOGeral daogeral = new DAOGeral();
+            daogeral.executaComRetorno("DELETE FROM " + this.table + " WHERE "+campo+" = " + id);
+        }
+
         private string generatesInsert(T obj)
         {
             var colunas = obj.GetType().GetProperties();

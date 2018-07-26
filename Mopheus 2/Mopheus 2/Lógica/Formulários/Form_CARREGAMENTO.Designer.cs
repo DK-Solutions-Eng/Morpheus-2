@@ -71,6 +71,7 @@
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_carregamento)).BeginInit();
@@ -451,6 +452,10 @@
             this.excluirToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form_CARREGAMENTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,12 +464,12 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(200, 0);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_CARREGAMENTO";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carregamento";
             this.menuStrip1.ResumeLayout(false);
@@ -525,5 +530,6 @@
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carregarToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

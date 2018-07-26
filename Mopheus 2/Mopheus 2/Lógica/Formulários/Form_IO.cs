@@ -27,7 +27,7 @@ namespace Mopheus_2
         Rele rele = new Rele();
 
         Materia_Prima mp = new Materia_Prima();
-        Materia_PrimaBLL mpbll= new Materia_PrimaBLL("Materia_Prima");
+        Materia_PrimaBLL mpbll = new Materia_PrimaBLL("Materia_Prima");
 
 
         public Form_IO()
@@ -62,7 +62,7 @@ namespace Mopheus_2
                     {
                         if (item.model == "ControlMix" || item.type_model != "4-TC" || item.type_model != "4-AI")
                         {
-                            if(item.model == "Indicador")
+                            if (item.model == "Indicador")
                             {
 
                             }
@@ -70,21 +70,21 @@ namespace Mopheus_2
                             {
                                 comboBox_device.Items.Add(item.full_name);
                             }
-                                
+
                         }
                     }
                 }
             }
-            if(comboBox_funcao.SelectedIndex == 1)
+            if (comboBox_funcao.SelectedIndex == 1)
             {
                 if (list != null)
                 {
                     foreach (Network item in list)
                     {
-                        if (item.model == "ControlMix" || item.model == "Expansão" )
+                        if (item.model == "ControlMix" || item.model == "Expansão")
                         {
                             comboBox_device.Items.Add(item.full_name);
-                            
+
                         }
                     }
                 }
@@ -108,16 +108,17 @@ namespace Mopheus_2
             }
             device = bll.get(Convert.ToInt32(dt.Rows[0]["id"].ToString()));
 
-            switch(device.type_model)
+            switch (device.type_model)
             {
                 case "5-DI/12-RO":
                     comboBox_tipo.Items.Clear();
-                    if (comboBox_funcao.Text != "Produto")
+                    if (comboBox_funcao.Text == "Produto")
                     {
-                        comboBox_tipo.Items.Add("Entrada Digital");
+                        comboBox_tipo.Items.Add("Saída a Relé");
                     }
                     else
                     {
+                        comboBox_tipo.Items.Add("Entrada Digital");
                         comboBox_tipo.Items.Add("Saída a Relé");
                     }
                     break;
@@ -128,12 +129,13 @@ namespace Mopheus_2
                     break;
                 case "8-DI/9-RO":
                     comboBox_tipo.Items.Clear();
-                    if (comboBox_funcao.Text != "Produto")
+                    if (comboBox_funcao.Text == "Produto")
                     {
-                        comboBox_tipo.Items.Add("Entrada Digital");
+                        comboBox_tipo.Items.Add("Saída a Relé");
                     }
                     else
                     {
+                        comboBox_tipo.Items.Add("Entrada Digital");
                         comboBox_tipo.Items.Add("Saída a Relé");
                     }
                     break;
@@ -173,7 +175,7 @@ namespace Mopheus_2
                     else
                     {
                         comboBox_tipo.Items.Add("Saída a Relé");
-                    }              
+                    }
                     break;
             }
         }
@@ -183,10 +185,17 @@ namespace Mopheus_2
             comboBox_IO.Items.Clear();
             comboBox_IO.Text = "";
             textBox_description.Clear();
+            if (comboBox_tipo.Text == "Saída Digital" & comboBox_funcao.SelectedIndex == 1)
+            {
+                textBox_description.Visible = true;
+                comboBox_produto.Location = new Point(556, 52);
+                comboBox_produto.Visible = false;
+            }
+
             switch (comboBox_tipo.Text)
             {
                 case "Entrada Digital":
-                    switch(device.type_model)
+                    switch (device.type_model)
                     {
                         case "5-DI/12-RO":
                             comboBox_IO.Items.Clear();
@@ -257,7 +266,7 @@ namespace Mopheus_2
                     }
                     break;
             }
-            switch(device.type_model)
+            switch (device.type_model)
             {
                 case "4-TC":
                     comboBox_IO.Items.Clear();
@@ -282,7 +291,7 @@ namespace Mopheus_2
             rele.device = comboBox_device.Text;
             rele.tipo = comboBox_tipo.Text;
             rele.IO = (comboBox_IO.Text);
-            
+
             if (comboBox_funcao.Text == "Produto")
             {
                 rele.descricao = comboBox_produto.Text;
@@ -310,6 +319,8 @@ namespace Mopheus_2
             comboBox_IO.SelectedIndex = -1;
             comboBox_produto.SelectedIndex = -1;
             textBox_description.Clear();
+            comboBox_funcao.SelectedIndex = -1;
+            comboBox_funcao.Focus();
 
 
 
@@ -360,16 +371,16 @@ namespace Mopheus_2
             //comboBox_produto.Text = "";
             textBox_description.Clear();
 
-            if (comboBox_funcao.SelectedIndex==0)
+            if (comboBox_funcao.SelectedIndex == 0)
             {
                 textBox_description.Visible = false;
                 comboBox_produto.Location = new Point(556, 25);
                 comboBox_produto.Visible = true;
             }
-            if (comboBox_funcao.SelectedIndex==1)
+            if (comboBox_funcao.SelectedIndex == 1)
             {
                 textBox_description.Visible = true;
-                //comboBox_produto.Location = new Point(516, 25);
+                comboBox_produto.Location = new Point(556, 52);
                 comboBox_produto.Visible = false;
             }
 
@@ -380,13 +391,13 @@ namespace Mopheus_2
         {
             List<Materia_Prima> list = mpbll.getAllCustom();
 
-                if (list != null)
+            if (list != null)
+            {
+                foreach (Materia_Prima item in list)
                 {
-                    foreach (Materia_Prima item in list)
-                    {
-                            comboBox_produto.Items.Add(item.descricao_completa);
-                    }
+                    comboBox_produto.Items.Add(item.descricao_completa);
                 }
+            }
         }
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_REDE));
             this.treeView_rede = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.novoControlMIXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoInversorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoIndicadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaExpansãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,12 +76,13 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoControlMIXToolStripMenuItem,
+            this.novoInversorToolStripMenuItem,
             this.novoIndicadorToolStripMenuItem,
             this.novaExpansãoToolStripMenuItem,
             this.excluirToolStripMenuItem,
             this.propriedadesToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 136);
             // 
             // novoControlMIXToolStripMenuItem
             // 
@@ -90,6 +91,14 @@
             this.novoControlMIXToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.novoControlMIXToolStripMenuItem.Text = "Novo ControlMix";
             this.novoControlMIXToolStripMenuItem.Click += new System.EventHandler(this.novoControlMIXToolStripMenuItem_Click);
+            // 
+            // novoInversorToolStripMenuItem
+            // 
+            this.novoInversorToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.inversor;
+            this.novoInversorToolStripMenuItem.Name = "novoInversorToolStripMenuItem";
+            this.novoInversorToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.novoInversorToolStripMenuItem.Text = "Novo Inversor";
+            this.novoInversorToolStripMenuItem.Click += new System.EventHandler(this.novoInversorToolStripMenuItem_Click);
             // 
             // novoIndicadorToolStripMenuItem
             // 
@@ -150,16 +159,16 @@
             // 
             this.carregarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.OpenFolder_16x;
             this.carregarToolStripMenuItem.Name = "carregarToolStripMenuItem";
-            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.carregarToolStripMenuItem.Text = "Carregar";
+            this.carregarToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.carregarToolStripMenuItem.Text = "Carregar Configuração";
             this.carregarToolStripMenuItem.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Save_16x_32;
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.salvarToolStripMenuItem.Text = "Salvar";
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.salvarToolStripMenuItem.Text = "Salvar Configuração";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // menuStrip1
@@ -257,11 +266,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.treeView_rede);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_REDE";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuração de Rede";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_REDE_FormClosing);
@@ -299,5 +309,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_Speed;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem novoInversorToolStripMenuItem;
     }
 }

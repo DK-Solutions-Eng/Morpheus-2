@@ -52,7 +52,9 @@ namespace Mopheus_2
             textBox_codigo_sistema.Clear();
             textBox_descricao_full.Clear();
             textBox_descricao_half.Clear();
-            
+            textBox_descricao_full.Focus();
+
+
         }
 
         private void atualiza_grid(string filtro)

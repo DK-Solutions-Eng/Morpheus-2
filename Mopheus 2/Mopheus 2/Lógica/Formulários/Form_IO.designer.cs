@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_IO));
             this.comboBox_IO = new System.Windows.Forms.ComboBox();
             this.comboBox_device = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.comboBox_IO.Location = new System.Drawing.Point(430, 25);
             this.comboBox_IO.Name = "comboBox_IO";
             this.comboBox_IO.Size = new System.Drawing.Size(120, 21);
-            this.comboBox_IO.TabIndex = 0;
+            this.comboBox_IO.TabIndex = 4;
             // 
             // comboBox_device
             // 
@@ -63,7 +62,7 @@
             this.comboBox_device.Location = new System.Drawing.Point(178, 25);
             this.comboBox_device.Name = "comboBox_device";
             this.comboBox_device.Size = new System.Drawing.Size(120, 21);
-            this.comboBox_device.TabIndex = 1;
+            this.comboBox_device.TabIndex = 2;
             this.comboBox_device.SelectedIndexChanged += new System.EventHandler(this.comboBox_device_SelectedIndexChanged);
             // 
             // label1
@@ -72,7 +71,7 @@
             this.label1.Location = new System.Drawing.Point(175, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 9;
             this.label1.Text = "Dispositivo";
             // 
             // label2
@@ -81,7 +80,7 @@
             this.label2.Location = new System.Drawing.Point(427, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 11;
             this.label2.Text = "I/O";
             // 
             // textBox_description
@@ -89,7 +88,7 @@
             this.textBox_description.Location = new System.Drawing.Point(556, 25);
             this.textBox_description.Name = "textBox_description";
             this.textBox_description.Size = new System.Drawing.Size(300, 20);
-            this.textBox_description.TabIndex = 4;
+            this.textBox_description.TabIndex = 5;
             // 
             // label3
             // 
@@ -97,7 +96,7 @@
             this.label3.Location = new System.Drawing.Point(553, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 12;
             this.label3.Text = "Descrição";
             // 
             // button_save
@@ -107,7 +106,7 @@
             this.button_save.Location = new System.Drawing.Point(862, 23);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
-            this.button_save.TabIndex = 6;
+            this.button_save.TabIndex = 7;
             this.button_save.Text = "Salvar";
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
@@ -125,7 +124,7 @@
             this.dataGridView_IO.ReadOnly = true;
             this.dataGridView_IO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView_IO.Size = new System.Drawing.Size(925, 397);
-            this.dataGridView_IO.TabIndex = 7;
+            this.dataGridView_IO.TabIndex = 13;
             this.dataGridView_IO.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_IO_MouseClick);
             // 
             // contextMenuStrip1
@@ -149,7 +148,7 @@
             this.label4.Location = new System.Drawing.Point(301, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 10;
             this.label4.Text = "Tipo";
             // 
             // comboBox_tipo
@@ -158,7 +157,7 @@
             this.comboBox_tipo.Location = new System.Drawing.Point(304, 25);
             this.comboBox_tipo.Name = "comboBox_tipo";
             this.comboBox_tipo.Size = new System.Drawing.Size(120, 21);
-            this.comboBox_tipo.TabIndex = 8;
+            this.comboBox_tipo.TabIndex = 3;
             this.comboBox_tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox_tipo_SelectedIndexChanged);
             // 
             // label5
@@ -167,7 +166,7 @@
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Função";
             // 
             // comboBox_funcao
@@ -176,7 +175,7 @@
             this.comboBox_funcao.Location = new System.Drawing.Point(12, 25);
             this.comboBox_funcao.Name = "comboBox_funcao";
             this.comboBox_funcao.Size = new System.Drawing.Size(160, 21);
-            this.comboBox_funcao.TabIndex = 11;
+            this.comboBox_funcao.TabIndex = 1;
             this.comboBox_funcao.SelectedIndexChanged += new System.EventHandler(this.comboBox_funcao_SelectedIndexChanged);
             // 
             // comboBox_produto
@@ -185,7 +184,7 @@
             this.comboBox_produto.Location = new System.Drawing.Point(556, 52);
             this.comboBox_produto.Name = "comboBox_produto";
             this.comboBox_produto.Size = new System.Drawing.Size(300, 21);
-            this.comboBox_produto.TabIndex = 12;
+            this.comboBox_produto.TabIndex = 6;
             // 
             // Form_IO
             // 
@@ -206,9 +205,10 @@
             this.Controls.Add(this.comboBox_device);
             this.Controls.Add(this.comboBox_IO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_IO";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entradas e Saídas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_IO)).EndInit();

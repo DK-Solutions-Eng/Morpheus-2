@@ -107,7 +107,8 @@ namespace Mopheus_2
                     textBox_nome_completo.Clear();
                     textBox_login.Clear();
                     textBox_senha.Clear();
-                    comboBox_tipo_acesso.Text = "";
+                    comboBox_tipo_acesso.SelectedIndex = -1;
+                    textBox_nome_completo.Focus();
                 }
                 else
                 {

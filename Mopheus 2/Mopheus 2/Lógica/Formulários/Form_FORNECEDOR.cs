@@ -50,7 +50,8 @@ namespace Mopheus_2
 
             textBox_nome_completo.Clear();
             textBox_nome_resumido.Clear();
-            
+            textBox_nome_resumido.Focus();
+
         }
         private void atualiza_grid(string filtro)
         {

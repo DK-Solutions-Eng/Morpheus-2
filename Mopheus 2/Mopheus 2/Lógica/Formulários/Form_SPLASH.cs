@@ -38,7 +38,7 @@ namespace Mopheus_2
             else
             {
                 this.Visible = false;
-                MessageBox.Show("O Programa já está em Execução!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("O Programa já está em Execução! Verifique na barra de notificações se o programa encontra-se minimizado", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 this.DialogResult = DialogResult.Abort;
                 this.Close();
             }

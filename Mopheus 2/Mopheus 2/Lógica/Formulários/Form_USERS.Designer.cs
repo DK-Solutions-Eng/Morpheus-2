@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_USERS));
             this.dataGridView_usuarios = new System.Windows.Forms.DataGridView();
             this.textBox_login = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -172,10 +171,11 @@
             this.Controls.Add(this.textBox_nome_completo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_USERS";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuários";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usuarios)).EndInit();

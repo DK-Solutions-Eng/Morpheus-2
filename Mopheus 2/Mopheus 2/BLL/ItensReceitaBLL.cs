@@ -92,6 +92,11 @@ namespace BLL
             obj.processo = row["processo"].ToString();
             obj.produto = row["produto"].ToString();
             obj.rele = (row["rele"].ToString());
+            obj.estado_saida = Convert.ToChar(row["estado_saida"].ToString());
+            obj.controle_velocidade= Convert.ToInt32(row["controle_velocidade"].ToString());
+            obj.name_inversor= (row["name_inversor"].ToString());
+            obj.addr_inversor= Convert.ToInt32(row["addr_inversor"].ToString());
+            obj.velocidade = Convert.ToInt32(row["velocidade"].ToString());
             obj.tipo_evento_anterior = row["tipo_evento_anterior"].ToString();
             obj.tempo_espera_evento_anterior = row["tempo_espera_evento_anterior"].ToString();
             obj.entrada_evento_anterior = row["entrada_evento_anterior"].ToString();
@@ -112,7 +117,7 @@ namespace BLL
             obj.alerta_emergencia = Convert.ToChar(row["alerta_emergencia"].ToString());
             obj.pausar_receita = Convert.ToChar(row["pausar_receita"].ToString());
             obj.acionar_saida = Convert.ToChar(row["acionar_saida"].ToString());
-            obj.saida_seguranca= row["saida_seguranca"].ToString();
+            obj.saida_seguranca=row["saida_seguranca"].ToString();
             obj.sequencia = Convert.ToInt32(row["sequencia"].ToString());
             if (row["dateinsert"].ToString() == "")
             {

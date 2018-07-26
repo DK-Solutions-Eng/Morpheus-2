@@ -73,9 +73,29 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ASX_Copy_blue_16x {
+            get {
+                object obj = ResourceManager.GetObject("ASX_Copy_blue_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ASX_Edit_grey_16x {
             get {
                 object obj = ResourceManager.GetObject("ASX_Edit_grey_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap AutoArrangeShapes_16x {
+            get {
+                object obj = ResourceManager.GetObject("AutoArrangeShapes_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ExportTableToFile_16x {
+            get {
+                object obj = ResourceManager.GetObject("ExportTableToFile_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap HelpApplication_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("HelpApplication_16x_32", resourceCulture);
@@ -183,9 +213,29 @@ namespace Mopheus_2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap History_16x {
+            get {
+                object obj = ResourceManager.GetObject("History_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap InputOutput_16x {
             get {
                 object obj = ResourceManager.GetObject("InputOutput_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap inversor {
+            get {
+                object obj = ResourceManager.GetObject("inversor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +356,26 @@ namespace Mopheus_2.Properties {
         public static System.Drawing.Bitmap Save_16x_32 {
             get {
                 object obj = ResourceManager.GetObject("Save_16x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SaveTable_16x {
+            get {
+                object obj = ResourceManager.GetObject("SaveTable_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap SaveTable_16x_32 {
+            get {
+                object obj = ResourceManager.GetObject("SaveTable_16x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

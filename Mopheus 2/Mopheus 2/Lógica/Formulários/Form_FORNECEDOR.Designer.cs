@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_FORNECEDOR));
             this.button_save = new System.Windows.Forms.Button();
             this.dataGridView_fornecedor = new System.Windows.Forms.DataGridView();
             this.textBox_nome_resumido = new System.Windows.Forms.TextBox();
@@ -129,10 +128,11 @@
             this.Controls.Add(this.textBox_nome_completo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_FORNECEDOR";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Fornecedor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fornecedor)).EndInit();
