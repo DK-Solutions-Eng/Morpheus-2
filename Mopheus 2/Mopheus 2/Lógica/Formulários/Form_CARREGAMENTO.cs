@@ -31,7 +31,7 @@ namespace Mopheus_2
         UsuarioBLL usuariobll = new UsuarioBLL("Usuario");
 
         Materia_PrimaBLL mpbll = new Materia_PrimaBLL("Materia_Prima");
-        Materia_Prima mp=new Materia_Prima();
+        Materia_Prima mp = new Materia_Prima();
 
         ReleBLL relebll = new ReleBLL("Rele");
         Rele rele = new Rele();
@@ -41,7 +41,9 @@ namespace Mopheus_2
 
         byte leitura_indicador = 0;
 
-        byte[] pacote_modbus = new byte[8];
+        
+
+        String string_peso;
 
         public Form_CARREGAMENTO()
         {
@@ -53,6 +55,25 @@ namespace Mopheus_2
             load_combobox_fornecedor();
             load_combobox_produto();
             load_combobox_recebedor();
+            load_combobox_indicador();
+
+            //Serial_Comumnication.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(port_DataReceived);
+        }
+
+        private void load_combobox_indicador()
+        {
+            List<Network> list = networkbll.getAllCustom();
+            if (list != null)
+            {
+                foreach (Network item in list)
+                {
+                    if (item.model == "Indicador")
+                    {
+                        comboBox_device.Items.Add(item.full_name);
+                        textBox_device_addr.Text = item.addr.ToString();
+                    }
+                }
+            }
         }
 
         private void load_combobox_fornecedor()
@@ -175,7 +196,7 @@ namespace Mopheus_2
                 comboBox_device.Enabled = false;
                 textBox_peso.Enabled = false;
 
-                
+
             }
             else
             {
@@ -203,6 +224,7 @@ namespace Mopheus_2
             groupBox1.Enabled = true;
             comboBox_device.Enabled = true;
             textBox_peso.Enabled = true;
+            timer1.Enabled = true;
 
         }
 
@@ -251,43 +273,274 @@ namespace Mopheus_2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch(leitura_indicador)
+            //switch (leitura_indicador)
+            //{
+            //    case 0:
+            //        break;
+            //    case 1:
+            //        try
+            //        {
+            //            List<Rele> list = relebll.getCustomListRele();
+
+            //            List<Network> listnet = networkbll.getAllCustom();
+            //            foreach (Network item in listnet)
+            //            {
+            //                if (comboBox_device.Text == item.full_name)
+            //                {
+            //                    pacote_modbus[0] = Convert.ToByte(item.addr);
+            //                }
+            //            }
+
+            //            pacote_modbus[1] = 0x03;
+            //            pacote_modbus[2] = 0x00;
+            //            pacote_modbus[3] = 0x10;
+            //            pacote_modbus[4] = 0x00;
+            //            pacote_modbus[5] = 0x02;
+            //            pacote_modbus[6] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) >> 8);
+            //            pacote_modbus[7] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) & 0xff);
+            //            Serial_Comumnication.serialPort.Write(pacote_modbus, 0, pacote_modbus.Length);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show("Erro ao enviar mensagem pela porta serial!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //        break;
+            //    case 2:
+            //        break;
+            //    default:
+            //        break;
+            //}
+
+            if(Serial_Comumnication.serialPort.IsOpen)
+            {
+                byte[] pacote_modbus = new byte[8];
+
+                pacote_modbus[0] = 0x10;
+                pacote_modbus[1] = 0x03;
+                pacote_modbus[2] = 0x00;
+                pacote_modbus[3] = 0x10;
+                pacote_modbus[4] = 0x00;
+                pacote_modbus[5] = 0x02;
+                pacote_modbus[7] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus,pacote_modbus.Length-2) >> 8);
+                pacote_modbus[6] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus,pacote_modbus.Length-2) & 0xff);
+                Serial_Comumnication.serialPort.Write(pacote_modbus, 0, pacote_modbus.Length);
+            }
+        }
+
+        //private void port_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        //{
+        //    int bytes_to_read;
+        //    byte crch, crcl;
+        //    byte crch_received, crcl_received;
+        //    try
+        //    {
+        //        if (Serial_Comumnication.serialPort.IsOpen)
+        //        {
+        //            bytes_to_read = Serial_Comumnication.serialPort.BytesToRead;
+        //            byte[] buffer = new byte[bytes_to_read - 2];
+
+        //            for (int i = 0; i < bytes_to_read - 2; i++)
+        //            {
+        //                buffer[i] = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+        //            }
+
+        //            //Serial_Comumnication.serialPort.Read(buffer, 0, bytes_to_read);
+
+        //            crch = Convert.ToByte(Crc16.ComputeCrc(buffer,buffer.Length) >> 8);
+        //            crcl = Convert.ToByte(Crc16.ComputeCrc(buffer, buffer.Length) & 0xff);
+
+        //            crch_received = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+        //            crcl_received = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+
+        //            if (crch == crch_received & crcl == crcl_received)
+        //            {
+        //                string_peso = descobre_peso(buffer);
+        //                this.Invoke(new EventHandler(Display_Peso));
+        //            }
+        //            else
+        //            {
+        //                string_peso = "ERRO";
+        //                this.Invoke(new EventHandler(Display_Peso)); ;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Porta serial não está aberta!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Erro ao ler a porta serial!\r\n" + ex.ToString(), "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        private string descobre_peso(byte[] buffer)
+        {
+
+            string unidade = "KG";
+            string format;
+            float peso;
+            byte status;
+            Boolean tipo_peso = false;
+            Boolean peso_negativo = false;
+            Boolean saturacao = false;
+            Boolean sobrecarga = false;
+            Boolean peso_bruto = false;
+            float multiplicador;
+
+            status = buffer[3];
+
+            #region VERIFICACAO DE PESO LIQUIDO E PESO BRUTO
+
+            if ((status & 0b10000000) == 0x80)
+            {
+                tipo_peso = true;  //peso bruto
+                peso_bruto = tipo_peso;
+            }
+            if ((status & 0b10000000) == 0)
+            {
+                tipo_peso = false;  //peso liquido
+                peso_bruto = tipo_peso;
+            }
+            #endregion
+
+
+            #region VERIFICACAO PESO NEGATIVO
+
+            if ((status & 0b00001000) == 0x08)
+            {
+                peso_negativo = true;
+            }
+            if ((status & 0b00001000) == 0)
+            {
+                peso_negativo = false;
+            }
+            #endregion VERIFICACAO PESO NEGATIVO
+
+
+            #region VERIFICACAO DE SOBRECARGA
+
+            if ((status & 0b01000000) == 0x40)
+            {
+                sobrecarga = true;
+            }
+            if ((status & 0b01000000) == 0)
+            {
+                sobrecarga = false;
+            }
+
+            #endregion
+
+
+            #region VERIFICACAO DE SATURACAO
+
+            if ((status & 0b00100000) == 0x20)
+            {
+                saturacao = true;
+            }
+            if ((status & 0b00100000) == 0)
+            {
+                saturacao = false;
+            }
+
+            #endregion
+
+
+            #region POSICAO PONTO DECIMAL
+
+            switch ((status & 0b00000111))
             {
                 case 0:
+                    multiplicador = 1.0f;
+                    format = "{0:F0}";
                     break;
+
                 case 1:
-                    try
-                    {
-                        List<Rele> list = relebll.getCustomListRele();
-
-                        List<Network> listnet = networkbll.getAllCustom();
-                        foreach (Network item in listnet)
-                        {
-                            if (comboBox_device.Text == item.full_name)
-                            {
-                                pacote_modbus[0] = Convert.ToByte(item.addr);
-                            }
-                        }
-
-                        pacote_modbus[1] = 0x03;
-                        pacote_modbus[2] = 0x00;
-                        pacote_modbus[3] = 0x10;
-                        pacote_modbus[4] = 0x00;
-                        pacote_modbus[5] = 0x02;
-                        pacote_modbus[6] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) >> 8);
-                        pacote_modbus[7] = Convert.ToByte(Crc16.ComputeCrc(pacote_modbus) & 0xff);
-                        Serial_Comumnication.serial_port.Write(pacote_modbus, 0, pacote_modbus.Length);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show("Erro ao enviar mensagem pela porta serial!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    multiplicador = 0.1f;
+                    format = "{0:F1}";
                     break;
+
                 case 2:
+                    multiplicador = 0.01f;
+                    format = "{0:F2}";
                     break;
+
+                case 3:
+                    multiplicador = 0.001f;
+                    format = "{0:F3}";
+                    break;
+
+                case 4:
+                    multiplicador = 0.0001f;
+                    format = "{0:F4}";
+                    break;
+
                 default:
+                    multiplicador = 1.0f;
+                    format = "{0:F0}";
                     break;
             }
+
+            #endregion POSICAO PONTO DECIMAL
+
+            if (peso_negativo)
+            {
+                peso = ((buffer[4] * 65536) + (buffer[5] * 256) + (buffer[6])) * multiplicador * -1.0f;
+            }
+            else
+            {
+                peso = ((buffer[4] * 65536) + (buffer[5] * 256) + (buffer[6])) * multiplicador * 1.0f;
+            }
+
+            if (sobrecarga == true)
+            {
+
+                string_peso = "SOBRECARGA";
+
+            }
+            else if (saturacao == true)
+            {
+
+                string_peso = "SATURADO";
+            }
+            else
+            {
+
+                switch (tipo_peso)
+                {
+                    case false:
+                        string_peso = "L" + string.Format(format, peso) + " " + unidade;
+                        break;
+
+                    case true:
+                        string_peso = "B" + string.Format(format, peso) + " " + unidade;
+                        break;
+
+                    default:
+                        string_peso = "N/A";
+                        break;
+                }
+
+            }
+            return string_peso;
+        }
+
+        private void Display_Peso(object sender, EventArgs e)
+        {
+            if (string_peso == "ERRO")
+            {
+                textBox_peso.Text = string_peso;
+            }
+            else
+            {
+                textBox_peso.Text = string_peso.Substring(1);
+            }
+
+        }
+
+        private void Form_CARREGAMENTO_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer1.Enabled = false;
         }
     }
 }

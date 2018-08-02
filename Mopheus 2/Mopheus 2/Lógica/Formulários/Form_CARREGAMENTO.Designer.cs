@@ -45,6 +45,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView_carregamento = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox_peso = new System.Windows.Forms.TextBox();
+            this.button_pausar_pausar = new System.Windows.Forms.Button();
+            this.button_iniciar_carregamento = new System.Windows.Forms.Button();
+            this.button_parar_carregamento = new System.Windows.Forms.Button();
             this.comboBox_device = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_tara = new System.Windows.Forms.TextBox();
@@ -65,13 +69,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_peso = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox_device_addr = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_carregamento)).BeginInit();
@@ -106,7 +111,7 @@
             // 
             this.novoToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.NewFile_16x;
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
@@ -114,7 +119,7 @@
             // 
             this.imprimirToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Print_16x;
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             this.imprimirToolStripMenuItem.Click += new System.EventHandler(this.imprimirToolStripMenuItem_Click);
             // 
@@ -122,7 +127,7 @@
             // 
             this.sairToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Cancel_16x;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // coToolStripMenuItem
@@ -139,7 +144,7 @@
             // 
             this.iniciarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.iniciarToolStripMenuItem.Text = "Iniciar";
             this.iniciarToolStripMenuItem.Click += new System.EventHandler(this.iniciarToolStripMenuItem_Click);
             // 
@@ -147,7 +152,7 @@
             // 
             this.pausarToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
             this.pausarToolStripMenuItem.Name = "pausarToolStripMenuItem";
-            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.pausarToolStripMenuItem.Text = "Pausar";
             this.pausarToolStripMenuItem.Click += new System.EventHandler(this.pausarToolStripMenuItem_Click);
             // 
@@ -155,7 +160,7 @@
             // 
             this.pararToolStripMenuItem.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
             this.pararToolStripMenuItem.Name = "pararToolStripMenuItem";
-            this.pararToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pararToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.pararToolStripMenuItem.Text = "Parar";
             this.pararToolStripMenuItem.Click += new System.EventHandler(this.pararToolStripMenuItem_Click);
             // 
@@ -200,11 +205,16 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.textBox_device_addr);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.textBox_peso);
+            this.tabPage2.Controls.Add(this.button_pausar_pausar);
+            this.tabPage2.Controls.Add(this.button_iniciar_carregamento);
+            this.tabPage2.Controls.Add(this.button_parar_carregamento);
             this.tabPage2.Controls.Add(this.comboBox_device);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textBox_peso);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -212,12 +222,63 @@
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Dados";
             // 
+            // textBox_peso
+            // 
+            this.textBox_peso.Font = new System.Drawing.Font("Digital-7", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_peso.Location = new System.Drawing.Point(433, 139);
+            this.textBox_peso.Name = "textBox_peso";
+            this.textBox_peso.ReadOnly = true;
+            this.textBox_peso.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox_peso.Size = new System.Drawing.Size(208, 50);
+            this.textBox_peso.TabIndex = 35;
+            this.textBox_peso.Text = "-000000 KG";
+            this.textBox_peso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button_pausar_pausar
+            // 
+            this.button_pausar_pausar.Image = global::Mopheus_2.Properties.Resources.Pause_16x;
+            this.button_pausar_pausar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pausar_pausar.Location = new System.Drawing.Point(86, 166);
+            this.button_pausar_pausar.Name = "button_pausar_pausar";
+            this.button_pausar_pausar.Size = new System.Drawing.Size(71, 23);
+            this.button_pausar_pausar.TabIndex = 34;
+            this.button_pausar_pausar.Text = "Pausar";
+            this.button_pausar_pausar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_pausar_pausar.UseVisualStyleBackColor = true;
+            this.button_pausar_pausar.Click += new System.EventHandler(this.pausarToolStripMenuItem_Click);
+            // 
+            // button_iniciar_carregamento
+            // 
+            this.button_iniciar_carregamento.Image = global::Mopheus_2.Properties.Resources.PlayVideo_16x;
+            this.button_iniciar_carregamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_iniciar_carregamento.Location = new System.Drawing.Point(15, 166);
+            this.button_iniciar_carregamento.Name = "button_iniciar_carregamento";
+            this.button_iniciar_carregamento.Size = new System.Drawing.Size(65, 23);
+            this.button_iniciar_carregamento.TabIndex = 33;
+            this.button_iniciar_carregamento.Text = "Iniciar";
+            this.button_iniciar_carregamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_iniciar_carregamento.UseVisualStyleBackColor = true;
+            this.button_iniciar_carregamento.Click += new System.EventHandler(this.iniciarToolStripMenuItem_Click);
+            // 
+            // button_parar_carregamento
+            // 
+            this.button_parar_carregamento.Image = global::Mopheus_2.Properties.Resources.Stop_grey_16x;
+            this.button_parar_carregamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_parar_carregamento.Location = new System.Drawing.Point(163, 166);
+            this.button_parar_carregamento.Name = "button_parar_carregamento";
+            this.button_parar_carregamento.Size = new System.Drawing.Size(65, 23);
+            this.button_parar_carregamento.TabIndex = 32;
+            this.button_parar_carregamento.Text = "Parar Receita";
+            this.button_parar_carregamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_parar_carregamento.UseVisualStyleBackColor = true;
+            this.button_parar_carregamento.Click += new System.EventHandler(this.pararToolStripMenuItem_Click);
+            // 
             // comboBox_device
             // 
             this.comboBox_device.FormattingEnabled = true;
-            this.comboBox_device.Location = new System.Drawing.Point(345, 162);
+            this.comboBox_device.Location = new System.Drawing.Point(15, 130);
             this.comboBox_device.Name = "comboBox_device";
-            this.comboBox_device.Size = new System.Drawing.Size(150, 21);
+            this.comboBox_device.Size = new System.Drawing.Size(142, 21);
             this.comboBox_device.TabIndex = 19;
             // 
             // groupBox1
@@ -382,7 +443,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(342, 146);
+            this.label10.Location = new System.Drawing.Point(12, 114);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 18;
@@ -391,26 +452,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(498, 114);
+            this.label2.Location = new System.Drawing.Point(430, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Peso Balança:";
-            // 
-            // textBox_peso
-            // 
-            this.textBox_peso.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox_peso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_peso.Font = new System.Drawing.Font("WinCC digital", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_peso.Location = new System.Drawing.Point(501, 130);
-            this.textBox_peso.Name = "textBox_peso";
-            this.textBox_peso.ReadOnly = true;
-            this.textBox_peso.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_peso.Size = new System.Drawing.Size(140, 53);
-            this.textBox_peso.TabIndex = 2;
-            this.textBox_peso.Text = "000000";
-            this.textBox_peso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_peso.WordWrap = false;
             // 
             // tabControl1
             // 
@@ -454,7 +500,26 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // textBox_device_addr
+            // 
+            this.textBox_device_addr.Location = new System.Drawing.Point(165, 130);
+            this.textBox_device_addr.Name = "textBox_device_addr";
+            this.textBox_device_addr.ReadOnly = true;
+            this.textBox_device_addr.Size = new System.Drawing.Size(63, 20);
+            this.textBox_device_addr.TabIndex = 37;
+            this.textBox_device_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(162, 114);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Endereço:";
             // 
             // Form_CARREGAMENTO
             // 
@@ -472,6 +537,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carregamento";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_CARREGAMENTO_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -524,12 +590,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_peso;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carregarToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button_pausar_pausar;
+        private System.Windows.Forms.Button button_iniciar_carregamento;
+        private System.Windows.Forms.Button button_parar_carregamento;
+        private System.Windows.Forms.TextBox textBox_peso;
+        private System.Windows.Forms.TextBox textBox_device_addr;
+        private System.Windows.Forms.Label label11;
     }
 }

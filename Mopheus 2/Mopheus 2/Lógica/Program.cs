@@ -11,6 +11,7 @@ namespace Mopheus_2
 {
     static class Program
     {
+        public static string rx_string;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

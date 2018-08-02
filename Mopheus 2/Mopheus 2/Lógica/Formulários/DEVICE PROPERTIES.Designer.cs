@@ -123,7 +123,7 @@
             // comboBox_type_control
             // 
             this.comboBox_type_control.FormattingEnabled = true;
-            this.comboBox_type_control.Location = new System.Drawing.Point(246, 65);
+            this.comboBox_type_control.Location = new System.Drawing.Point(246, 66);
             this.comboBox_type_control.Name = "comboBox_type_control";
             this.comboBox_type_control.Size = new System.Drawing.Size(160, 21);
             this.comboBox_type_control.TabIndex = 10;

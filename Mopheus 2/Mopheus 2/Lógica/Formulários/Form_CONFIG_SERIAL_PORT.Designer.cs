@@ -1,6 +1,6 @@
 ﻿namespace Mopheus_2
 {
-    partial class Form_CONFIG_SERIAL_PORT
+    partial class Form_CONFIG_serialPort
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,10 @@
             this.button_enviar = new System.Windows.Forms.Button();
             this.checkBox_limpar = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox_HEX_format = new System.Windows.Forms.CheckBox();
             this.timerCOM = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +68,7 @@
             this.comboBox_porta_arduino.Location = new System.Drawing.Point(268, 32);
             this.comboBox_porta_arduino.Name = "comboBox_porta_arduino";
             this.comboBox_porta_arduino.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_porta_arduino.Sorted = true;
             this.comboBox_porta_arduino.TabIndex = 3;
             // 
             // comboBox_Speed
@@ -73,6 +77,7 @@
             this.comboBox_Speed.Location = new System.Drawing.Point(268, 72);
             this.comboBox_Speed.Name = "comboBox_Speed";
             this.comboBox_Speed.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_Speed.Sorted = true;
             this.comboBox_Speed.TabIndex = 4;
             // 
             // label1
@@ -195,6 +200,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.checkBox_HEX_format);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button_conectar);
             this.groupBox2.Controls.Add(this.button_clear_rx);
@@ -217,11 +224,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Testes";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(281, 210);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // checkBox_HEX_format
+            // 
+            this.checkBox_HEX_format.AutoSize = true;
+            this.checkBox_HEX_format.Location = new System.Drawing.Point(268, 179);
+            this.checkBox_HEX_format.Name = "checkBox_HEX_format";
+            this.checkBox_HEX_format.Size = new System.Drawing.Size(48, 17);
+            this.checkBox_HEX_format.TabIndex = 13;
+            this.checkBox_HEX_format.Text = "HEX";
+            this.checkBox_HEX_format.UseVisualStyleBackColor = true;
+            this.checkBox_HEX_format.CheckedChanged += new System.EventHandler(this.checkBox_HEX_format_CheckedChanged);
+            // 
             // timerCOM
             // 
             this.timerCOM.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form_CONFIG_SERIAL_PORT
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // Form_CONFIG_serialPort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,12 +263,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_CONFIG_SERIAL_PORT";
+            this.Name = "Form_CONFIG_serialPort";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comunicação";
-            this.Load += new System.EventHandler(this.Form_CONFIG_SERIAL_PORT_Load);
+            this.Load += new System.EventHandler(this.Form_CONFIG_serialPort_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -261,5 +294,8 @@
         private System.Windows.Forms.CheckBox checkBox_limpar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Timer timerCOM;
+        private System.Windows.Forms.CheckBox checkBox_HEX_format;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }

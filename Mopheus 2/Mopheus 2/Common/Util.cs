@@ -116,13 +116,18 @@ namespace Common
         0X4400, 0X84C1, 0X8581, 0X4540, 0X8701, 0X47C0, 0X4680, 0X8641,
         0X8201, 0X42C0, 0X4380, 0X8341, 0X4100, 0X81C1, 0X8081, 0X4040 };
 
-        public static UInt16 ComputeCrc(byte[] data)
+        public static UInt16 ComputeCrc(byte[] data,int lenght)
         {
             ushort crc = 0xFFFF;
 
-            foreach (byte datum in data)
+            //foreach (byte datum in data)
+            //{
+            //    crc = (ushort)((crc >> 8) ^ CrcTable[(crc ^ datum) & 0xFF]);
+            //}
+
+            for(int i=0;i<lenght;i++)
             {
-                crc = (ushort)((crc >> 8) ^ CrcTable[(crc ^ datum) & 0xFF]);
+                crc = (ushort)((crc >> 8) ^ CrcTable[(crc ^ data[i]) & 0xFF]);
             }
 
             return crc;

@@ -13,13 +13,15 @@ using Entidades;
 
 namespace Mopheus_2
 {
-    public partial class Form_CONFIG_SERIAL_PORT : Form
+    public partial class Form_CONFIG_serialPort : Form
     {
         ConfiguracaoBLL bll = new ConfiguracaoBLL("Configuracao");
         Configuracao obj = new Configuracao();
 
+        string RxString;
 
-        public Form_CONFIG_SERIAL_PORT()
+
+        public Form_CONFIG_serialPort()
         {
             InitializeComponent();
             timerCOM.Enabled = true;
@@ -32,7 +34,7 @@ namespace Mopheus_2
                 if (Serial_Comumnication.serialPort.IsOpen)
                 {
                     button_conectar.Text = "CONECTAR";
-                    Serial_Comumnication.serial_port.Close();
+                    Serial_Comumnication.serialPort.Close();
                 }
                 else
                 {
@@ -53,16 +55,16 @@ namespace Mopheus_2
                     bll.update(obj);
 
 
-                    //Global.serial_port_status = true;
+                    //Global.serialPort_status = true;
 
-                    Serial_Comumnication.serial_port.PortName = comboBox_porta_arduino.Text;
-                    Serial_Comumnication.serial_port.BaudRate = Convert.ToInt32(comboBox_Speed.Text);
-                    Serial_Comumnication.serial_port.DataBits = 8;
-                    Serial_Comumnication.serial_port.StopBits = System.IO.Ports.StopBits.Two;
-                    Serial_Comumnication.serial_port.Parity = System.IO.Ports.Parity.None;
+                    Serial_Comumnication.serialPort.PortName = comboBox_porta_arduino.Text;
+                    Serial_Comumnication.serialPort.BaudRate = Convert.ToInt32(comboBox_Speed.Text);
+                    Serial_Comumnication.serialPort.DataBits = 8;
+                    Serial_Comumnication.serialPort.StopBits = System.IO.Ports.StopBits.Two;
+                    Serial_Comumnication.serialPort.Parity = System.IO.Ports.Parity.None;
               
-                    Serial_Comumnication.serial_port.Open();
-                    if (Serial_Comumnication.serial_port.IsOpen)
+                    Serial_Comumnication.serialPort.Open();
+                    if (Serial_Comumnication.serialPort.IsOpen)
                     {
                         button_conectar.Text = "DESCONECTAR";
                         MessageBox.Show("Porta serial aberta com sucesso!","Sucesso");
@@ -73,11 +75,11 @@ namespace Mopheus_2
             {
                 MessageBox.Show(ex.Message.ToString(), "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Environment.Exit(0);
-                //Global.serial_port_status = false;
+                //Global.serialPort_status = false;
             }
         }
 
-        private void Form_CONFIG_SERIAL_PORT_Load(object sender, EventArgs e)
+        private void Form_CONFIG_serialPort_Load(object sender, EventArgs e)
         {
             try
             {
@@ -109,6 +111,11 @@ namespace Mopheus_2
                     obj = bll.get(Convert.ToInt32(dt.Rows[0]["id"].ToString()));
                     comboBox_porta_arduino.SelectedItem = obj.porta_arduino;
                     comboBox_Speed.Text = obj.baud_rate.ToString();
+
+                    if (Serial_Comumnication.serialPort.IsOpen)
+                    {
+                        button_conectar.Text = "DESCONECTAR";
+                    }
                 }
             }
 
@@ -183,7 +190,7 @@ namespace Mopheus_2
             {
                 if (checkBox_continuous.Checked)
                 {
-                    Serial_Comumnication.serial_port.Write(e.KeyChar.ToString());
+                    Serial_Comumnication.serialPort.Write(e.KeyChar.ToString());
                 }
             }
             catch (Exception erro)
@@ -199,44 +206,100 @@ namespace Mopheus_2
 
         private void atualizaListaCOMs()
         {
-            int i;
-            bool quantDiferente; //flag para sinalizar que a quantidade de portas mudou
+            //int i;
+            //bool quantDiferente; //flag para sinalizar que a quantidade de portas mudou
 
-            i = 0;
-            quantDiferente = false;
+            //i = 0;
+            //quantDiferente = false;
 
             //se a quantidade de portas mudou
             if (comboBox_porta_arduino.Items.Count == SerialPort.GetPortNames().Length)
             {
-                foreach (string s in SerialPort.GetPortNames())
-                {
-                    if (comboBox_porta_arduino.Items[i++].Equals(s) == false)
-                    {
-                        quantDiferente = true;
-                    }
-                }
+                //foreach (string s in SerialPort.GetPortNames())
+                //{
+                //    if (comboBox_porta_arduino.Items[i++].Equals(s) == false)
+                //    {
+                //        quantDiferente = true;
+                //    }
+                //}
+                return;
             }
             else
             {
-                quantDiferente = true;
+                //quantDiferente = true;
+                string last_com_name = comboBox_porta_arduino.SelectedText.ToString();
+                //MessageBox.Show(last_com_name);
+                comboBox_porta_arduino.Items.Clear();
+                //adiciona todas as COM diponíveis na lista
+                foreach (string s in SerialPort.GetPortNames())
+                {
+                    comboBox_porta_arduino.Items.Add(s);
+                }
+                comboBox_porta_arduino.SelectedIndex = comboBox_porta_arduino.FindStringExact(last_com_name);
+                //comboBox_porta_arduino.Sorted = true;
+                //seleciona a primeira posição da lista
+                //comboBox_porta_arduino.SelectedIndex = 0;
             }
 
             //Se não foi detectado diferença
-            if (quantDiferente == false)
-            {
-                return;                     //retorna
-            }
+            //if (quantDiferente == false)
+            //{
+            //    return;                     //retorna
+            //}
 
             //limpa comboBox
-            comboBox_porta_arduino.Items.Clear();
+            //comboBox_porta_arduino.Items.Clear();
 
             //adiciona todas as COM diponíveis na lista
-            foreach (string s in SerialPort.GetPortNames())
-            {
-                comboBox_porta_arduino.Items.Add(s);
-            }
+            //foreach (string s in SerialPort.GetPortNames())
+            //{
+            //    comboBox_porta_arduino.Items.Add(s);
+            //}
             //seleciona a primeira posição da lista
-            comboBox_porta_arduino.SelectedIndex = 0;
+            //comboBox_porta_arduino.SelectedIndex = 0;
+        }
+
+        private void DisplayText(object sender, EventArgs e)
+        {
+            if (!checkBox_HEX_format.Checked)
+            {
+                //textBox_rx.AppendText(Program.rx_string);
+            }
+            else
+            {
+                char[] charValues = RxString.ToCharArray();
+                string hexOutput = "";
+                foreach (char _eachChar in charValues)
+                {
+                    // Get the integral value of the character.
+                    int value = Convert.ToInt32(_eachChar);
+                    // Convert the decimal value to a hexadecimal value in string form.
+                    hexOutput += "0x"+String.Format("{0:X}", value)+" ";
+                    // to make output as your eg 
+                    //  hexOutput +=" "+ String.Format("{0:X}", value);
+                    
+                }
+                textBox_rx.AppendText(hexOutput);
+            }
+        }
+
+        private void checkBox_HEX_format_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_rx.Clear();
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            //this.Invoke(new EventHandler(DisplayText));
+            RxString = Program.rx_string;
+            DisplayText(sender, e);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Program.rx_string);
+            textBox_rx.Text = Program.rx_string;
         }
     }
 }

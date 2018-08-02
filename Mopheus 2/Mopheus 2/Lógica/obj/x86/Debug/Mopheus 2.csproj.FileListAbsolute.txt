@@ -107,7 +107,6 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\x86\Debug\pt\DevExpress.Diagram.v17.2.Core.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus 2.csprojResolveAssemblyReference.cache
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.DEVICE_PROPERTIES.resources
-C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.Form_CONFIG_SERIAL_PORT.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.Form_IO.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.Form_MAIN.resources
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.Form_receita.resources
@@ -212,3 +211,4 @@ C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\x86\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\x86\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
 C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\bin\x86\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
+C:\Users\Lucas Tadeu\Documents\GitHub\Morpheus-2\Mopheus 2\Mopheus 2\Lógica\obj\x86\Debug\Mopheus_2.Form_CONFIG_serialPort.resources

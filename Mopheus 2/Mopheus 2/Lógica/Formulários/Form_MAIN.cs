@@ -23,8 +23,6 @@ namespace Mopheus_2
 {
     public partial class Form_MAIN : Form
     {
-        Form_CONFIG_SERIAL_PORT form_config_serial;
-
         public Form_MAIN()
         {
             InitializeComponent();
@@ -32,6 +30,8 @@ namespace Mopheus_2
             timer1.Start();
 
             hide_menus();
+
+            Serial_Comumnication.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(port_DataReceived);
         }
 
         private void hide_menus()
@@ -63,7 +63,8 @@ namespace Mopheus_2
         public void comunicaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            form_config_serial = new Form_CONFIG_SERIAL_PORT();
+            Form_CONFIG_serialPort form_config_serial;
+            form_config_serial = new Form_CONFIG_serialPort();
             form_config_serial.ShowDialog();
         }
 
@@ -118,9 +119,9 @@ namespace Mopheus_2
             {
                 try
                 {
-                    if (Serial_Comumnication.serial_port.IsOpen)
+                    if (Serial_Comumnication.serialPort.IsOpen)
                     {
-                        Serial_Comumnication.serial_port.Close();
+                        Serial_Comumnication.serialPort.Close();
                     }
                 }
                 catch (Exception ex)
@@ -136,7 +137,7 @@ namespace Mopheus_2
 
         public void timer1_Tick(object sender, EventArgs e)
         {
-            if (Serial_Comumnication.serial_port.IsOpen)
+            if (Serial_Comumnication.serialPort.IsOpen)
             {
                 toolStripStatusLabel1.Text = "CONECTADO";
                 if (toolStripStatusLabel1.BackColor == System.Drawing.Color.Green)
@@ -315,8 +316,10 @@ namespace Mopheus_2
 
         private void carregamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_CARREGAMENTO form_carregamento = new Form_CARREGAMENTO();
-            form_carregamento.ShowDialog();
+            //Form_CARREGAMENTO form_carregamento = new Form_CARREGAMENTO();
+            //form_carregamento.ShowDialog();
+
+            MessageBox.Show("Função em desenvolvimento, aguarde!", "Atenção!");
         }
 
         private void atualizarDataEHoraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -335,25 +338,25 @@ namespace Mopheus_2
             byte temp_dia_semana = 0;
             switch (dia_semana)
             {
-                case "SUNDAY":
+                case "MONDAY":
                     temp_dia_semana = 1;
                     break;
-                case "MONDAY":
+                case "TUESDAY":
                     temp_dia_semana = 2;
                     break;
-                case "TUESDAY":
+                case "WEDNESDAY":
                     temp_dia_semana = 3;
                     break;
-                case "WEDNESDAY":
+                case "THURSDAY":
                     temp_dia_semana = 4;
                     break;
-                case "THURSDAY":
+                case "FRIDAY":
                     temp_dia_semana = 5;
                     break;
-                case "FRIDAY":
+                case "SATURDAY":
                     temp_dia_semana = 6;
                     break;
-                case "SATURDAY":
+                case "SUNDAY":
                     temp_dia_semana = 7;
                     break;
                 default:
@@ -380,16 +383,16 @@ namespace Mopheus_2
             //segundo
             cmd_data_hora[9] = Convert.ToByte(hora.Substring(6, 2));
 
-            crc = Crc16.ComputeCrc(cmd_data_hora);
-            cmd_data_hora[10] = Convert.ToByte(crc >> 8);
-            cmd_data_hora[11] = Convert.ToByte(crc & 0xff);
+            crc = Crc16.ComputeCrc(cmd_data_hora, cmd_data_hora.Length - 2);
+            cmd_data_hora[11] = Convert.ToByte(crc >> 8);
+            cmd_data_hora[10] = Convert.ToByte(crc & 0xff);
 
-            if (Serial_Comumnication.serial_port.IsOpen)
+            if (Serial_Comumnication.serialPort.IsOpen)
             {
                 try
                 {
-                    //Serial_Comumnication.serial_port.Write(60.ToString() + temp_dia_semana.ToString() + data + hora);
-                    Serial_Comumnication.serialPort.Write(cmd_data_hora,0,cmd_data_hora.Length);
+                    //Serial_Comumnication.serialPort.Write(60.ToString() + temp_dia_semana.ToString() + data + hora);
+                    Serial_Comumnication.serialPort.Write(cmd_data_hora, 0, cmd_data_hora.Length);
                     MessageBox.Show("Dia da Semana: " + dia_semana + "\r\n" + "Data: " + data + "\r\n" + "Horário: " + hora + "\r\n", "Atualização de Data e Hora");
                 }
                 catch (Exception error)
@@ -407,6 +410,52 @@ namespace Mopheus_2
         private void statusDosDispositivosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Função em desenvolvimento, aguarde!", "Atenção!");
+        }
+
+        private void port_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            if (Serial_Comumnication.serialPort.IsOpen)
+            {
+                Program.rx_string = Serial_Comumnication.serialPort.ReadExisting();
+                this.Invoke(new EventHandler(DisplayText));
+
+
+                
+                
+                //Serial_Comumnication.bytes_to_read = Serial_Comumnication.serialPort.BytesToRead;
+                //byte[] buffer = new byte[Serial_Comumnication.serialPort.BytesToRead];
+
+                //for (int i = 0; i < Serial_Comumnication.bytes_to_read - 2; i++)
+                //{
+                //    buffer[i] = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+                //}
+
+                //Serial_Comumnication.serialPort.Read(buffer, 0, Serial_Comumnication.serialPort.BytesToRead);
+
+                //Serial_Comumnication.crch = Convert.ToByte(Crc16.ComputeCrc(buffer, buffer.Length) >> 8);
+                //Serial_Comumnication.crcl = Convert.ToByte(Crc16.ComputeCrc(buffer, buffer.Length) & 0xff);
+
+                //Serial_Comumnication.crcl_received = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+                //Serial_Comumnication.crch_received = Convert.ToByte(Serial_Comumnication.serialPort.ReadByte());
+
+                //Serial_Comumnication.rx_string = System.Text.Encoding.Default.GetString(buffer);
+
+                //if (Serial_Comumnication.crch == Serial_Comumnication.crch_received & Serial_Comumnication.crcl == Serial_Comumnication.crcl_received)
+                //{
+                //    //Array.Clear(Serial_Comumnication.buffer, 0, buffer.Length);
+                //    Serial_Comumnication.buffer = buffer;
+                //}
+                //else
+                //{
+                //    //Array.Clear(Serial_Comumnication.buffer, 0, buffer.Length);
+                //    Serial_Comumnication.buffer = buffer.ToArray();
+                //}
+            }
+        }
+
+        private void DisplayText(object sender, EventArgs e)
+        {
+            textBox1.AppendText(Program.rx_string);
         }
     }
 }

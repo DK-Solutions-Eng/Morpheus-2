@@ -1648,15 +1648,15 @@ namespace Mopheus_2
                 //segundo
                 cmd_data_hora[9] = Convert.ToByte(hora.Substring(6, 2));
 
-                crc = Crc16.ComputeCrc(cmd_data_hora);
+                crc = Crc16.ComputeCrc(cmd_data_hora, cmd_data_hora.Length - 2);
                 cmd_data_hora[10] = Convert.ToByte(crc >> 8);
                 cmd_data_hora[11] = Convert.ToByte(crc & 0xff);
 
-                if (Serial_Comumnication.serial_port.IsOpen)
+                if (Serial_Comumnication.serialPort.IsOpen)
                 {
                     try
                     {
-                        //Serial_Comumnication.serial_port.Write(60.ToString() + temp_dia_semana.ToString() + data + hora);
+                        //Serial_Comumnication.serialPort.Write(60.ToString() + temp_dia_semana.ToString() + data + hora);
                         Serial_Comumnication.serialPort.Write(cmd_data_hora, 0, cmd_data_hora.Length);
                         MessageBox.Show("Dia da Semana: " + dia_semana + "\r\n" + "Data: " + data + "\r\n" + "Horário: " + hora + "\r\n", "Atualização de Data e Hora");
                     }

@@ -7,7 +7,7 @@ namespace Entidades
 {
     public static class Global
     {
-        public static bool serial_port_status { get; set; }
+        public static bool serialPort_status { get; set; }
 
         public static bool god_mode { get; set; }
 
